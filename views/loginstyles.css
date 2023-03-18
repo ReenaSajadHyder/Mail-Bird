@@ -1,0 +1,134 @@
+#login-pg {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  height: 100vh;
+}
+
+#login-side {
+  background-color: #e1e1e1;
+}
+
+#login-box {
+  background-color: white;
+  width: 40vh;
+  height: 54vh;
+  border-radius: 15px;
+  font-family: "Mulish", sans-serif;
+  margin-top: 40%;
+  margin-left: 15%;
+}
+
+#log-in-title {
+  font-size: 36px;
+  padding-top: 10%;
+  padding-left: 30%;
+  padding-bottom: 14%;
+}
+
+#email,
+#password,
+#email-input,
+#password-input {
+  margin-left: 10%;
+}
+
+#email,
+#password {
+  font-size: 14px;
+}
+
+#email-input {
+  font-size: 16px;
+  background-color: #f9cece;
+  height: 30px;
+  width: 80%;
+  border-color: #f9cece;
+  margin-top: 1%;
+  position: relative;
+}
+
+/* #password-container {
+    width: 80%;
+    margin-left: 10%;
+    background-color: #f9cece;
+}; */
+
+#password-input {
+    font-size: 16px;
+    background-color: #f9cece;
+    height: 30px;
+    width: 80%;
+    border-color: #f9cece;
+    margin-top: 1%;
+    position: relative;
+  }
+
+.field-icon {
+  float: right;
+  position: absolute;
+  margin-top: 0.5%;
+  /* margin-left: 2%; */
+  margin-right: 2%;
+  z-index: 2;
+  /* float: right;
+  margin-left: -25px;
+  margin-top: -25px;
+  position: relative;
+  z-index: 2; */
+}
+
+#login-btn {
+  border-radius: 10px;
+  font-size: 18px;
+  background-color: #ff4f5a;
+  font-family: "Mulish", sans-serif;
+  color: white;
+  width: 106px;
+  border-color: #ff4f5a;
+  margin-left: 28%;
+  margin-top: 10%;
+}
+
+.signup-redir {
+  margin-left: 16%;
+  margin-top: 6%;
+}
+
+#signup-redir {
+  margin-left: 38%;
+}
+
+#design-side {
+  display: grid;
+  grid-template-rows: 12% 88%;
+}
+
+#logo-section {
+  background-color: #ff4f5a;
+}
+
+#app-logo-name {
+  margin-top: 1%;
+  margin-left: 40%;
+  display: flex;
+}
+
+#app-logo {
+  height: 62px;
+  width: 62px;
+}
+
+#app-name {
+  font-family: "Pacifico", cursive;
+  font-size: 42px;
+  color: white;
+  padding-left: 2%;
+}
+
+#digi-illustration {
+  background-color: white;
+  background-image: url(./assets/images/login-signup-bg-small.jpg);
+  background-repeat: no-repeat;
+  margin-top: 8%;
+  margin-left: 15%;
+}

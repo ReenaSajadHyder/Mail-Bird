@@ -1,35 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css" />
-  <title>Mail Bird</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@500;700&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <title>Mail Bird</title>
+    <link rel="shortcut icon" href="./assets/images/logo-carrier-pigeon.png" />
+  </head>
+  <body>
+    <div id="login-pg">
+      <div id="login-side">
+        <div id="login-box">
+          <div id="log-in-title">Log In</div>
+          <form action="/login" method="POST">
+            <div>
+              <label id="email" for="email">Email Address</label>
+            </div>
+            <div>
+              <input id="email-input" type="email" id="email" name="email" placeholder="Enter email address" required />
+            </div>
+            <br>
+            <div>
+              <label id="password" for="password">Password</label>
+            </div>
+            <div id="password-container">
+              <input id="password-input" type="password" id="password" name="password" placeholder="Enter password" required />
+              <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+            </div>
+            <div>
+              <button id="login-btn" type="submit">Login</button>
+            </div>
+          </form>
+          <div class="error-message">
+            <% if(message) { %> <%= message %> <% } %>
+          </div>
+          <div class="signup-redir">Don't have an account yet?</div>
+          <div><a class="signup-redir" id="signup-redir" href="/signup">Sign Up</a></div>
+        </div>
+      </div>
+      <div id="design-side">
+        <div id="logo-section">
+          <div id="app-logo-name">
+            <div>
+              <img
+                id="app-logo"
+                src="./assets/images/logo-carrier-pigeon.png"
+                alt="logo-carrier-pigeon"
+              />
+            </div>
+            <div id="app-name">Mail Bird</div>
+          </div>
+        </div>
+        <div id="digi-illustration"></div>
+      </div>
+    </div>
+  </body>
 </html>
-<h1>Login Page</h1>
-<form action="/login" method="POST">
-  <div>
-    <label for="name">Name*</label>
-    <input type="text" id="name" name="name" required />
-  </div>
-  <div>
-    <label for="email">Email*</label>
-    <input type="email" id="email" name="email" required />
-  </div>
-  <div>
-    <label for="password">Password*</label>
-    <input type="password" id="password" name="password" required />
-  </div>
-  <button type="submit">Login</button>
-</form>
-<div class="error-message"><% if(message)
-  { 
-    %> <%= message %> <% 
-  } %>
-</div>
-<a href="/signup">Sign Up</a>
+
+

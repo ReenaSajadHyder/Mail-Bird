@@ -36,8 +36,6 @@ app.post("/login", (req, res) => {
   let email = req.body.email;
   let password = req.body.password;
   let data = [];
-  // console.log(email);
-  // res.render('index.ejs')
   fs.readFile("./users.json", "utf-8", (err, userData) => {
     if (err) {
       console.log(err);
@@ -53,7 +51,7 @@ app.post("/login", (req, res) => {
       if (data[i].email === email) {
         userExists = "true";
           if (data[i].password === password) {
-            res.render("index.ejs", { name: data[i].name });
+            res.render("homepg.ejs", { name: data[i].name });
           } else {
             req.flash("message", "Password entered is incorrect.");
             res.redirect("/login");
