@@ -117,6 +117,7 @@
   padding: 2% 2% 1% 2%;
   margin: 1%;
   height: 87vh;
+  border-radius: 10px;
 }
 #subject-time {
   display: grid;

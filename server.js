@@ -51,7 +51,7 @@ app.post("/login", (req, res) => {
       if (data[i].email === email) {
         userExists = "true";
           if (data[i].password === password) {
-            res.render("homepg.ejs", { name: data[i].name });
+            res.render("homepg.ejs");
           } else {
             req.flash("message", "Password entered is incorrect.");
             res.redirect("/login");
@@ -82,42 +82,68 @@ app.post("/signup", async (req, res) => {
       password: req.body.password,
       confirmPassword: req.body.confirmPassword,
     };
-
-    if (userObj.password !== userObj.confirmPassword) {
-      req.flash(
-        "message",
-        "The passwords don't match. Please Enter the same password again."
-      )
-      res.redirect("/signup");
-    } else {
-      let data = [];
-      fs.readFile("./users.json", "utf-8", (err, userData) => {
-        if (err) {
-          console.log(err);
-        } else {
-          try {
-            console.log("Inside");
-            data = JSON.parse(userData);
-            data.push(userObj);
-            console.log(data);
-            fs.writeFile(
-              "./users.json",
-              JSON.stringify(data, null, 2),
-              (err) => {
-                if (err) {
-                  console.log(err);
-                } else {
-                  console.log("File succesfully written");
-                }
-              }
-            );
-          } catch (err) {
-            console.log("Error parsing JSON file:" + err);
+    let data = [];
+    let userExists = "false";
+    fs.readFile("./users.json", "utf-8",(err,userData) => {
+      if(err){
+        console.log(err);
+      }
+      else{
+        console.log("inside");
+        data = JSON.parse(userData);
+        for (let i = 0; i < data.length; i++){
+          if(data[i].email === userObj.email){
+            userExists = "true";
+            console.log(userExists);
           }
         }
-      });
-      res.redirect("/login");
-    }
+        if(userExists === "true"){
+          console.log("Inside user exists true");
+          req.flash(
+            "message",
+            "The email you entered is already in use. Please enter a different email id."
+          )
+          res.redirect("/signup");
+        }
+        else {
+          console.log("Inside user exists false");
+          if (userObj.password !== userObj.confirmPassword) {
+            req.flash(
+              "message",
+              "The passwords don't match. Please Enter the same password again."
+            )
+            res.redirect("/signup");
+          } else {
+            let data = [];
+            fs.readFile("./users.json", "utf-8", (err, userData) => {
+              if (err) {
+                console.log(err);
+              } else {
+                try {
+                  data = JSON.parse(userData);
+                  data.push(userObj);
+                  console.log(data);
+                  fs.writeFile(
+                    "./users.json",
+                    JSON.stringify(data, null, 2),
+                    (err) => {
+                      if (err) {
+                        console.log(err);
+                      } else {
+                        console.log("File succesfully written");
+                      }
+                    }
+                  );
+                } catch (err) {
+                  console.log("Error parsing JSON file:" + err);
+                }
+              }
+            });
+            res.redirect("/login");
+          }
+        }
+      }
+    })
   } catch (err) {
     console.log("Throws error", err);
     res.redirect("/signup");
