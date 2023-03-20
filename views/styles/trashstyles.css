@@ -49,43 +49,46 @@
 #sent-sym,
 #drafts-sym,
 #trash-sym {
-  height: 22px;
-  width: 22px;
-  margin-top: 20%;
-}
-
-#trash-txt {
-  font-family: "Mulish", sans-serif;
-  font-size: 24px;
-  color: white;
-  margin-left: 10%;
+    height: 22px;
+    width: 22px;
+    margin-top: 20%;
 }
 #inbox-sec,
+#sent-sec,
 #drafts-sec,
-#sent-sec {
-  margin-left: 10%;
-  margin-right: 10%;
-  background-color: white;
-  padding-top: 2%;
-  padding-left: 24%;
-  cursor: pointer;
-  display: flex;
+#trash-sec {
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: white;
+    padding-top: 2%;
+    padding-left: 24%;
+    cursor: pointer;
+    display: flex;
 }
 #inbox-txt,
+#sent-txt,
 #drafts-txt,
-#sent-txt {
-  font-family: "Mulish", sans-serif;
-  font-size: 24px;
-  margin-left: 10%;
+#trash-txt{
+    font-family: 'Mulish', sans-serif;
+    font-size: 24px;
+    margin-left: 10%;
+    text-decoration: none;
+    color: black;
 }
 #inbox-sec:hover,
+#sent-sec:hover,
 #drafts-sec:hover,
-#sent-sec:hover {
-  background-color: #ff4f5a;
-  color: white;
-  cursor: pointer;
+#trash-sec:hover {
+    background-color: #FF4F5A;
+    cursor: pointer;
+    text-decoration: none;
 }
-
+#inbox-txt:hover,
+#sent-txt:hover,
+#drafts-txt:hover,
+#trash-txt:hover {
+    color: white;
+}
 #design-section {
   display: grid;
   grid-template-rows: 10% 82% 8%;

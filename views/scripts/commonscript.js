@@ -6,7 +6,6 @@ export function menuFunctionality() {
     document.querySelector("inbox-sec").addEventListener("click",() => {
         getInbox
     })
-    function getInbox() {
-        
+    
+
     }
-}

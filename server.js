@@ -147,19 +147,19 @@ app.post("/signup", async (req, res) => {
   }
 });
 
-app.get("/inbox", (req, res) => {
+app.get("/inboxsection", (req, res) => {
   res.render("inboxsection.ejs");
 });
 
-app.get("/sent", (req, res) => {
+app.get("/sentsection", (req, res) => {
   res.render("sentsection.ejs");
 });
 
-app.get("/drafts", (req, res) => {
+app.get("/draftssection", (req, res) => {
   res.render("draftssection.ejs");
 });
 
-app.get("/trash", (req, res) => {
+app.get("/trashsection", (req, res) => {
   res.render("trashsection.ejs");
 });
 
