@@ -35,7 +35,14 @@
     grid-template-rows: 25% 25% 25% 25%;
     row-gap: 4%;
 }
-
+#inbox-sym,
+#sent-sym,
+#drafts-sym,
+#trash-sym {
+    height: 22px;
+    width: 22px;
+    margin-top: 20%;
+}
 #inbox-sec,
 #sent-sec,
 #drafts-sec,
@@ -43,13 +50,19 @@
     margin-left: 10%;
     margin-right: 10%;
     background-color: white;
+    padding-top: 2%;
+    padding-left: 24%;
+    cursor: pointer;
+    display: flex;
+}
+#inbox-txt,
+#sent-txt,
+#drafts-txt,
+#trash-txt{
     font-family: 'Mulish', sans-serif;
     font-size: 24px;
-    padding-top: 2%;
-    padding-left: 28%;
-    cursor: pointer;
+    margin-left: 10%;
 }
-
 #inbox-sec:hover,
 #sent-sec:hover,
 #drafts-sec:hover,
