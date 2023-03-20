@@ -1,0 +1,167 @@
+@import "commonstyles.css";
+#home-pg {
+  display: grid;
+  grid-template-columns: 18% 82%;
+  height: 100vh;
+}
+
+#menu-section {
+  display: grid;
+  grid-template-rows: 16% 24% 40%;
+  background-color: #f9cece;
+}
+
+#app-name-logo {
+  display: flex;
+  flex-direction: row;
+  margin-left: 10%;
+  padding-top: 2.2%;
+}
+
+#app-logo {
+  height: 52px;
+  width: 52px;
+}
+
+#app-name {
+  font-size: 30px;
+  font-family: "Pacifico", cursive;
+  margin-left: 3%;
+  margin-top: 1%;
+}
+
+#sections {
+  display: grid;
+  grid-template-rows: 25% 25% 25% 25%;
+  row-gap: 4%;
+}
+
+#sent-sec {
+  margin-left: 10%;
+  margin-right: 10%;
+  background-color: #ff4f5a;
+  padding-top: 2%;
+  padding-left: 24%;
+  cursor: pointer;
+  display: flex;
+}
+#inbox-sym,
+#sent-sym,
+#drafts-sym,
+#trash-sym {
+  height: 22px;
+  width: 22px;
+  margin-top: 20%;
+}
+
+#sent-txt {
+  font-family: "Mulish", sans-serif;
+  font-size: 24px;
+  color: white;
+  margin-left: 10%;
+}
+#inbox-sec,
+#drafts-sec,
+#trash-sec {
+  margin-left: 10%;
+  margin-right: 10%;
+  background-color: white;
+  padding-top: 2%;
+  padding-left: 24%;
+  cursor: pointer;
+  display: flex;
+}
+#inbox-txt,
+#drafts-txt,
+#trash-txt {
+  font-family: "Mulish", sans-serif;
+  font-size: 24px;
+  margin-left: 10%;
+}
+#inbox-sec:hover,
+#drafts-sec:hover,
+#trash-sec:hover {
+  background-color: #ff4f5a;
+  color: white;
+  cursor: pointer;
+}
+
+#design-section {
+  display: grid;
+  grid-template-rows: 10% 82% 8%;
+  background-color: white;
+}
+#section-header {
+  background-color: #eeacac;
+  display: grid;
+  grid-template-columns: 85% 15%;
+}
+#section-name {
+  font-family: "Mulish", sans-serif;
+  font-size: 36px;
+  margin-top: 1%;
+  margin-left: 50%;
+}
+#sign-out-btn {
+  margin-top: 10%;
+  display: grid;
+  grid-template-columns: 65% 35%;
+  cursor: pointer;
+}
+#sign-out-txt {
+  font-family: "Mulish", sans-serif;
+  font-size: 24px;
+  margin-left: 10%;
+}
+#profile-user {
+  height: 32px;
+  width: 32px;
+}
+#mails-container {
+  background-image: url(../assets/images/sectionpg-bg-small.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  overflow-y: auto;
+}
+.mail {
+  background-color: #faebeb;
+  display: grid;
+  grid-template-columns: 5% 20% 65% 10%;
+  width: 100%;
+  height: 8%;
+  margin-bottom: 0.5%;
+  cursor: pointer;
+  font-family: "Mulish", sans-serif;
+  padding-top: 1%;
+}
+.pin {
+  padding-left: 20%;
+}
+.pin-symbol {
+  height: 28px;
+  width: 28px;
+}
+.sender-name,
+.mail-title {
+  font-size: 22px;
+}
+.time {
+  font-size: 18px;
+}
+#compose-btn {
+  background-color: #ff4f5a;
+  font-size: 24px;
+  border-radius: 18px;
+  margin-top: 0.5%;
+  margin-left: 84%;
+  font-family: "Mulish", sans-serif;
+  width: fit-content;
+  padding: 0.5% 2.2% 0.5% 2.2%;
+  cursor: pointer;
+  color: white;
+}
+
+#compose-btn:hover {
+  background-color: #a12c34;
+  color: white;
+}

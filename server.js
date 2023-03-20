@@ -128,6 +128,18 @@ app.get("/inbox", (req, res) => {
   res.render("inboxsection.ejs");
 });
 
+app.get("/sent", (req, res) => {
+  res.render("sentsection.ejs");
+});
+
+app.get("/drafts", (req, res) => {
+  res.render("draftssection.ejs");
+});
+
+app.get("/trash", (req, res) => {
+  res.render("trashsection.ejs");
+});
+
 app.listen(8000, () => {
   console.log(
     "Server connected at port number 8000 with url 'http://localhost:8000/'"
