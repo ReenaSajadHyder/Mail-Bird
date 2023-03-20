@@ -1,26 +1,119 @@
-<h1>Signup Page</h1>
-<form action="/signup" method="POST">
-    <div>
-        <label for="name">Name*</label>
-        <input type="text" id="name" name="name" required>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="signupstyles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@500;700&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <title>Mail Bird</title>
+    <link rel="shortcut icon" href="./assets/images/logo-carrier-pigeon.png" />
+  </head>
+  <body>
+    <div id="signup-pg">
+      <div id="signup-side">
+        <div id="signup-box">
+          <div id="sign-up-title">Create Account</div>
+          <form action="/signup" method="POST">
+            <div>
+              <label id="name" for="name">Name*</label>
+            </div>
+            <div>
+              <input
+                id="name-input"
+                type="text"
+                id="name"
+                name="name"
+                required
+              />
+            </div>
+            <div>
+              <label id="email" for="email">Email Address*</label>
+            </div>
+            <div>
+              <input
+                id="email-input"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter email address"
+                required
+              />
+            </div>
+            <br />
+            <div>
+              <label id="password" for="password">Password*</label>
+            </div>
+            <div id="password-container">
+              <input
+                id="password-input"
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter password"
+                required
+              />
+              <i class="far fa-eye" id="togglePassword"></i>
+              <!-- <span
+                toggle="#password-field"
+                class="fa fa-fw fa-eye field-icon toggle-password"
+              ></span> -->
+            </div>
+            <div>
+              <label for="password">Confirm Password*</label>
+            </div>
+            <div id="conf-password-container">
+              <input
+                id="conf-password"
+                type="password"
+                id="confirm-password"
+                name="confirmPassword"
+                required
+              />
+              <i class="far fa-eye" id="togglePassword"></i>
+              <!-- <span
+                id="conf-password-input"
+                toggle="#password-field"
+                class="fa fa-fw fa-eye field-icon toggle-password"
+              ></span> -->
+            </div>
+            <div>
+              <button id="signup-btn" type="submit">Sign up</button>
+            </div>
+          </form>
+          <div class="error-message">
+            <% if(message) { %> <%= message %> <% } %>
+          </div>
+          <div class="login-redir">Already have an account?</div>
+          <div>
+            <a class="login-redir" id="login-redir" href="/login">Log In</a>
+          </div>
+        </div>
+      </div>
+      <div id="design-side">
+        <div id="logo-section">
+          <div id="app-logo-name">
+            <div>
+              <img
+                id="app-logo"
+                src="./assets/images/logo-carrier-pigeon.png"
+                alt="logo-carrier-pigeon"
+              />
+            </div>
+            <div id="app-name">Mail Bird</div>
+          </div>
+        </div>
+        <div id="digi-illustration"></div>
+      </div>
     </div>
-    <div>
-        <label for="email">Email Address*</label>
-        <input type="email" id="email" name="email" required>
-    </div>
-    <div>
-        <label for="password">Password*</label>
-        <input type="password" id="password" name="password" required>
-    </div>
-    <div>
-        <label for="password">Confirm Password*</label>
-        <input type="password" id="confirm-password" name="confirmPassword" required>
-    </div>
-    <button type="submit">Sign up</button>
-</form>
-<div class="error-message"><% if(message)
-    { 
-      %> <%= message %> <% 
-    } %>
-  </div>
-<a href="/login">Login</a>
+  </body>
+</html>

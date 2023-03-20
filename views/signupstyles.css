@@ -1,40 +1,45 @@
 @import "commonstyles.css";
-#login-pg {
+#signup-pg {
   display: grid;
   grid-template-columns: 30% 70%;
   height: 100vh;
 }
 
-#login-side {
+#signup-side {
   background-color: #e1e1e1;
 }
 
-#login-box {
+#signup-box {
   background-color: white;
   width: 40vh;
-  height: 54vh;
+  height: 66vh;
   border-radius: 15px;
   font-family: "Mulish", sans-serif;
   margin-top: 40%;
   margin-left: 15%;
 }
 
-#log-in-title {
-  font-size: 36px;
+#sign-up-title {
+  font-size: 32px;
   padding-top: 10%;
-  padding-left: 30%;
-  padding-bottom: 14%;
+  padding-left: 10%;
+  padding-bottom: 10%;
 }
 
+#name,
 #email,
 #password,
-#email-input,
-#password-input {
+#conf-password,
+#name-input #email-input,
+#password-input,
+#conf-password-input {
   margin-left: 10%;
 }
 
+#name,
 #email,
-#password {
+#password,
+#conf-password {
   font-size: 14px;
 }
 
@@ -49,12 +54,14 @@
 }
 
 /* #password-container {
-    width: 80%;
-    margin-left: 10%;
-    background-color: #f9cece;
-}; */
+      width: 80%;
+      margin-left: 10%;
+      background-color: #f9cece;
+  }; */
 
-#password-input {
+#name-input,
+#password-input,
+#conf-password-input {
   font-size: 16px;
   background-color: #f9cece;
   height: 30px;
@@ -62,13 +69,6 @@
   border-color: #f9cece;
   margin-top: 1%;
   position: relative;
-}
-
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 30px #f9cece inset !important;
 }
 
 .field-icon {
@@ -79,13 +79,20 @@ input:-webkit-autofill:active {
   margin-right: 2%;
   z-index: 2;
   /* float: right;
-  margin-left: -25px;
-  margin-top: -25px;
-  position: relative;
-  z-index: 2; */
+    margin-left: -25px;
+    margin-top: -25px;
+    position: relative;
+    z-index: 2; */
 }
 
-#login-btn {
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #f9cece inset !important;
+}
+
+#signup-btn {
   border-radius: 10px;
   font-size: 18px;
   background-color: #ff4f5a;
@@ -97,17 +104,17 @@ input:-webkit-autofill:active {
   margin-top: 10%;
 }
 
-#login-btn:hover {
+#signup-btn:hover {
   background-color: #bc343e;
   cursor: pointer;
 }
 
-.signup-redir {
+.login-redir {
   margin-left: 16%;
   margin-top: 6%;
 }
 
-#signup-redir {
+#login-redir {
   margin-left: 38%;
 }
 
