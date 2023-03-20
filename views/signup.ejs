@@ -33,6 +33,7 @@
                 type="text"
                 id="name"
                 name="name"
+                placeholder="Enter full name"
                 required
               />
             </div>
@@ -49,7 +50,6 @@
                 required
               />
             </div>
-            <br />
             <div>
               <label id="password" for="password">Password*</label>
             </div>
@@ -69,14 +69,15 @@
               ></span> -->
             </div>
             <div>
-              <label for="password">Confirm Password*</label>
+              <label id="conf-password" for="password">Confirm Password*</label>
             </div>
             <div id="conf-password-container">
               <input
-                id="conf-password"
+                id="conf-password-input"
                 type="password"
                 id="confirm-password"
                 name="confirmPassword"
+                placeholder="Enter password again"
                 required
               />
               <i class="far fa-eye" id="togglePassword"></i>
@@ -90,7 +91,7 @@
               <button id="signup-btn" type="submit">Sign up</button>
             </div>
           </form>
-          <div class="error-message">
+          <div id="signup-error-message">
             <% if(message) { %> <%= message %> <% } %>
           </div>
           <div class="login-redir">Already have an account?</div>

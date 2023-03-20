@@ -94,7 +94,7 @@ input:-webkit-autofill:active {
   width: 106px;
   border-color: #ff4f5a;
   margin-left: 28%;
-  margin-top: 10%;
+  margin-top: 8%;
 }
 
 #login-btn:hover {
@@ -102,9 +102,15 @@ input:-webkit-autofill:active {
   cursor: pointer;
 }
 
+#login-error-message {
+  font-size: 14px;
+  margin-left: 4%;
+  margin-top: 6%;
+}
+
 .signup-redir {
   margin-left: 16%;
-  margin-top: 6%;
+  margin-top: 2%;
 }
 
 #signup-redir {

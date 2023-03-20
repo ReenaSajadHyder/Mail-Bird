@@ -86,7 +86,7 @@ app.post("/signup", async (req, res) => {
     if (userObj.password !== userObj.confirmPassword) {
       req.flash(
         "message",
-        "The passwords don't match. Please Enter the same password."
+        "The passwords don't match. Please Enter the same password again."
       )
       res.redirect("/signup");
     } else {
