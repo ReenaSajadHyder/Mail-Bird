@@ -68,7 +68,7 @@
 #inbox-sec:hover,
 #drafts-sec:hover,
 #trash-sec:hover,
-#sent-sec:hover{
+#sent-sec:hover {
   background-color: #ff4f5a;
   color: white;
   cursor: pointer;
@@ -107,17 +107,21 @@
   width: 32px;
 }
 #compose-box {
+  background-color: #f9f2f2;
+}
+#mail-container {
   display: grid;
   grid-template-rows: 10% 8% 8% 74%;
   font-family: "Mulish", sans-serif;
-  background-color: #F9F2F2;
+  background-color: white;
   padding: 2% 2% 1% 2%;
+  margin: 1%;
+  height: 87vh;
 }
 #subject-time {
   display: grid;
   grid-template-columns: 98% 2%;
   border-bottom: 2px solid black;
-  background-color: white;
 }
 #subject {
   font-size: 32px;
@@ -126,34 +130,32 @@
   font-size: 16px;
 }
 #close-compose {
-    font-size: 20px;
+  font-size: 20px;
 }
 #close-compose:hover {
-    cursor: pointer;
-    color: red;
+  cursor: pointer;
+  color: red;
 }
 #from-sender,
 #to-recipient {
-    padding-top: 0.8%;
-    display: grid;
-    grid-template-columns: 10% 90%;
-    font-size: 24px;
-    border-bottom: 2px solid black;
-    background-color: white;
+  padding-top: 0.8%;
+  display: grid;
+  grid-template-columns: 10% 90%;
+  font-size: 24px;
+  border-bottom: 2px solid black;
 }
-#content{
-    padding-top: 1%;
-    background-color: white;
-    overflow-y: auto;
+#content {
+  padding-top: 1%;
+  overflow-y: auto;
 }
-#send-btn{
-    background-color: #FF4F5A;
-    border-radius: 15px;
-    margin-left: 84%;
-    width: fit-content;
-    padding: 0% 2.2% 0% 2.2%;
-    cursor: pointer;
-    color: white;
-    font-size: 22px;
-    font-family: 'Mulish', sans-serif;
+#send-btn {
+  background-color: #ff4f5a;
+  border-radius: 15px;
+  margin-left: 84%;
+  width: fit-content;
+  padding: 0% 2.2% 0% 2.2%;
+  cursor: pointer;
+  color: white;
+  font-size: 22px;
+  font-family: "Mulish", sans-serif;
 }
