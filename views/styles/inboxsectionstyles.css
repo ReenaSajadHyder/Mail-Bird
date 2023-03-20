@@ -151,15 +151,25 @@
 }
 #compose-btn {
     background-color: #FF4F5A;
-    font-size: 24px;
     border-radius: 18px;
-    margin-top: 0.5%;
     margin-left: 84%;
-    font-family: 'Mulish', sans-serif;
     width: fit-content;
     padding: 0.5% 2.2% 0.5% 2.2%;
     cursor: pointer;
     color: white;
+    display: flex;
+}
+
+#compose-txt {
+    font-size: 24px;
+    font-family: 'Mulish', sans-serif;
+    margin-left: 8%;
+}
+
+#compose-sym {
+    width: 22px;
+    height: 22px;
+    margin-top: 20%;
 }
 
 #compose-btn:hover {
