@@ -55,8 +55,7 @@
 }
 #inbox-sec,
 #sent-sec,
-#drafts-sec,
-#trash-sec {
+#drafts-sec {
     margin-left: 10%;
     margin-right: 10%;
     background-color: white;
@@ -65,10 +64,16 @@
     cursor: pointer;
     display: flex;
 }
+#trash-txt{
+    font-family: 'Mulish', sans-serif;
+    font-size: 24px;
+    color: white;
+    margin-left: 10%;
+    text-decoration: none;
+}
 #inbox-txt,
 #sent-txt,
-#drafts-txt,
-#trash-txt{
+#drafts-txt{
     font-family: 'Mulish', sans-serif;
     font-size: 24px;
     margin-left: 10%;
@@ -77,16 +82,14 @@
 }
 #inbox-sec:hover,
 #sent-sec:hover,
-#drafts-sec:hover,
-#trash-sec:hover {
+#drafts-sec:hover {
     background-color: #FF4F5A;
     cursor: pointer;
     text-decoration: none;
 }
 #inbox-txt:hover,
 #sent-txt:hover,
-#drafts-txt:hover,
-#trash-txt:hover {
+#drafts-txt:hover {
     color: white;
 }
 #design-section {
