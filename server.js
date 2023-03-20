@@ -1,12 +1,9 @@
 const express = require("express");
 const app = express();
 const fs = require("fs");
-// const bcrypt = require("bcrypt");
 const flash = require("connect-flash");
 const session = require("express-session");
 const cookieParser = require("cookie-parser");
-
-// const users = [];
 
 app.set("view-engine", "ejs");
 app.use(express.urlencoded({ extended: false }));
@@ -166,7 +163,7 @@ app.get("/trash", (req, res) => {
   res.render("trashsection.ejs");
 });
 
-app.get("/compose", (req, res) => {
+app.get("/composemail", (req, res) => {
   res.render("composemail.ejs");
 });
 

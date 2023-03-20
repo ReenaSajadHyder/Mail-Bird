@@ -163,6 +163,9 @@
   font-size: 24px;
   font-family: 'Mulish', sans-serif;
   margin-left: 8%;
+  text-decoration: none;
+  color: white;
+
 }
 
 #compose-sym {
