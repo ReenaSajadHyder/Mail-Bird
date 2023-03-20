@@ -140,6 +140,10 @@ app.get("/trash", (req, res) => {
   res.render("trashsection.ejs");
 });
 
+app.get("/compose", (req, res) => {
+  res.render("composemail.ejs");
+});
+
 app.listen(8000, () => {
   console.log(
     "Server connected at port number 8000 with url 'http://localhost:8000/'"
