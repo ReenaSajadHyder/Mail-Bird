@@ -78,10 +78,12 @@
 
 #select {
     font-size: 24px;
-    margin-left: 5%;
+    margin-left: 3%;
 }
 
 #bg-image {
+    background-image: url(../assets/images/homepg-bg-small.jpg);
+    background-repeat: no-repeat;
     margin-left: 26%;
     margin-top: 4%;
 }

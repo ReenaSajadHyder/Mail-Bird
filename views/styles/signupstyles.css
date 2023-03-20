@@ -1,44 +1,54 @@
 @import "commonstyles.css";
-#login-pg {
+#signup-pg {
   display: grid;
   grid-template-columns: 30% 70%;
   height: 100vh;
 }
 
-#login-side {
+#signup-side {
   background-color: #e1e1e1;
 }
 
-#login-box {
+#signup-box {
   background-color: white;
   width: 40vh;
-  height: 54vh;
+  height: 66vh;
   border-radius: 15px;
   font-family: "Mulish", sans-serif;
   margin-top: 40%;
   margin-left: 15%;
 }
 
-#log-in-title {
-  font-size: 36px;
+#sign-up-title {
+  font-size: 30px;
   padding-top: 10%;
-  padding-left: 30%;
-  padding-bottom: 14%;
+  padding-left: 12%;
+  padding-bottom: 8%;
 }
 
+#name,
 #email,
 #password,
+#conf-password,
+#name-input,
 #email-input,
-#password-input {
+#password-input,
+#conf-password-input {
   margin-left: 10%;
+  margin-bottom: 3%;
 }
 
+#name,
 #email,
-#password {
+#password,
+#conf-password {
   font-size: 14px;
 }
 
-#email-input {
+#email-input,
+#name-input,
+#password-input,
+#conf-password-input  {
   font-size: 16px;
   background-color: #f9cece;
   height: 30px;
@@ -49,27 +59,10 @@
 }
 
 /* #password-container {
-    width: 80%;
-    margin-left: 10%;
-    background-color: #f9cece;
-}; */
-
-#password-input {
-  font-size: 16px;
-  background-color: #f9cece;
-  height: 30px;
-  width: 80%;
-  border-color: #f9cece;
-  margin-top: 1%;
-  position: relative;
-}
-
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 30px #f9cece inset !important;
-}
+      width: 80%;
+      margin-left: 10%;
+      background-color: #f9cece;
+  }; */
 
 .field-icon {
   float: right;
@@ -79,13 +72,20 @@ input:-webkit-autofill:active {
   margin-right: 2%;
   z-index: 2;
   /* float: right;
-  margin-left: -25px;
-  margin-top: -25px;
-  position: relative;
-  z-index: 2; */
+    margin-left: -25px;
+    margin-top: -25px;
+    position: relative;
+    z-index: 2; */
 }
 
-#login-btn {
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #f9cece inset !important;
+}
+
+#signup-btn {
   border-radius: 10px;
   font-size: 18px;
   background-color: #ff4f5a;
@@ -94,26 +94,26 @@ input:-webkit-autofill:active {
   width: 106px;
   border-color: #ff4f5a;
   margin-left: 28%;
-  margin-top: 8%;
+  margin-top: 4%;
+  padding-bottom: 1.2%;
 }
 
-#login-btn:hover {
+#signup-btn:hover {
   background-color: #bc343e;
   cursor: pointer;
 }
 
-#login-error-message {
+#signup-error-message {
   font-size: 14px;
   margin-left: 4%;
-  margin-top: 6%;
+  margin-top: 4%;
 }
-
-.signup-redir {
+.login-redir {
   margin-left: 16%;
-  margin-top: 2%;
+  margin-top: 4%;
 }
 
-#signup-redir {
+#login-redir {
   margin-left: 38%;
 }
 
@@ -146,7 +146,7 @@ input:-webkit-autofill:active {
 
 #digi-illustration {
   background-color: white;
-  background-image: url(./assets/images/login-signup-bg-small.jpg);
+  background-image: url(../assets/images/login-signup-bg-small.jpg);
   background-repeat: no-repeat;
   margin-top: 8%;
   margin-left: 15%;

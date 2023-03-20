@@ -124,6 +124,10 @@ app.post("/signup", async (req, res) => {
   }
 });
 
+app.get("/inbox", (req, res) => {
+  res.render("inboxsection.ejs");
+});
+
 app.listen(8000, () => {
   console.log(
     "Server connected at port number 8000 with url 'http://localhost:8000/'"

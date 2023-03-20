@@ -1,54 +1,44 @@
 @import "commonstyles.css";
-#signup-pg {
+#login-pg {
   display: grid;
   grid-template-columns: 30% 70%;
   height: 100vh;
 }
 
-#signup-side {
+#login-side {
   background-color: #e1e1e1;
 }
 
-#signup-box {
+#login-box {
   background-color: white;
   width: 40vh;
-  height: 66vh;
+  height: 54vh;
   border-radius: 15px;
   font-family: "Mulish", sans-serif;
   margin-top: 40%;
   margin-left: 15%;
 }
 
-#sign-up-title {
-  font-size: 30px;
+#log-in-title {
+  font-size: 36px;
   padding-top: 10%;
-  padding-left: 12%;
-  padding-bottom: 8%;
+  padding-left: 30%;
+  padding-bottom: 14%;
 }
 
-#name,
 #email,
 #password,
-#conf-password,
-#name-input,
 #email-input,
-#password-input,
-#conf-password-input {
+#password-input {
   margin-left: 10%;
-  margin-bottom: 3%;
 }
 
-#name,
 #email,
-#password,
-#conf-password {
+#password {
   font-size: 14px;
 }
 
-#email-input,
-#name-input,
-#password-input,
-#conf-password-input  {
+#email-input {
   font-size: 16px;
   background-color: #f9cece;
   height: 30px;
@@ -59,23 +49,19 @@
 }
 
 /* #password-container {
-      width: 80%;
-      margin-left: 10%;
-      background-color: #f9cece;
-  }; */
+    width: 80%;
+    margin-left: 10%;
+    background-color: #f9cece;
+}; */
 
-.field-icon {
-  float: right;
-  position: absolute;
-  margin-top: 0.5%;
-  /* margin-left: 2%; */
-  margin-right: 2%;
-  z-index: 2;
-  /* float: right;
-    margin-left: -25px;
-    margin-top: -25px;
-    position: relative;
-    z-index: 2; */
+#password-input {
+  font-size: 16px;
+  background-color: #f9cece;
+  height: 30px;
+  width: 80%;
+  border-color: #f9cece;
+  margin-top: 1%;
+  position: relative;
 }
 
 input:-webkit-autofill,
@@ -85,7 +71,21 @@ input:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0 30px #f9cece inset !important;
 }
 
-#signup-btn {
+.field-icon {
+  float: right;
+  position: absolute;
+  margin-top: 0.5%;
+  /* margin-left: 2%; */
+  margin-right: 2%;
+  z-index: 2;
+  /* float: right;
+  margin-left: -25px;
+  margin-top: -25px;
+  position: relative;
+  z-index: 2; */
+}
+
+#login-btn {
   border-radius: 10px;
   font-size: 18px;
   background-color: #ff4f5a;
@@ -94,26 +94,26 @@ input:-webkit-autofill:active {
   width: 106px;
   border-color: #ff4f5a;
   margin-left: 28%;
-  margin-top: 4%;
-  padding-bottom: 1.2%;
+  margin-top: 8%;
 }
 
-#signup-btn:hover {
+#login-btn:hover {
   background-color: #bc343e;
   cursor: pointer;
 }
 
-#signup-error-message {
+#login-error-message {
   font-size: 14px;
   margin-left: 4%;
-  margin-top: 4%;
-}
-.login-redir {
-  margin-left: 16%;
-  margin-top: 4%;
+  margin-top: 6%;
 }
 
-#login-redir {
+.signup-redir {
+  margin-left: 16%;
+  margin-top: 2%;
+}
+
+#signup-redir {
   margin-left: 38%;
 }
 
@@ -146,7 +146,7 @@ input:-webkit-autofill:active {
 
 #digi-illustration {
   background-color: white;
-  background-image: url(./assets/images/login-signup-bg-small.jpg);
+  background-image: url(../assets/images/login-signup-bg-small.jpg);
   background-repeat: no-repeat;
   margin-top: 8%;
   margin-left: 15%;
