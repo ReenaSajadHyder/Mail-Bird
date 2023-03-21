@@ -48,11 +48,9 @@
   position: relative;
 }
 
-/* #password-container {
-    width: 80%;
-    margin-left: 10%;
-    background-color: #f9cece;
-}; */
+.password-container {
+  position: relative;
+}
 
 #password-input {
   font-size: 16px;
@@ -61,7 +59,15 @@
   width: 80%;
   border-color: #f9cece;
   margin-top: 1%;
-  position: relative;
+}
+
+#password-hidden {
+  height: 18px;
+  width: 18px;
+  position: absolute;
+  top: 30%;
+  left: 80%;
+  cursor: pointer;
 }
 
 input:-webkit-autofill,
@@ -71,7 +77,7 @@ input:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0 30px #f9cece inset !important;
 }
 
-.field-icon {
+#togglepassword {
   float: right;
   position: absolute;
   margin-top: 0.5%;
