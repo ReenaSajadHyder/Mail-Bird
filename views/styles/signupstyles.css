@@ -26,6 +26,10 @@
   padding-bottom: 8%;
 }
 
+.password-container {
+  position: relative;
+}
+
 #name,
 #email,
 #password,
@@ -58,24 +62,14 @@
   position: relative;
 }
 
-/* #password-container {
-      width: 80%;
-      margin-left: 10%;
-      background-color: #f9cece;
-  }; */
-
-.field-icon {
-  float: right;
+#password-hidden,
+#conf-password-hidden {
+  height: 18px;
+  width: 18px;
   position: absolute;
-  margin-top: 0.5%;
-  /* margin-left: 2%; */
-  margin-right: 2%;
-  z-index: 2;
-  /* float: right;
-    margin-left: -25px;
-    margin-top: -25px;
-    position: relative;
-    z-index: 2; */
+  top: 26%;
+  left: 80%;
+  cursor: pointer;
 }
 
 input:-webkit-autofill,
