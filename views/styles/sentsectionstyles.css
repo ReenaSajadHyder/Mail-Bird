@@ -59,6 +59,7 @@
   font-size: 24px;
   color: white;
   margin-left: 10%;
+  text-decoration: none;
 }
 #inbox-sec,
 #drafts-sec,
@@ -77,15 +78,21 @@
   font-family: "Mulish", sans-serif;
   font-size: 24px;
   margin-left: 10%;
+  text-decoration: none;
+  color: black;
 }
 #inbox-sec:hover,
 #drafts-sec:hover,
 #trash-sec:hover {
   background-color: #ff4f5a;
-  color: white;
   cursor: pointer;
+  text-decoration: none;
 }
-
+#inbox-txt:hover,
+#drafts-txt:hover,
+#trash-txt:hover {
+  color: white;
+} 
 #design-section {
   display: grid;
   grid-template-rows: 10% 82% 8%;
@@ -149,7 +156,7 @@
   font-size: 18px;
 }
 #compose-btn {
-  background-color: #FF4F5A;
+  background-color: #ff4f5a;
   border-radius: 18px;
   margin-left: 84%;
   width: fit-content;
@@ -161,11 +168,10 @@
 
 #compose-txt {
   font-size: 24px;
-  font-family: 'Mulish', sans-serif;
+  font-family: "Mulish", sans-serif;
   margin-left: 8%;
   text-decoration: none;
   color: white;
-
 }
 
 #compose-sym {
