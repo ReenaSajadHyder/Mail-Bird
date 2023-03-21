@@ -171,6 +171,10 @@ app.get("/openmail", (req, res) => {
   res.render("openmail.ejs");
 });
 
+app.get("/signout", (req,res) => {
+  res.render("login.ejs", { message: req.flash("message") });
+})
+
 app.listen(8000, () => {
   console.log(
     "Server connected at port number 8000 with url 'http://localhost:8000/'"

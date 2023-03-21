@@ -112,6 +112,8 @@
     font-family: "Mulish", sans-serif;
     font-size: 24px;
     margin-left: 10%;
+    text-decoration: none;
+    color: black;
   }
 #profile-user {
     height: 32px;
