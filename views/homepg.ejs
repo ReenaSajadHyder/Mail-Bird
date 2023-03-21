@@ -43,7 +43,11 @@
         </div>
         <div id="design-section">
             <div id="welcome-message">
-                <div id="welcome">Welcome to your mail box!</div>
+                <div id="welcome">
+                    Welcome to your mail box,
+                    <% if(message) { %> <%= message %> <% } %>
+                    !
+                </div>
                 <div id="select">Select a section to go through</div>
             </div>
             <div id="bg-image"></div>

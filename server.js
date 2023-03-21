@@ -28,6 +28,10 @@ app.get("/login", (req, res) => {
   res.render("login.ejs", { message: req.flash("message") });
 });
 
+app.get("/homepg", (req,res) => {
+  res.render("homepg.ejs", { message: req.flash("message") });
+})
+
 app.post("/login", (req, res) => {
   console.log("inside login post");
   let email = req.body.email;
@@ -48,7 +52,8 @@ app.post("/login", (req, res) => {
       if (data[i].email === email) {
         userExists = "true";
           if (data[i].password === password) {
-            res.render("homepg.ejs");
+            req.flash("message", `${data[i].name}`);
+            res.redirect("/homepg");
           } else {
             req.flash("message", "Password entered is incorrect.");
             res.redirect("/login");
