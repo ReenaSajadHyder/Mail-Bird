@@ -1,178 +1,190 @@
 @import "commonstyles.css";
 #home-pg {
-    display: grid;
-    grid-template-columns: 18% 82%;
-    height: 100vh;
-  }
+  display: grid;
+  grid-template-columns: 18% 82%;
+  height: 100vh;
+}
 #menu-section {
-    background-color: #f9cece;
-    display: grid;
-    grid-template-rows: 16% 24% 40%;
-  }
+  background-color: #f9cece;
+  display: grid;
+  grid-template-rows: 16% 24% 40%;
+}
 #app-name-logo {
-    display: flex;
-    flex-direction: row;
-    margin-left: 10%;
-    padding-top: 2.2%;
-  }
+  display: flex;
+  flex-direction: row;
+  margin-left: 10%;
+  padding-top: 2.2%;
+}
 #app-logo {
-    height: 52px;
-    width: 52px;
-  }
+  height: 52px;
+  width: 52px;
+}
 #app-name {
-    font-family: "Pacifico", cursive;
-    font-size: 30px;
-    margin-left: 3%;
-    margin-top: 1%;
-  }
+  font-family: "Pacifico", cursive;
+  font-size: 30px;
+  margin-left: 3%;
+  margin-top: 1%;
+}
 #sections {
-    display: grid;
-    grid-template-rows: 25% 25% 25% 25%;
-    row-gap: 4%;
-  }
+  display: grid;
+  grid-template-rows: 25% 25% 25% 25%;
+  row-gap: 4%;
+}
 #inbox-sec {
-    background-color: #ff4f5a;
-    cursor: pointer;
-    display: flex;
-    margin-left: 10%;
-    margin-right: 10%;
-    padding-left: 24%;
-    padding-top: 2%;
-  }
+  background-color: #ff4f5a;
+  cursor: pointer;
+  display: flex;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-left: 24%;
+  padding-top: 2%;
+}
 #inbox-sym,
 #sent-sym,
 #drafts-sym,
 #trash-sym {
-    height: 22px;
-    margin-top: 20%;
-    width: 22px;
-  }
+  height: 22px;
+  margin-top: 20%;
+  width: 22px;
+}
 #inbox-txt {
-      color: white;
-      font-family: 'Mulish', sans-serif;
-      font-size: 24px;
-      margin-left: 10%;
-      text-decoration: none;
-    }
+  color: white;
+  font-family: "Mulish", sans-serif;
+  font-size: 24px;
+  margin-left: 10%;
+  text-decoration: none;
+}
 #sent-sec,
 #drafts-sec,
 #trash-sec {
-      background-color: white;
-      cursor: pointer;
-      display: flex;
-      margin-left: 10%;
-      margin-right: 10%;
-      padding-left: 24%;
-      padding-top: 2%;
-    }
+  background-color: white;
+  cursor: pointer;
+  display: flex;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-left: 24%;
+  padding-top: 2%;
+}
 #sent-txt,
 #drafts-txt,
 #trash-txt {
-      color: black;
-      font-family: 'Mulish', sans-serif;
-      font-size: 24px;
-      margin-left: 10%;
-      text-decoration: none;
-    }
+  color: black;
+  font-family: "Mulish", sans-serif;
+  font-size: 24px;
+  margin-left: 10%;
+  text-decoration: none;
+}
 #sent-sec:hover,
 #drafts-sec:hover,
 #trash-sec:hover {
-      background-color: #FF4F5A;
-      cursor: pointer;
-      text-decoration: none;
-    }
+  background-color: #ff4f5a;
+  cursor: pointer;
+  text-decoration: none;
+}
 #sent-txt:hover,
 #drafts-txt:hover,
 #trash-txt:hover {
-      color: white;
-    }
+  color: white;
+}
 #design-section {
-    background-color: white;
-    display: grid;
-    grid-template-rows: 10% 82% 8%;
-  }
+  background-color: white;
+  display: grid;
+  grid-template-rows: 10% 82% 8%;
+}
 #section-header {
-    background-color: #eeacac;
-    display: grid;
-    grid-template-columns: 85% 15%;
-  }
+  background-color: #eeacac;
+  display: grid;
+  grid-template-columns: 85% 15%;
+}
 #section-name {
-    font-family: "Mulish", sans-serif;
-    font-size: 36px;
-    margin-left: 50%;
-    margin-top: 1%;
-  }
+  font-family: "Mulish", sans-serif;
+  font-size: 36px;
+  margin-left: 50%;
+  margin-top: 1%;
+}
 #sign-out-btn {
-    cursor: pointer;
-    display: grid;
-    grid-template-columns: 65% 35%;
-    margin-top: 10%;
-  }
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 65% 35%;
+  margin-top: 10%;
+}
 #sign-out-txt {
-    font-family: "Mulish", sans-serif;
-    font-size: 24px;
-    margin-left: 10%;
-    text-decoration: none;
-    color: black;
-  }
+  color: black;
+  font-family: "Mulish", sans-serif;
+  font-size: 24px;
+  margin-left: 10%;
+  text-decoration: none;
+}
 #profile-user {
-    height: 32px;
-    width: 32px;
-  }
+  height: 32px;
+  width: 32px;
+}
 #mails-container {
-    background-image: url(../assets/images/sectionpg-bg-small.jpg);
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    overflow-y: auto;
-  }
+  background-image: url(../assets/images/sectionpg-bg-small.jpg);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  overflow-y: auto;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 .mail {
-    background-color: #faebeb;
-    cursor: pointer;
-    display: grid;
-    font-family: "Mulish", sans-serif;
-    grid-template-columns: 5% 20% 65% 10%;
-    height: 8%;
-    margin-bottom: 0.5%;
-    padding-top: 1%;
-    width: 100%;
-  }
+  background-color: #faebeb;
+  cursor: pointer;
+  display: grid;
+  font-family: "Mulish", sans-serif;
+  grid-template-columns: 5% 20% 65% 10%;
+  height: 8%;
+  margin-bottom: 0.5%;
+  padding-top: 1%;
+  width: 100%;
+}
 .pin {
-    padding-left: 20%;
-  }
+  padding-left: 20%;
+}
 .pin-symbol {
-    height: 28px;
-    width: 28px;
-  }
+  height: 28px;
+  width: 28px;
+}
 .sender-name,
 .mail-title {
-    font-size: 22px;
-  }
+  font-size: 22px;
+}
 .time {
-    font-size: 18px;
-  }
+  font-size: 18px;
+}
 #compose-btn {
-    background-color: #ff4f5a;
-    border-radius: 18px;
-    color: white;
-    cursor: pointer;
-    display: flex;
-    margin-left: 84%;
-    padding: 0.5% 2.2% 0.5% 2.2%;
-    width: fit-content;
-  }
+  background-color: #ff4f5a;
+  border-radius: 18px;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  margin-left: 84%;
+  padding: 0.5% 2.2% 0.5% 2.2%;
+  width: fit-content;
+}
 #compose-txt {
-    color: white;
-    font-family: "Mulish", sans-serif;
-    font-size: 24px;
-    margin-left: 8%;
-    text-decoration: none;
-  }
+  color: white;
+  font-family: "Mulish", sans-serif;
+  font-size: 24px;
+  margin-left: 8%;
+  text-decoration: none;
+}
 #compose-sym {
-    height: 22px;
-    margin-top: 20%;
-    width: 22px;
-  }
+  height: 22px;
+  margin-top: 20%;
+  width: 22px;
+}
 #compose-btn:hover {
-    background-color: #a12c34;
-    color: white;
-  }
+  background-color: #a12c34;
+  color: white;
+}

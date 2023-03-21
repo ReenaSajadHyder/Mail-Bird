@@ -40,38 +40,45 @@
 #sent-sym,
 #drafts-sym,
 #trash-sym {
-  height: 22px;
-  width: 22px;
-  margin-top: 20%;
+    height: 22px;
+    width: 22px;
+    margin-top: 20%;
 }
-
 #inbox-sec,
+#sent-sec,
 #drafts-sec,
-#trash-sec,
-#sent-sec {
-  margin-left: 10%;
-  margin-right: 10%;
-  background-color: white;
-  padding-top: 2%;
-  padding-left: 24%;
-  cursor: pointer;
-  display: flex;
+#trash-sec {
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: white;
+    padding-top: 2%;
+    padding-left: 24%;
+    cursor: pointer;
+    display: flex;
 }
 #inbox-txt,
+#sent-txt,
 #drafts-txt,
-#trash-txt,
-#sent-txt {
-  font-family: "Mulish", sans-serif;
-  font-size: 24px;
-  margin-left: 10%;
+#trash-txt{
+    font-family: 'Mulish', sans-serif;
+    font-size: 24px;
+    margin-left: 10%;
+    text-decoration: none;
+    color: black;
 }
 #inbox-sec:hover,
+#sent-sec:hover,
 #drafts-sec:hover,
-#trash-sec:hover,
-#sent-sec:hover {
-  background-color: #ff4f5a;
-  color: white;
-  cursor: pointer;
+#trash-sec:hover {
+    background-color: #FF4F5A;
+    cursor: pointer;
+    text-decoration: none;
+}
+#inbox-txt:hover,
+#sent-txt:hover,
+#drafts-txt:hover,
+#trash-txt:hover {
+    color: white;
 }
 
 #compose-section {

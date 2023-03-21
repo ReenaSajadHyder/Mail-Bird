@@ -109,11 +109,11 @@
     margin-top: 10%;
   }
 #sign-out-txt {
+    color: black;
     font-family: "Mulish", sans-serif;
     font-size: 24px;
     margin-left: 10%;
     text-decoration: none;
-    color: black;
   }
 #profile-user {
     height: 32px;
@@ -124,6 +124,18 @@
     background-position: 50% 50%;
     background-repeat: no-repeat;
     overflow-y: auto;
+  }
+::-webkit-scrollbar {
+    width: 10px;
+  }
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
   }
 .mail {
     background-color: #faebeb;
