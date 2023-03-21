@@ -124,6 +124,18 @@
   background-color: #f5f5f5;
   padding: 2% 2% 1% 2%;
 }
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 #subject-time {
   display: grid;
   grid-template-columns: 98% 2%;
