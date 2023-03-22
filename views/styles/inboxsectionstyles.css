@@ -103,13 +103,13 @@
   margin-top: 1%;
 }
 #sign-out-btn {
-  cursor: pointer;
   display: grid;
   grid-template-columns: 65% 35%;
   margin-top: 10%;
 }
 #sign-out-txt {
   color: black;
+  cursor: pointer;
   font-family: "Mulish", sans-serif;
   font-size: 24px;
   margin-left: 10%;
@@ -163,8 +163,8 @@
   font-size: 18px;
 }
 .trash-can {
-  margin-top: 8%;
   height: 16px;
+  margin-top: 8%;
   width: 16px;
 }
 #compose-btn {
