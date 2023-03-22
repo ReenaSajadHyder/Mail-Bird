@@ -142,7 +142,7 @@
     cursor: pointer;
     display: grid;
     font-family: "Mulish", sans-serif;
-    grid-template-columns: 5% 20% 65% 10%;
+    grid-template-columns: 5% 20% 65% 7% 3%;
     height: 8%;
     margin-bottom: 0.5%;
     padding-top: 1%;
@@ -161,6 +161,11 @@
   }
 .time {
     font-size: 18px;
+  }
+  .trash-can {
+    margin-top: 8%;
+    height: 16px;
+    width: 16px;
   }
 #compose-btn {
     background-color: #ff4f5a;

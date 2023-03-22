@@ -40,6 +40,9 @@ function displayMails(){
                 <div class="time">
                     ${mailArr[i].time}
                 </div>
+                <div>
+                    <img class="trash-can" src="./assets/images/trash-outline.png" alt="trash can">
+                </div>
             </div>` + document.querySelector("#mails-container").innerHTML;
         }
     }

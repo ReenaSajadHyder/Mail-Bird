@@ -16,7 +16,6 @@ function fetchUsername(){
 }
 
 function fetchDrafts(){
-    // console.log("Inside fetchmail method in js file")
     fetch("/fetchDrafts")
     .then((data) => data.json())  
      .then((result) => {
@@ -43,6 +42,9 @@ function displayMails(){
                 </div>
                 <div class="time">
                     ${mailArr[i].time}
+                </div>
+                <div>
+                    <img class="trash-can" src="./assets/images/trash-outline.png" alt="trash can">
                 </div>
             </div>`
             + document.querySelector("#mails-container").innerHTML 
