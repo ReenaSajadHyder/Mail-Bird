@@ -1,5 +1,5 @@
 let mailArr = [];
-let email
+let email;
 
 (function(){
     fetchUsername();
@@ -27,13 +27,12 @@ function fetchMail(){
 }
 
 function displayMails(){
-    console.log("Inside display mails function")
     document.querySelector("#mails-container").innerHTML = "";
     for (let i = 0; i < mailArr.length; i++ ){
         console.log("Inside for loop");
         if(mailArr[i].recipient == email){
             console.log("Inside if loop");
-            document.querySelector("#mails-container").innerHTML += 
+            document.querySelector("#mails-container").innerHTML = 
             `<div class="mail">
                 <div class="pin"><img class="pin-symbol" src="./assets/images/tack-bw.png" alt="pinned"></div>
                 <div class="sender-name">
@@ -45,7 +44,7 @@ function displayMails(){
                 <div class="time">
                     ${mailArr[i].time}
                 </div>
-            </div>`
+            </div>` + document.querySelector("#mails-container").innerHTML;
         }
     }
     

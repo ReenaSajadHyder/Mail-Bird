@@ -294,6 +294,23 @@ app.post("/addDraft", (req, res) => {
   }
 });
 
+app.get("/fetchDrafts", (req, res) => {
+  let data;
+  fs.readFile("./drafts.json","utf-8", (err, draftData) => {
+    if(err) {
+      console.log(err);
+    }
+    else {
+      try {
+        data = JSON.parse(draftData);
+        res.json(data);
+      }
+      catch{
+        console.log("Error parsing drafts file");
+      }
+    }
+  })
+});
 
 app.listen(8000, () => {
   console.log(
