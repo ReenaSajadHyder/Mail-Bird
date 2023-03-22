@@ -115,6 +115,11 @@
     margin-left: 10%;
     text-decoration: none;
   }
+  #current-user {
+    font-family: "Mulish", sans-serif;
+    font-size: 16px;
+    margin-left: 30%;
+  }
 #profile-user {
     height: 32px;
     width: 32px;

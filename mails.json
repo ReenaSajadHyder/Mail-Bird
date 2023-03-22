@@ -1,10 +1,34 @@
 [
-    {
-        "id": "1679045817868",
-        "time": "6:57 AM",
-        "subject": "Meeting at 3",
-        "from": "reena@gmail.com",
-        "to": "reemaa@gmail.com",
-        "content": "1. The display has rounded corners that follow a beautiful curved design, and these corners are within a standard rectangle. When measured as a standard rectangular shape, the screen is 15.40 centimetres / 6.06 inches (iPhone 14) or 16.95 centimetres / 6.68 inches (iPhone 14 Plus) diagonally. Actual viewable area is less. "
-      }
+  {
+    "id": "lfj6xnnwki5o4ceur8",
+    "time": "10:4",
+    "subject": "Meeting",
+    "sender": "reena@gmail.com",
+    "recipient": "reemaa@gmail.com",
+    "content": " Understand the problem - do some basic study, think through all dimensions of Problem and compile a list of written questions and assumptions based on what questions you think are necessary for an effective design and solution for the problem. Understand the requirement and protocol. Send your queries to the trainer. This is (SUBMISSION A). Imagine that you are sending this list in an email directly to a customer. You must submit this list at most 4 hours from start of assignment. If you finish SUBMISSION A faster, you can start working on any aspects of problem that you think are not too influenced by the answers to those questions. SUBMISSION A will be evaluated based on how completely your questions spec out the problem so that the final output coincides with the customer's expectations. "
+  },
+  {
+    "id": "lfj75k4eivscvhfg0r",
+    "time": "10:10 AM",
+    "subject": "Meeting",
+    "sender": "ace@gmail.com",
+    "recipient": "reemaa@gmail.com",
+    "content": "var hours = now.getHours() % 12 || 12;"
+  },
+  {
+    "id": "lfj7ilehtv834wh50ma",
+    "time": "10:21 AM",
+    "subject": "Hi there",
+    "sender": "ace@gmail.com",
+    "recipient": "reemaa@gmail.com",
+    "content": "Hi Reemaa,\n\nHow's it going?\n\nSorry I haven't been in touch for such a long time but I've had exams so I've been studying every free minute. Anyway, I'd love to hear all your news and I'm hoping we can get together soon to catch up. We just moved to a bigger flat so maybe you can come and visit one weekend?\n\nHow's the new job?  \n\nLooking forward to hearing from you!\n\nAce"
+  },
+  {
+    "id": "lfj7phk3uhg407rqq79",
+    "time": "10:26 AM",
+    "subject": "Hello",
+    "sender": "reena@gmail.com",
+    "recipient": "reemaa@gmail.com",
+    "content": "Hi Reemaa,\n\nI've been meaning to write to you for ages now so don't worry! How did your exams go? When will you know your results? I'm sure you did brilliantly as always!\n\nAs for me, I'll have been in the new job three months by the end of next week so I'm feeling more settled in. At first I felt like I had no idea what I was doing but now I realise it's normal to feel like that. There was a lot to learn – there still is actually – and I soon had to get used to the idea that I can't know everything. I used to work late a lot and at weekends but I'm slowly getting into a normal routine.\n\nWhich means I'd love to come and visit! We really need a good catch up! I can't believe we haven't seen each other since Carl's wedding. How does next month sound?\n\nAnyway, I'd better get back to work.\n\nCongratulations on the new flat! Can't wait to see you!\n\nLove,\n\nreena"
+  }
 ]

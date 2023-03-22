@@ -40,5 +40,26 @@
     "email": "kamiloon@gmail.com",
     "password": "kamiloon",
     "confirmPassword": "kamiloon"
+  },
+  {
+    "id": "1679396707171",
+    "name": "Ash",
+    "email": "ashritha@gmail.com",
+    "password": "ashritha",
+    "confirmPassword": "ashritha"
+  },
+  {
+    "id": "1679402193453",
+    "name": "ace",
+    "email": "ace@gmail.com",
+    "password": "ace",
+    "confirmPassword": "ace"
+  },
+  {
+    "id": "1679462074566",
+    "name": "tom",
+    "email": "tom@gmail.com",
+    "password": "tom",
+    "confirmPassword": "tom"
   }
 ]

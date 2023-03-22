@@ -4,11 +4,13 @@ const fs = require("fs");
 const flash = require("connect-flash");
 const session = require("express-session");
 const cookieParser = require("cookie-parser");
+let currentUser;
+let CurrrentUserEmail;
 
 app.set("view-engine", "ejs");
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(__dirname + "/views"));
-
+app.use(express.json());
 app.use(cookieParser("NotSoSecret"));
 app.use(
   session({
@@ -28,12 +30,11 @@ app.get("/login", (req, res) => {
   res.render("login.ejs", { message: req.flash("message") });
 });
 
-app.get("/homepg", (req,res) => {
+app.get("/homepg", (req, res) => {
   res.render("homepg.ejs", { message: req.flash("message") });
-})
+});
 
 app.post("/login", (req, res) => {
-  console.log("inside login post");
   let email = req.body.email;
   let password = req.body.password;
   let data = [];
@@ -51,13 +52,16 @@ app.post("/login", (req, res) => {
     for (let i = 0; i < data.length; i++) {
       if (data[i].email === email) {
         userExists = "true";
-          if (data[i].password === password) {
-            req.flash("message", `${data[i].name}`);
-            res.redirect("/homepg");
-          } else {
-            req.flash("message", "Password entered is incorrect.");
-            res.redirect("/login");
-          }
+        if (data[i].password === password) {
+          currentUser = data[i].name;
+          CurrentUserEmail = data[i].email;
+          req.flash("message", `${currentUser}`);
+          res.redirect("/homepg");
+          // window.sessionStorage.setItem("data[i].name", "data[i].email");
+        } else {
+          req.flash("message", "Password entered is incorrect.");
+          res.redirect("/login");
+        }
         break;
       }
     }
@@ -86,34 +90,28 @@ app.post("/signup", async (req, res) => {
     };
     let data = [];
     let userExists = "false";
-    fs.readFile("./users.json", "utf-8",(err,userData) => {
-      if(err){
+    fs.readFile("./users.json", "utf-8", (err, userData) => {
+      if (err) {
         console.log(err);
-      }
-      else{
-        console.log("inside");
+      } else {
         data = JSON.parse(userData);
-        for (let i = 0; i < data.length; i++){
-          if(data[i].email === userObj.email){
+        for (let i = 0; i < data.length; i++) {
+          if (data[i].email === userObj.email) {
             userExists = "true";
-            console.log(userExists);
           }
         }
-        if(userExists === "true"){
-          console.log("Inside user exists true");
+        if (userExists === "true") {
           req.flash(
             "message",
             "The email you entered is already in use. Please enter a different email id."
-          )
+          );
           res.redirect("/signup");
-        }
-        else {
-          console.log("Inside user exists false");
+        } else {
           if (userObj.password !== userObj.confirmPassword) {
             req.flash(
               "message",
               "The passwords don't match. Please Enter the same password again."
-            )
+            );
             res.redirect("/signup");
           } else {
             let data = [];
@@ -124,7 +122,6 @@ app.post("/signup", async (req, res) => {
                 try {
                   data = JSON.parse(userData);
                   data.push(userObj);
-                  console.log(data);
                   fs.writeFile(
                     "./users.json",
                     JSON.stringify(data, null, 2),
@@ -145,7 +142,7 @@ app.post("/signup", async (req, res) => {
           }
         }
       }
-    })
+    });
   } catch (err) {
     console.log("Throws error", err);
     res.redirect("/signup");
@@ -176,9 +173,107 @@ app.get("/openmail", (req, res) => {
   res.render("openmail.ejs");
 });
 
-app.get("/signout", (req,res) => {
+app.get("/signout", (req, res) => {
+  // window.sessionStorage.clear();
   res.render("login.ejs", { message: req.flash("message") });
-})
+});
+
+app.get("/fetchUsername", (req, res) => {
+  let user = currentUser;
+  let email = CurrentUserEmail;
+  res.json({user, email});
+});
+
+app.post("/addMail", (req, res) => {
+  try {
+    var today = new Date();
+    var AmPm;
+    if((today.getHours()>12)){
+      AmPm = "PM";
+    }
+    else{
+      AmPm = "AM";
+    }
+    var hours = today.getHours() % 12 || 12;
+    let newMail = {};
+    newMail.id = Date.now().toString(36) + Math.random().toString(36).slice(2);
+    newMail.time = hours + ":" + today.getMinutes() + " " +AmPm;
+    newMail.subject = req.body.subject;
+    newMail.sender = req.body.sender;
+    newMail.recipient = req.body.recipient;
+    newMail.content = req.body.content;
+    let data = [];
+    fs.readFile("./mails.json", "utf-8", (err, mailData) => {
+      if (err) {
+        console.log(err);
+      } else {
+        try {
+          data = JSON.parse(mailData);
+          data.push(newMail);
+          fs.writeFile("./mails.json", JSON.stringify(data, null, 2), (err) => {
+            if (err) {
+              console.log(err);
+            } else {
+              let message = "Succesfully written";
+              console.log("Succesfully written into mails.json");
+              res.json(message);
+            }
+          });
+        } catch (err) {
+          console.log("Error parsing mails JSON file:" + err);
+        }
+      }
+    });
+  } catch (err) {
+    console.log("Error parsing mails JSOn file:" + err);
+  }
+});
+
+app.post("/addDraft", (req, res) => {
+  try {
+    var today = new Date();
+    var AmPm;
+    if((today.getHours()>12)){
+      AmPm = "PM";
+    }
+    else{
+      AmPm = "AM";
+    }
+    var hours = today.getHours() % 12 || 12;
+    let newDraft = {};
+    newDraft.id = Date.now().toString(36) + Math.random().toString(36).slice(2);
+    newDraft.time = hours + ":" + today.getMinutes() + " " +AmPm;
+    newDraft.subject = req.body.subject;
+    newDraft.sender = req.body.sender;
+    newDraft.recipient = req.body.recipient;
+    newDraft.content = req.body.content;
+    let data = [];
+    fs.readFile("./drafts.json", "utf-8", (err, draftData) => {
+      if (err) {
+        console.log(err);
+      } else {
+        try {
+          data = JSON.parse(draftData);
+          data.push(newDraft);
+          fs.writeFile("./drafts.json", JSON.stringify(data, null, 2), (err) => {
+            if (err) {
+              console.log(err);
+            } else {
+              let message = "Succesfully written";
+              console.log("Succesfully written into drafts.json");
+              res.json(message);
+            }
+          });
+        } catch (err) {
+          console.log("Error parsing mails JSON file:" + err);
+        }
+      }
+    });
+  } catch (err) {
+    console.log("Error parsing mails JSOn file:" + err);
+  }
+});
+
 
 app.listen(8000, () => {
   console.log(
