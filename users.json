@@ -7,13 +7,6 @@
     "confirmPassword": "reena"
   },
   {
-    "id": "1679317654675",
-    "name": "Reena Sajad",
-    "email": "reenasajad@gmail.com",
-    "password": "reenasajad",
-    "confirmPassword": "reenasajad"
-  },
-  {
     "id": "1679374284212",
     "name": "Reemaa Sajad",
     "email": "reemaa@gmail.com",
@@ -61,5 +54,12 @@
     "email": "tom@gmail.com",
     "password": "tom",
     "confirmPassword": "tom"
+  },
+  {
+    "id": "1679470108054",
+    "name": "Kai",
+    "email": "kai@gmail.com",
+    "password": "kai",
+    "confirmPassword": "kai"
   }
 ]

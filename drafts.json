@@ -1,18 +1,26 @@
 [
   {
-    "id": "lfj8fk34sxfhl62ut7",
-    "time": "10:46 AM",
-    "subject": "Job offer acceptance",
-    "sender": "tom@gmail.com",
-    "recipient": "dill@gmail.com",
-    "content": "Hey Dill,\n\nI've just received your job offer email, and I'm 100% going to accept!\n\nIt's been a pleasure learning more about the role and the organization, and I'm convinced it's the ideal opportunity for me.\n\nYou can consider this email a formal acceptance. Please outline the next steps in the process. I can provide any documents, references, or information you need.\n\nIf you need to contact me, you can message me anytime. If you spot me in the street, I'll be the one with a big smile on my face!\n\nI can't wait to start working with you and making a difference.\nTom"
-  },
-  {
     "id": "lfj8ldhkvzjzg6uyxsa",
     "time": "10:51 AM",
     "subject": "Lunch invite!",
     "sender": "tom@gmail.com",
     "recipient": "ace@gmail.com",
     "content": "Hey all!\n\nIt's about time we organized a social event, and I'm going to do it!\n\nI've done some research, gone through shared calendars, and identified a date, time, and venue that should work for us all (details below!).\n\nDate\nTime\nVenue\nCan you let me know if you would like to attend? Drop me an email with a yes or no, and I'll confirm the numbers and make a booking.\n\nI can't wait to see you.\nTom"
+  },
+  {
+    "id": "lfjd3j45lgo6gclfes8",
+    "time": "12:57 AM",
+    "subject": "Request for sick leave",
+    "sender": "reena@gmail.com",
+    "recipient": "kamiloon@gmail.com",
+    "content": "Hi Kami,\n\nI am writing to request sick leave from [date range]. I will be undergoing surgery and at the recommendation of my doctor, I need to be off of work for 2 weeks in order to recover. I hope to be back at work on [date]. \n\nPlease let me know if you have any questions.\n\nRegards,\n\n[Reena]"
+  },
+  {
+    "id": "lfjd4faok7w4uaz8fsk",
+    "time": "12:57 AM",
+    "subject": "Request for discount",
+    "sender": "reena@gmail.com",
+    "recipient": "kamiloon@gmail.com",
+    "content": "Dear Kai,\n\nThank you for sending over your catalog of goods. We are very much interested in purchasing [name of the product(s)] from you and would like to get a quote for these items.\n\nAdditionally, we are hoping that this will lead to a prolonged partnership between the two of us. Therefore, we are kindly requesting that you provide us with your best possible price since we would like to use your goods on a permanent basis.\n\nThank you for your understanding.\n\nWith regards,\n\nReena"
   }
 ]

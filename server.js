@@ -5,7 +5,7 @@ const flash = require("connect-flash");
 const session = require("express-session");
 const cookieParser = require("cookie-parser");
 let currentUser;
-let CurrrentUserEmail;
+let currentUserEmail;
 
 app.set("view-engine", "ejs");
 app.use(express.urlencoded({ extended: false }));
@@ -54,7 +54,7 @@ app.post("/login", (req, res) => {
         userExists = "true";
         if (data[i].password === password) {
           currentUser = data[i].name;
-          CurrentUserEmail = data[i].email;
+          currentUserEmail = data[i].email;
           req.flash("message", `${currentUser}`);
           res.redirect("/homepg");
           // window.sessionStorage.setItem("data[i].name", "data[i].email");
@@ -180,8 +180,26 @@ app.get("/signout", (req, res) => {
 
 app.get("/fetchUsername", (req, res) => {
   let user = currentUser;
-  let email = CurrentUserEmail;
+  let email = currentUserEmail;
   res.json({user, email});
+});
+
+app.get("/fetchMail", (req, res) => {
+  let data;
+  fs.readFile("./mails.json","utf-8", (err, mailData) => {
+    if(err) {
+      console.log(err);
+    }
+    else {
+      try {
+         data = JSON.parse(mailData);
+         res.json(data);
+      }
+      catch{
+        console.log("Error parsing mails file");
+      }
+    }
+  })
 });
 
 app.post("/addMail", (req, res) => {
@@ -199,6 +217,7 @@ app.post("/addMail", (req, res) => {
     newMail.id = Date.now().toString(36) + Math.random().toString(36).slice(2);
     newMail.time = hours + ":" + today.getMinutes() + " " +AmPm;
     newMail.subject = req.body.subject;
+    newMail.senderName = req.body.senderName;
     newMail.sender = req.body.sender;
     newMail.recipient = req.body.recipient;
     newMail.content = req.body.content;
@@ -244,6 +263,7 @@ app.post("/addDraft", (req, res) => {
     newDraft.id = Date.now().toString(36) + Math.random().toString(36).slice(2);
     newDraft.time = hours + ":" + today.getMinutes() + " " +AmPm;
     newDraft.subject = req.body.subject;
+    newDraft.senderName = req.body.senderName;
     newDraft.sender = req.body.sender;
     newDraft.recipient = req.body.recipient;
     newDraft.content = req.body.content;

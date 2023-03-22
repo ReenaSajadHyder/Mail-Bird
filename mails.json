@@ -1,34 +1,83 @@
 [
   {
-    "id": "lfj6xnnwki5o4ceur8",
-    "time": "10:4",
-    "subject": "Meeting",
+    "id": "lfjcq0ia8aagx6b7am",
+    "time": "12:46 AM",
+    "subject": "Thank you for your services",
+    "senderName": "reena",
     "sender": "reena@gmail.com",
     "recipient": "reemaa@gmail.com",
-    "content": " Understand the problem - do some basic study, think through all dimensions of Problem and compile a list of written questions and assumptions based on what questions you think are necessary for an effective design and solution for the problem. Understand the requirement and protocol. Send your queries to the trainer. This is (SUBMISSION A). Imagine that you are sending this list in an email directly to a customer. You must submit this list at most 4 hours from start of assignment. If you finish SUBMISSION A faster, you can start working on any aspects of problem that you think are not too influenced by the answers to those questions. SUBMISSION A will be evaluated based on how completely your questions spec out the problem so that the final output coincides with the customer's expectations. "
+    "content": "Hi Reemaa,\n\nThank you so much for [action they did] It was such a pleasure to work with you, and I’m very excited about the next opportunity to work together again.\n\nPlease don’t hesitate to contact me if I can provide any additional information.\n\nBest regards,\n\nReena"
   },
   {
-    "id": "lfj75k4eivscvhfg0r",
-    "time": "10:10 AM",
-    "subject": "Meeting",
-    "sender": "ace@gmail.com",
-    "recipient": "reemaa@gmail.com",
-    "content": "var hours = now.getHours() % 12 || 12;"
-  },
-  {
-    "id": "lfj7ilehtv834wh50ma",
-    "time": "10:21 AM",
-    "subject": "Hi there",
-    "sender": "ace@gmail.com",
-    "recipient": "reemaa@gmail.com",
-    "content": "Hi Reemaa,\n\nHow's it going?\n\nSorry I haven't been in touch for such a long time but I've had exams so I've been studying every free minute. Anyway, I'd love to hear all your news and I'm hoping we can get together soon to catch up. We just moved to a bigger flat so maybe you can come and visit one weekend?\n\nHow's the new job?  \n\nLooking forward to hearing from you!\n\nAce"
-  },
-  {
-    "id": "lfj7phk3uhg407rqq79",
-    "time": "10:26 AM",
-    "subject": "Hello",
+    "id": "lfjcr6oniezyjkgliig",
+    "time": "12:47 AM",
+    "subject": "Recognition email",
+    "senderName": "reena",
     "sender": "reena@gmail.com",
-    "recipient": "reemaa@gmail.com",
-    "content": "Hi Reemaa,\n\nI've been meaning to write to you for ages now so don't worry! How did your exams go? When will you know your results? I'm sure you did brilliantly as always!\n\nAs for me, I'll have been in the new job three months by the end of next week so I'm feeling more settled in. At first I felt like I had no idea what I was doing but now I realise it's normal to feel like that. There was a lot to learn – there still is actually – and I soon had to get used to the idea that I can't know everything. I used to work late a lot and at weekends but I'm slowly getting into a normal routine.\n\nWhich means I'd love to come and visit! We really need a good catch up! I can't believe we haven't seen each other since Carl's wedding. How does next month sound?\n\nAnyway, I'd better get back to work.\n\nCongratulations on the new flat! Can't wait to see you!\n\nLove,\n\nreena"
+    "recipient": "ace@gmail.com",
+    "content": "Dear Mr.Ace,\n\nI would like to formally recognize all the hard work and dedication you’ve put into completing [project/task]. Due to your consistent efforts, the project is what it is today and that led to the positive results we were hoping for. \n\nOn behalf of [company name, board members, etc.], we would like to formally thank you for your hard work and we would like to let you know that we highly value your contribution and your continued dedication to your job.\n\nWe are very grateful to have you as a member of our team and we wish to continue to see you thrive within our organization.\n\nBest regards,\nReena"
+  },
+  {
+    "id": "lfjcs0kunvj5op8y4ts",
+    "time": "12:48 AM",
+    "subject": "Letter of complaint",
+    "senderName": "reena",
+    "sender": "reena@gmail.com",
+    "recipient": "nalina@gmail.com",
+    "content": "Dear Nalina,\n\nOn January 30th, 2020, I made a reservation at your restaurant located at 1234 Mulberry Lane for a birthday dinner for four people. This letter is intended to bring certain issues to your attention.\n\nUnfortunately, we did not enjoy our dinner due to the fact that the food was very slow to arrive and we received the wrong dishes. It’s understandable that it was a busy time at your restaurant, but the quality of the service was not as expected.\n\nTo resolve this problem, I would appreciate it if you could provide compensation in the form of a gift voucher or discount on a future meal. \n\nI’m looking forward to your reply.\n\nWith regards,\n\nReena"
+  },
+  {
+    "id": "lfjct7e9w0f3i97jpz",
+    "time": "12:49 AM",
+    "subject": "Cover Letter",
+    "senderName": "reena",
+    "sender": "reena@gmail.com",
+    "recipient": "sadhana@gmail.com",
+    "content": "Dear hiring manager Sadhana,\n\nI was very interested while reading the job posting for the position of [job title]. I believe that the experience I have strongly match the responsibilities of this position. I am enthusiastic about submitting my application for the position.\n\nMy most recent position was at [company name], where I was a [job title name ]. Additionally, I recently participated in a [mention an accomplishment in your last job that is relevent]\n\nI have attached my resume to this email. Thanks to it, I believe you will learn more about my experience, education, and achievements.\n\nLooking forward to hearing from you,\n\nReena"
+  },
+  {
+    "id": "lfjcupu02b25pcd6nbu",
+    "time": "12:50 AM",
+    "subject": "Reminder email",
+    "senderName": "Ash",
+    "sender": "ashritha@gmail.com",
+    "recipient": "reena@gmail.com",
+    "content": "Hi Reena,\n\nI’m sure your schedule is very busy, so this email is simply to remind you of your upcoming interview with [name] who is a candidate for [name of position].\n\nThe interview will be at [time] on [date] in [location].\n\nPlease let me know if there’s anything I can help you with to prepare to interview this candidate.\n\nBest,\n\nAsh"
+  },
+  {
+    "id": "lfjcvraqrd1lzeck3cr",
+    "time": "12:51 AM",
+    "subject": "Proposal Submission",
+    "senderName": "Ash",
+    "sender": "ashritha@gmail.com",
+    "recipient": "reena@gmail.com",
+    "content": "Dear Reena,\n\nPlease find enclosed to this email the proposal you requested regarding your website audit.\n\nWe hope that you will find this proposal helpful and insightful and that it meets your expectations. Of course, if you would like to make any adjustments or go in a different direction, feel free to let us know and we’d be happy to discuss with you.\n\nThank you for entrusting [your company name] with your website audit, and we hope to hear back from you soon.\n\nBest regards,\n\nAsh,\nHiring Manager"
+  },
+  {
+    "id": "lfjcx5frvjibwif4hvd",
+    "time": "12:52 AM",
+    "subject": "Email of inquiry requesting information",
+    "senderName": "tom",
+    "sender": "tom@gmail.com",
+    "recipient": "reena@gmail.com",
+    "content": "Dear Reena,\n\nThis email is to inquire about the website audit services you posted on your website. \n\nAs I understand, you offer services to audit businesses’ websites and provide personalized insight into what improvements can be made. I’d like to request further information with regard to your pricing as well as the scope of the work that will be performed, including specific services that can be expected.\n\nI look forward to receiving your response.\n\nBest regards,\n\nTom"
+  },
+  {
+    "id": "lfjcyagil14si641c7",
+    "time": "12:53 AM",
+    "subject": "Status Update Required",
+    "senderName": "ace",
+    "sender": "ace@gmail.com",
+    "recipient": "reena@gmail.com",
+    "content": "Hi Reena,\n\nI wanted to check in and check on the status of the website audit project that is due on [date]. \n\nPlease let me know where you’re at with the project and don’t hesitate to let me know if you require any assistance from my end.\n\nThanks,\n\nAce"
+  },
+  {
+    "id": "lfjd6j5qpswm058kuud",
+    "time": "12:59 AM",
+    "subject": "Meeting at 3PM",
+    "senderName": "Kai",
+    "sender": "kai@gmail.com",
+    "recipient": "reena@gmail.com",
+    "content": "Hi Reena,\n\nThanks for getting in touch with us about our product. I’d be glad to set up a meeting in order to give you more information, answer your questions, and show you how it can work for your business. Does 23rd December, 2030 at 3 PM work for you?\n\nI look forward to meeting with you soon!\n\nBest,\n\nKai"
   }
 ]

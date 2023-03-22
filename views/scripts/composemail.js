@@ -17,6 +17,7 @@ function fetchUsername() {
 
 function addMail() {
   let newMailObj = {};
+  newMailObj.senderName = user; 
   newMailObj.sender = email;
   newMailObj.subject = document.querySelector("#subject-inp").value;
   newMailObj.recipient = document.querySelector("#recipient-name").value;
@@ -39,6 +40,7 @@ function addMail() {
 
 function addToDrafts() {
     let draftObj = {};
+    draftObj.senderName = user;
     draftObj.sender = email;
     draftObj.subject = document.querySelector("#subject-inp").value;
     draftObj.recipient = document.querySelector("#recipient-name").value;
