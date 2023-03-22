@@ -12,7 +12,6 @@ function fetchUsername(){
      .then((result) => {
         let user = result.user;
         email = result.email;
-        document.querySelector("#current-user").innerHTML = user;
      })
 }
 

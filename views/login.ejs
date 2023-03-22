@@ -25,26 +25,48 @@
               <label id="email" for="email">Email Address</label>
             </div>
             <div>
-              <input id="email-input" type="email" id="email" name="email" placeholder="Enter email address" required />
+              <input
+                id="email-input"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter email address"
+                required
+              />
             </div>
-            <br>
+            <br />
             <div>
               <label id="password" for="password">Password</label>
             </div>
             <div class="password-container">
-                <input id="password-input" type="password" id="password" name="password" placeholder="Enter password" required />
-                <!-- <i class="far fa-eye" id="togglePassword"></i> -->
-                <img id="password-hidden" src="./assets/images/password-hidden.png" alt="password hidden">
+              <input
+                id="password-input"
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter password"
+                required
+              />
+              <!-- <i class="far fa-eye" id="togglePassword"></i> -->
+              <img
+                id="password-hidden"
+                src="./assets/images/password-hidden.png"
+                alt="password hidden"
+              />
             </div>
             <div>
-              <button id="login-btn" type="submit">Login</button>
+              <button id="login-btn" type="submit" onclick="addUser()">
+                Login
+              </button>
             </div>
           </form>
           <div id="login-error-message">
             <% if(message) { %> <%= message %> <% } %>
           </div>
           <div class="signup-redir">Don't have an account yet?</div>
-          <div><a class="signup-redir" id="signup-redir" href="/signup">Sign Up</a></div>
+          <div>
+            <a class="signup-redir" id="signup-redir" href="/signup">Sign Up</a>
+          </div>
         </div>
       </div>
       <div id="design-side">
@@ -65,5 +87,3 @@
     </div>
   </body>
 </html>
-
-

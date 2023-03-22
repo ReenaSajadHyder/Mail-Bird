@@ -12,12 +12,10 @@ function fetchUsername(){
      .then((result) => {
         let user = result.user;
         email = result.email;
-        document.querySelector("#current-user").innerHTML = user;
      })
 }
 
 function fetchMail(){
-    // console.log("Inside fetchmail method in js file")
     fetch("/fetchMail")
     .then((data) => data.json())  
      .then((result) => {
@@ -29,9 +27,7 @@ function fetchMail(){
 function displayMails(){
     document.querySelector("#mails-container").innerHTML = "";
     for (let i = 0; i < mailArr.length; i++ ){
-        console.log("Inside for loop");
         if(mailArr[i].recipient == email){
-            console.log("Inside if loop");
             document.querySelector("#mails-container").innerHTML = 
             `<div class="mail">
                 <div class="pin"><img class="pin-symbol" src="./assets/images/tack-bw.png" alt="pinned"></div>
@@ -47,5 +43,4 @@ function displayMails(){
             </div>` + document.querySelector("#mails-container").innerHTML;
         }
     }
-    
 }

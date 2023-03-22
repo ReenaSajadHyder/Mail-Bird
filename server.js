@@ -174,7 +174,6 @@ app.get("/openmail", (req, res) => {
 });
 
 app.get("/signout", (req, res) => {
-  // window.sessionStorage.clear();
   res.render("login.ejs", { message: req.flash("message") });
 });
 
@@ -246,6 +245,7 @@ app.post("/addMail", (req, res) => {
   } catch (err) {
     console.log("Error parsing mails JSOn file:" + err);
   }
+  
 });
 
 app.post("/addDraft", (req, res) => {
@@ -290,7 +290,7 @@ app.post("/addDraft", (req, res) => {
       }
     });
   } catch (err) {
-    console.log("Error parsing mails JSOn file:" + err);
+    console.log("Error parsing mails JSON file:" + err);
   }
 });
 

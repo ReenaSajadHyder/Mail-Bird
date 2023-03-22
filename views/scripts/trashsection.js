@@ -9,6 +9,5 @@ function fetchUsername(){
         let user = result.user;
         let email = result.email;
         console.log("Inside trash page "+user);
-        document.querySelector("#current-user").innerHTML = user;
      })
 }

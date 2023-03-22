@@ -11,7 +11,6 @@ function fetchUsername() {
     .then((result) => {
       user = result.user;
       email = result.email;
-      document.querySelector("#current-user").innerHTML = user;
     });
 }
 
@@ -30,12 +29,8 @@ function addMail() {
     .then((data) => data.json())
     .then((result) => {
       console.log(result);
+      window.location.href = "/sentsection";
     });
-//   fetch("/inboxsection", {})
-//   .then((data) => data.json())
-//   .then((result) => {
-
-//   });
 }
 
 function addToDrafts() {
@@ -53,10 +48,6 @@ function addToDrafts() {
         .then((data) => data.json())
         .then((result) => {
           console.log(result);
+          window.location.href = "/draftssection";
         });
-        fetch("/draftssection", {})
-          .then((data) => data.json())
-          .then((result) => {
-        
-          });
 }
