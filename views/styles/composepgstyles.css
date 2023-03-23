@@ -110,6 +110,9 @@
   text-decoration: none;
   color: black;
 }
+#sign-out-txt:hover {
+  color: white;
+}
 #profile-user {
   height: 32px;
   width: 32px;

@@ -115,6 +115,9 @@
   margin-left: 10%;
   text-decoration: none;
 }
+#sign-out-txt:hover {
+  color: white;
+}
 #profile-user {
   height: 32px;
   width: 32px;
