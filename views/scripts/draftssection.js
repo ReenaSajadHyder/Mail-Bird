@@ -1,5 +1,6 @@
 let draftsArr = [];
 let email;
+let currentMailId = "";
 
 (function(){
     fetchUsername();
@@ -28,11 +29,10 @@ function displayMails(){
     console.log("Inside display mails function");
     document.querySelector("#mails-container").innerHTML = "";
     for (let i = 0; i < mailArr.length; i++ ){
-        console.log("Inside for loop");
         if(mailArr[i].sender == email){
-            console.log("Inside if loop");
+            currentMailId = mailArr[i].id;
             document.querySelector("#mails-container").innerHTML = 
-            `<div class="mail">
+            `<div class="mail" onclick="showMailContent(${currentMailId})">
                 <div class="pin"><img class="pin-symbol" src="./assets/images/tack-bw.png" alt="pinned"></div>
                 <div class="sender-name">
                     ${mailArr[i].recipient}
@@ -51,4 +51,29 @@ function displayMails(){
         }
     }
 
+}
+
+function showMailContent(id) {
+    let mailContentId = id;
+    for (let i = 0; i < mailArr.length; i++){
+        if(mailArr[i].id == mailContentId){
+            document.querySelector("#mails-container").style.overflowY = "hidden";
+            document.querySelector("#mails-container").innerHTML = 
+                `<div id="compose-box">
+                    <div id="mail-container">
+                        <div id="subject-time">
+                            <div id="subject">${mailArr[i].subject}</div>
+                            <div id="close-compose" onclick="displayMails()">&#10005</div>
+                        </div>
+                        <div id="to-recipient">
+                            <div id="to">To:</div>
+                            <div id="recipient-name">${mailArr[i].recipient}</div>
+                        </div>
+                        <div id="content">
+                            ${mailArr[i].content}
+                        </div>
+                    </div>
+                </div>`
+        }
+    }
 }

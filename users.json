@@ -68,5 +68,12 @@
     "email": "asdfghjklasdf@gmail.com",
     "password": "asdf",
     "confirmPassword": "asdf"
+  },
+  {
+    "id": "1679547212164",
+    "name": "pradheep",
+    "email": "pradheep@gmail.com",
+    "password": "pradheep",
+    "confirmPassword": "pradheep"
   }
 ]

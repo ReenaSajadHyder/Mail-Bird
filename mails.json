@@ -1,137 +1,83 @@
 [
   {
-    "id": "lfjcq0ia8aagx6b7am",
-    "time": "12:46 AM",
-    "subject": "Thank you for your services",
-    "senderName": "reena",
-    "sender": "reena@gmail.com",
-    "recipient": "reemaa@gmail.com",
-    "content": "Hi Reemaa,\n\nThank you so much for [action they did] It was such a pleasure to work with you, and I’m very excited about the next opportunity to work together again.\n\nPlease don’t hesitate to contact me if I can provide any additional information.\n\nBest regards,\n\nReena"
-  },
-  {
-    "id": "lfjcr6oniezyjkgliig",
-    "time": "12:47 AM",
-    "subject": "Recognition email",
-    "senderName": "reena",
-    "sender": "reena@gmail.com",
-    "recipient": "ace@gmail.com",
-    "content": "Dear Mr.Ace,\n\nI would like to formally recognize all the hard work and dedication you’ve put into completing [project/task]. Due to your consistent efforts, the project is what it is today and that led to the positive results we were hoping for. \n\nOn behalf of [company name, board members, etc.], we would like to formally thank you for your hard work and we would like to let you know that we highly value your contribution and your continued dedication to your job.\n\nWe are very grateful to have you as a member of our team and we wish to continue to see you thrive within our organization.\n\nBest regards,\nReena"
-  },
-  {
-    "id": "lfjcs0kunvj5op8y4ts",
-    "time": "12:48 AM",
-    "subject": "Letter of complaint",
-    "senderName": "reena",
-    "sender": "reena@gmail.com",
-    "recipient": "nalina@gmail.com",
-    "content": "Dear Nalina,\n\nOn January 30th, 2020, I made a reservation at your restaurant located at 1234 Mulberry Lane for a birthday dinner for four people. This letter is intended to bring certain issues to your attention.\n\nUnfortunately, we did not enjoy our dinner due to the fact that the food was very slow to arrive and we received the wrong dishes. It’s understandable that it was a busy time at your restaurant, but the quality of the service was not as expected.\n\nTo resolve this problem, I would appreciate it if you could provide compensation in the form of a gift voucher or discount on a future meal. \n\nI’m looking forward to your reply.\n\nWith regards,\n\nReena"
-  },
-  {
-    "id": "lfjct7e9w0f3i97jpz",
-    "time": "12:49 AM",
-    "subject": "Cover Letter",
-    "senderName": "reena",
-    "sender": "reena@gmail.com",
-    "recipient": "sadhana@gmail.com",
-    "content": "Dear hiring manager Sadhana,\n\nI was very interested while reading the job posting for the position of [job title]. I believe that the experience I have strongly match the responsibilities of this position. I am enthusiastic about submitting my application for the position.\n\nMy most recent position was at [company name], where I was a [job title name ]. Additionally, I recently participated in a [mention an accomplishment in your last job that is relevent]\n\nI have attached my resume to this email. Thanks to it, I believe you will learn more about my experience, education, and achievements.\n\nLooking forward to hearing from you,\n\nReena"
-  },
-  {
-    "id": "lfjcupu02b25pcd6nbu",
-    "time": "12:50 AM",
-    "subject": "Reminder email",
-    "senderName": "Ash",
-    "sender": "ashritha@gmail.com",
-    "recipient": "reena@gmail.com",
-    "content": "Hi Reena,\n\nI’m sure your schedule is very busy, so this email is simply to remind you of your upcoming interview with [name] who is a candidate for [name of position].\n\nThe interview will be at [time] on [date] in [location].\n\nPlease let me know if there’s anything I can help you with to prepare to interview this candidate.\n\nBest,\n\nAsh"
-  },
-  {
-    "id": "lfjcvraqrd1lzeck3cr",
-    "time": "12:51 AM",
-    "subject": "Proposal Submission",
-    "senderName": "Ash",
-    "sender": "ashritha@gmail.com",
-    "recipient": "reena@gmail.com",
-    "content": "Dear Reena,\n\nPlease find enclosed to this email the proposal you requested regarding your website audit.\n\nWe hope that you will find this proposal helpful and insightful and that it meets your expectations. Of course, if you would like to make any adjustments or go in a different direction, feel free to let us know and we’d be happy to discuss with you.\n\nThank you for entrusting [your company name] with your website audit, and we hope to hear back from you soon.\n\nBest regards,\n\nAsh,\nHiring Manager"
-  },
-  {
-    "id": "lfjcx5frvjibwif4hvd",
-    "time": "12:52 AM",
-    "subject": "Email of inquiry requesting information",
-    "senderName": "tom",
-    "sender": "tom@gmail.com",
-    "recipient": "reena@gmail.com",
-    "content": "Dear Reena,\n\nThis email is to inquire about the website audit services you posted on your website. \n\nAs I understand, you offer services to audit businesses’ websites and provide personalized insight into what improvements can be made. I’d like to request further information with regard to your pricing as well as the scope of the work that will be performed, including specific services that can be expected.\n\nI look forward to receiving your response.\n\nBest regards,\n\nTom"
-  },
-  {
-    "id": "lfjcyagil14si641c7",
-    "time": "12:53 AM",
-    "subject": "Status Update Required",
-    "senderName": "ace",
-    "sender": "ace@gmail.com",
-    "recipient": "reena@gmail.com",
-    "content": "Hi Reena,\n\nI wanted to check in and check on the status of the website audit project that is due on [date]. \n\nPlease let me know where you’re at with the project and don’t hesitate to let me know if you require any assistance from my end.\n\nThanks,\n\nAce"
-  },
-  {
-    "id": "lfjd6j5qpswm058kuud",
-    "time": "12:59 AM",
-    "subject": "Meeting at 3PM",
-    "senderName": "Kai",
-    "sender": "kai@gmail.com",
-    "recipient": "reena@gmail.com",
-    "content": "Hi Reena,\n\nThanks for getting in touch with us about our product. I’d be glad to set up a meeting in order to give you more information, answer your questions, and show you how it can work for your business. Does 23rd December, 2030 at 3 PM work for you?\n\nI look forward to meeting with you soon!\n\nBest,\n\nKai"
-  },
-  {
-    "id": "lfjirjeymw0yhsl7ptd",
-    "time": "3:35 PM",
-    "subject": "Resignation",
-    "senderName": "ace",
-    "sender": "ace@gmail.com",
-    "recipient": "nalina@gmail.com",
-    "content": "Dear Sir,\n\nI am planning to pursue my higher studies in the coming academic year, and hence I would like to inform you of my intention to resign from the post of (Designation) at (Name of the Institution), effective three months from now.\n\nI appreciate the opportunities for growth and development you have provided during my association with (Name of the Institution). It was indeed a privilege working here, and it was a valuable work experience which has helped me grow personally and professionally to a great extent.\n\nPlease accept this letter as the formal intimation of my resignation.\n\nThank you for your guidance and support.\n\nYours sincerely,\n\nAce"
-  },
-  {
-    "id": "lfjix6a0rraiepntpvj",
-    "time": "3:40 PM",
+    "id": 1679562821355,
+    "time": "2:43 PM",
     "subject": "Hi there",
     "senderName": "reena",
     "sender": "reena@gmail.com",
+    "recipient": "reemaa@gmail.com",
+    "content": "Hi there, \n\nLong time no see. Hope all's well in your world!　\n\nI haven't been to JALT all year, shame on me, but I needed the break.\nI still see the guys and I'm going to the national, so don't write me off\nyet!\n\nI was trying to remember who you've published with in the past, and I\nwondered if you had any contacts at Nan'Un-Do. I want to send a\nproposal to them but have no names, and the personal touch is always\nbest!\n\nI might go to see Jane Willis, family commitments permitting, any plans in\nthat direction? Going to Shizuoka I presume?\n\nBye for now\nAll the best\nR"
+  },
+  {
+    "id": 1679563090102,
+    "time": "2:48 PM",
+    "subject": "Updates",
+    "senderName": "reena",
+    "sender": "reena@gmail.com",
+    "recipient": "ace@gmail.com",
+    "content": "Hi Everyone!\nThought I'd send out a picture of my little monsters.　 They had a great　\nHalloween yesterday.　 Doreen and Dennis came over to hand out candy so\nRay and I were both able to go out with the kids.　 They made quite the\nhaul, the dentist is going to love us!\n\nDoreen and Dennis left this morning for Wisconsin.　 They hope to get to\nIdaho today.　 Judy, you should be seeing them sometime next week.　 I\nhope they have good weather.　 They'll be back here in time for　\nThanksgiving.\n\nI hope you all have a great weekend!\n\nLove, Reena."
+  },
+  {
+    "id": 1679563215315,
+    "time": "2:50 PM",
+    "subject": "Project Plan",
+    "senderName": "Nalina",
+    "sender": "nalina@gmail.com",
+    "recipient": "reena@gmail.com",
+    "content": "Hi George,\nThanks for your reply.　 You are always so quick!\n\nI sent an-mail to Mr. Imai of Seibido yesterday, and I just got a phone call\nfrom him.　 They want us to send the whole thing and also a \"Project　\nPlan.\"　 It seems that they have some form to fill in to describe the project　\nin Japanese, so I will write something which will appeal to the publsiher.\n\nThat's all for now.　 Let's hope it will come out!\n\n"
+  },
+  {
+    "id": 1679563296090,
+    "time": "2:51 PM",
+    "subject": "Weekly update",
+    "senderName": "ace",
+    "sender": "ace@gmail.com",
+    "recipient": "reemaa@gmail.com",
+    "content": "Dear Prof. Reemaa,\n\nI hope you are doing fine. I am now in Saitama, but will go back to\nHiroshima to attend the conference. We would like to visit you to say　\nthank　 you for your cooperation. During this week, WED, THU, and FRI,　\nplease let me know when you will be in your office. We would like to visit　\nyou shortly.\n\nSincerely,\nAce"
+  },
+  {
+    "id": 1679563528059,
+    "time": "2:55 PM",
+    "subject": "Thank you message from us",
+    "senderName": "Reemaa Sajad",
+    "sender": "reemaa@gmail.com",
     "recipient": "nalina@gmail.com",
-    "content": "Dearest Nalina,\n\nI was so glad to hear from my mother that you are back home after the trip. Hope you had a safe and enjoyable trip. I have been waiting to hear all about the trip from you.\n\nSince this was the first time you have been to a foreign land, I guess every little bit of the trip was as exciting as you expected it to be. I have heard from my friends residing there that the place is extremely beautiful and that the people there are very endearing. However, I was worried when I knew that there were a few bomb blasts during your stay there. Hope all of you there were safe. I hope everything else was fine except for this.\n\nI had spoken to your mother earlier, and she told me that you would be coming home after two weeks. I saw your pictures on Instagram as well. I can’t wait to meet you and hear all your stories. Waiting eagerly for your reply.\n\nYour loving cousin,\n\nReena"
+    "content": "Hi Dennis,\n\nAfter the exciting Saturday, I guess you've been doing as good as that\nSaturday.　 The weather is good, food is good, and studying is good in this\nseason.　 I like this season the best.\n\nOh, well, this introduction may remind you of students' writing, so I\nshould stop it now.　 To make a long story short (or the introduction　\nshort?), I am sending you this message to say thank you.　 I said so for　\nthe Saturday already.　 Today's \"thank you\" is to the vocabulary test,　\nwhich was delivered to me today.　 On the letter from Professor Tanaka,　\nyour name was also written, so I assume that you and Prof. Tanaka　\nworked together to develop this test.　 To tell you the truth, I like it, and I　\ndo want to use it for my research and classes.　 He said that an online　\ndelivery is being planned.　 I wonder if anyone can use the test.　 If so, this　\nis really great.\n\nSending you a thank-you message, I would like to ask you a favor.　 The\nattached is a thank-you letter to　 Prof. Tanaka.　 Would it be too much to\nask you to print it out and hand it to him?　 If so, would you send me back\na \"Do it yourself\" message.　 I'll send it by regular mail.　 Or would you let　\nme know his mail address.　 (I hope he is a regular mail user.　 In our school,\nthere are still quite a few senior professors who don't use e-mail at all.\nYes, AT ALL!　 Can you believe that?)\n\nOK, Dennis, sorry for interrupting you with my favor.　 Hope to see you\nsoon again.　\n\nBest wishes,\n\nReemaa"
   },
   {
-    "id": "lfjizt10p47iivjipb",
-    "time": "3:42 PM",
-    "subject": "Helllo!",
-    "senderName": "reena",
-    "sender": "reena@gmail.com",
-    "recipient": "kamiloon@gmail.com",
-    "content": "Dear Surya,\n\nHope you are keeping well, and everyone at home is keeping safe and healthy. It has been a long time since all of us have met, so I was thinking we could all meet up. I have planned to have a get-together next month. I would love to discuss more about it.\n\nAll of us could meet on Friday evening and stay over the weekend at a resort in Munnar. The climate in Munnar is great and it will be a good stress reliever. We could also go around the tourist spots if everyone is interested. If you are ready, we could talk to the others also. I will visit you next weekend to discuss more on this.\n\nAwaiting your reply and hoping to meet you soon.\n\nLove,\n\nSreya"
+    "id": 1679563908955,
+    "time": "3:1 PM",
+    "subject": "How are you?",
+    "senderName": "ace",
+    "sender": "ace@gmail.com",
+    "recipient": "reena@gmail.com",
+    "content": "Dear Reena,\n\nHope you are well and that the second semester is going smoothly for　\nyou.\n\nThe other day when we were talking at the bus stop you mentioned a\nweb page on which Linda Holkenson detailed her reasons for leaving.\n\nIf you don't mind, would you send me the URL for that web page if you\nstill have it?\n\nThanks a lot.\n\nBest regards,\nTim Brown"
   },
   {
-    "id": "lfjk4zpgqu03sl6me2f",
-    "time": "4:14 PM",
-    "subject": "Inability to attend",
-    "senderName": "reena",
-    "sender": "reena@gmail.com",
-    "recipient": "kai@gmail.com",
-    "content": "Dear Sreya,\n\nIt is extremely thoughtful of you to plan a get-together for all of us. I wish I could join you, but I am sorry to say that I have a project starting next month, and it would not be possible for me to be there. If there is any way of preponing the get-together to any time before the month-end, I can definitely make it to our gathering.\n\nI hope we can reschedule the get-together and not miss the chance to meet up. Waiting to hear from you.\n\nWith love,\n\nSurya"
-  },
-  {
-    "id": "lfjk8e24o8jgg9r45",
-    "time": "4:17 PM",
-    "subject": "Ho ho ho",
+    "id": 1679566121290,
+    "time": "3:38 PM",
+    "subject": "Job Offer Acceptance",
     "senderName": "reena",
     "sender": "reena@gmail.com",
     "recipient": "reemaa@gmail.com",
-    "content": "merry chrishtmas!!!"
+    "content": "Hey! Reemaa,\n\nI've just received your job offer email, and I'm 100% going to accept!\n\nIt's been a pleasure learning more about the role and the organization, and I'm convinced it's the ideal opportunity for me.\n\nYou can consider this email a formal acceptance. Please outline the next steps in the process. I can provide any documents, references, or information you need.\n\nIf you need to contact me, you can message me anytime. If you spot me in the street, I'll be the one with a big smile on my face!\n\nI can't wait to start working with you and making a difference.\nReena"
   },
   {
-    "id": "lfjk9l3b19yp0g5hv7q",
-    "time": "4:17 PM",
-    "subject": "ho hoho",
+    "id": 1679566216956,
+    "time": "3:40 PM",
+    "subject": "Thank you",
+    "senderName": "Reemaa Sajad",
+    "sender": "reemaa@gmail.com",
+    "recipient": "reena@gmail.com",
+    "content": "Hello Reena,\nThanks for participating in our survey.\n\nRegards,\nReemaa "
+  },
+  {
+    "id": 1679566790204,
+    "time": "3:49 PM",
+    "subject": "Lunch Invite",
     "senderName": "reena",
     "sender": "reena@gmail.com",
     "recipient": "reemaa@gmail.com",
-    "content": "ohhphphhph"
+    "content": "Hey all!\n\nIt's about time we organized a social event, and I'm going to do it!\n\nI've done some research, gone through shared calendars, and identified a date, time, and venue that should work for us all (details below!).\n\nDate\nTime\nVenue\nCan you let me know if you would like to attend? Drop me an email with a yes or no, and I'll confirm the numbers and make a booking.\n\nI can't wait to see you.\n(Your name)"
   }
 ]

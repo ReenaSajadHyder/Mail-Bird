@@ -213,7 +213,7 @@ app.post("/addMail", (req, res) => {
     }
     var hours = today.getHours() % 12 || 12;
     let newMail = {};
-    newMail.id = Date.now().toString(36) + Math.random().toString(36).slice(2);
+    newMail.id = Date.now();
     newMail.time = hours + ":" + today.getMinutes() + " " +AmPm;
     newMail.subject = req.body.subject;
     newMail.senderName = req.body.senderName;
@@ -260,7 +260,7 @@ app.post("/addDraft", (req, res) => {
     }
     var hours = today.getHours() % 12 || 12;
     let newDraft = {};
-    newDraft.id = Date.now().toString(36) + Math.random().toString(36).slice(2);
+    newDraft.id = Date.now();
     newDraft.time = hours + ":" + today.getMinutes() + " " +AmPm;
     newDraft.subject = req.body.subject;
     newDraft.senderName = req.body.senderName;
