@@ -1,5 +1,6 @@
 let mailArr = [];
 let email;
+let user;
 let currentMailId = "";
 
 (function(){
@@ -11,7 +12,7 @@ function fetchUsername(){
     fetch("/fetchUsername")
     .then((data) => data.json())  
      .then((result) => {
-        let user = result.user;
+        user = result.user;
         email = result.email;
      })
 }

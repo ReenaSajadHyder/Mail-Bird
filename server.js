@@ -198,6 +198,22 @@ app.get("/fetchMail", (req, res) => {
   });
 });
 
+app.get("/fetchTrash", (req, res) => {
+  let data;
+  fs.readFile("./trash.json", "utf-8", (err, mailData) => {
+    if (err) {
+      console.log(err);
+    } else {
+      try {
+        data = JSON.parse(mailData);
+        res.json(data);
+      } catch {
+        console.log("Error parsing mails file");
+      }
+    }
+  });
+});
+
 app.post("/addMail", (req, res) => {
   try {
     var today = new Date();
