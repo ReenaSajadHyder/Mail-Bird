@@ -75,5 +75,12 @@
     "email": "pradheep@gmail.com",
     "password": "pradheep",
     "confirmPassword": "pradheep"
+  },
+  {
+    "id": "1679568574949",
+    "name": "sathika",
+    "email": "sathika@mailbird.com",
+    "password": "sathika",
+    "confirmPassword": "sathika"
   }
 ]

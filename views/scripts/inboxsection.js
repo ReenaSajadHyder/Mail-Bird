@@ -75,8 +75,4 @@ function showMailContent(id) {
     }
 }
 
-// document.querySelector("#close-compose").addEventListener("click",() => {
-
-// })
-
 

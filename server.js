@@ -168,7 +168,6 @@ app.get("/trashsection", (req, res) => {
 app.get("/composemail", (req, res) => {
   res.render("composemail.ejs");
 });
-
 app.get("/openmail", (req, res) => {
   res.render("openmail.ejs");
 });
@@ -180,41 +179,38 @@ app.get("/signout", (req, res) => {
 app.get("/fetchUsername", (req, res) => {
   let user = currentUser;
   let email = currentUserEmail;
-  res.json({user, email});
+  res.json({ user, email });
 });
 
 app.get("/fetchMail", (req, res) => {
   let data;
-  fs.readFile("./mails.json","utf-8", (err, mailData) => {
-    if(err) {
+  fs.readFile("./mails.json", "utf-8", (err, mailData) => {
+    if (err) {
       console.log(err);
-    }
-    else {
+    } else {
       try {
-         data = JSON.parse(mailData);
-         res.json(data);
-      }
-      catch{
+        data = JSON.parse(mailData);
+        res.json(data);
+      } catch {
         console.log("Error parsing mails file");
       }
     }
-  })
+  });
 });
 
 app.post("/addMail", (req, res) => {
   try {
     var today = new Date();
     var AmPm;
-    if((today.getHours()>12)){
+    if (today.getHours() > 12) {
       AmPm = "PM";
-    }
-    else{
+    } else {
       AmPm = "AM";
     }
     var hours = today.getHours() % 12 || 12;
     let newMail = {};
     newMail.id = Date.now();
-    newMail.time = hours + ":" + today.getMinutes() + " " +AmPm;
+    newMail.time = hours + ":" + today.getMinutes() + " " + AmPm;
     newMail.subject = req.body.subject;
     newMail.senderName = req.body.senderName;
     newMail.sender = req.body.sender;
@@ -245,23 +241,21 @@ app.post("/addMail", (req, res) => {
   } catch (err) {
     console.log("Error parsing mails JSOn file:" + err);
   }
-  
 });
 
 app.post("/addDraft", (req, res) => {
   try {
     var today = new Date();
     var AmPm;
-    if((today.getHours()>12)){
+    if (today.getHours() > 12) {
       AmPm = "PM";
-    }
-    else{
+    } else {
       AmPm = "AM";
     }
     var hours = today.getHours() % 12 || 12;
     let newDraft = {};
     newDraft.id = Date.now();
-    newDraft.time = hours + ":" + today.getMinutes() + " " +AmPm;
+    newDraft.time = hours + ":" + today.getMinutes() + " " + AmPm;
     newDraft.subject = req.body.subject;
     newDraft.senderName = req.body.senderName;
     newDraft.sender = req.body.sender;
@@ -269,21 +263,35 @@ app.post("/addDraft", (req, res) => {
     newDraft.content = req.body.content;
     let data = [];
     fs.readFile("./drafts.json", "utf-8", (err, draftData) => {
+      let mailExists = false;
       if (err) {
         console.log(err);
       } else {
         try {
           data = JSON.parse(draftData);
-          data.push(newDraft);
-          fs.writeFile("./drafts.json", JSON.stringify(data, null, 2), (err) => {
-            if (err) {
-              console.log(err);
-            } else {
-              let message = "Succesfully written";
-              console.log("Succesfully written into drafts.json");
-              res.json(message);
+          for(let i = 0; i < data.length; i++) {
+            if(newDraft.id == data[i].id) {
+              mailExists = true;
+              break;
             }
-          });
+          }
+          if(!mailExists){
+            data.push(newDraft);
+          }
+          // data.push(newDraft);
+          fs.writeFile(
+            "./drafts.json",
+            JSON.stringify(data, null, 2),
+            (err) => {
+              if (err) {
+                console.log(err);
+              } else {
+                let message = "Succesfully written";
+                console.log("Succesfully written into drafts.json");
+                res.json(message);
+              }
+            }
+          );
         } catch (err) {
           console.log("Error parsing mails JSON file:" + err);
         }
@@ -296,21 +304,57 @@ app.post("/addDraft", (req, res) => {
 
 app.get("/fetchDrafts", (req, res) => {
   let data;
-  fs.readFile("./drafts.json","utf-8", (err, draftData) => {
-    if(err) {
+  fs.readFile("./drafts.json", "utf-8", (err, draftData) => {
+    if (err) {
       console.log(err);
-    }
-    else {
+    } else {
       try {
         data = JSON.parse(draftData);
         res.json(data);
-      }
-      catch{
+      } catch {
         console.log("Error parsing drafts file");
       }
     }
-  })
+  });
 });
+
+// app.post("/fetchCompose", (req, res,next) => {
+//   let draftId = req.body.id;
+//   let subject;
+//   let recipient;
+//   let content;
+//   let data = [];
+//   fs.readFile("./drafts.json", "utf-8", (err, draftData) => {
+//     if(err){
+//       console.log("error",err);
+//     }
+//     else{
+//       try {
+        
+//         data = JSON.parse(draftData);
+//         console.log(data);
+//         for( let i = 0; i < data.length; i++ ){
+//           if(data[i].id == draftId) {
+//             subject = data[i].subject;
+//             recipient = data[i].recipient;
+//             content = data[i].content;
+//           }
+//         }
+//         console.log(subject);
+//         console.log(recipient);
+//         console.log(content);
+//    next()
+//       }
+//       catch(err){
+//         console.log("Error parsing drafts JSON file:" + err);
+//       }
+ 
+//      }
+//   });
+//   // res.redirect("/composemail")
+//   // res.render("composemail.ejs",{subject: "", recipient: "", content: ""})
+   
+// },composemailFun);
 
 app.listen(8000, () => {
   console.log(

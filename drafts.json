@@ -1,13 +1,5 @@
 [
   {
-    "id": "lfj8ldhkvzjzg6uyxsa",
-    "time": "10:51 AM",
-    "subject": "Lunch invite!",
-    "sender": "tom@gmail.com",
-    "recipient": "ace@gmail.com",
-    "content": "Hey all!\n\nIt's about time we organized a social event, and I'm going to do it!\n\nI've done some research, gone through shared calendars, and identified a date, time, and venue that should work for us all (details below!).\n\nDate\nTime\nVenue\nCan you let me know if you would like to attend? Drop me an email with a yes or no, and I'll confirm the numbers and make a booking.\n\nI can't wait to see you.\nTom"
-  },
-  {
     "id": 1679567078021,
     "time": "3:54 PM",
     "subject": "Lunch invite for all",
@@ -24,5 +16,108 @@
     "sender": "ace@gmail.com",
     "recipient": "linda@gmail.com",
     "content": "Hi Linda,\n\nI'm contacting you with great offers for our best customers (like you!).\n\nWe're always looking for ways to save you money and can offer you an exclusive deal to save you cash.\n\n(Insert information about the offers/products)\n\nInterested?\n\nWe're only offering these deals to our best customers, and they're available for a limited time. Contact me today if you want to take advantage. We can't guarantee you'll ever get these prices again.\n\nLooking forward to your call.\nAce"
+  },
+  {
+    "id": 1679567775428,
+    "time": "4:6 PM",
+    "subject": "hello",
+    "senderName": "reena",
+    "sender": "reena@gmail.com",
+    "recipient": "reemaa@gmail.com",
+    "content": "wwww"
+  },
+  {
+    "id": 1679568660964,
+    "time": "4:21 PM",
+    "subject": "ree",
+    "senderName": "reena",
+    "sender": "reena@gmail.com",
+    "recipient": "reemaa@gmail.com",
+    "content": "asdfghjmk"
+  },
+  {
+    "id": 1679573537444,
+    "time": "5:42 PM",
+    "subject": "",
+    "senderName": "reena",
+    "sender": "reena@gmail.com",
+    "recipient": "",
+    "content": ""
+  },
+  {
+    "id": 1679573548290,
+    "time": "5:42 PM",
+    "subject": "",
+    "recipient": "",
+    "content": ""
+  },
+  {
+    "id": 1679641761946,
+    "time": "12:39 AM",
+    "subject": "",
+    "recipient": "",
+    "content": ""
+  },
+  {
+    "id": 1679642496141,
+    "time": "12:51 AM",
+    "subject": "",
+    "recipient": "",
+    "content": ""
+  },
+  {
+    "id": 1679652655104,
+    "time": "3:40 PM",
+    "subject": "ree",
+    "recipient": "reemaa@gmail.com",
+    "content": "asdfghjmk"
+  },
+  {
+    "id": 1679652907940,
+    "time": "3:45 PM",
+    "subject": "Lunch invite for all",
+    "senderName": "reena",
+    "sender": "reena@gmail.com",
+    "recipient": "rita@gmail.com",
+    "content": "Hey all!\n\nIt's about time we organized a social event, and I'm going to do it!\n\nI've done some research, gone through shared calendars, and identified a date, time, and venue that should work for us all (details below!).\n\nDate\nTime\nVenue\nCan you let me know if you would like to attend? Drop me an email with a yes or no, and I'll confirm the numbers and make a booking.\n\nI can't wait to see you.\n(Your name)"
+  },
+  {
+    "id": 1679652955975,
+    "time": "3:45 PM",
+    "subject": "Lunch invite for all",
+    "recipient": "rita@gmail.com",
+    "content": "Hey all!\n\nIt's about time we organized a social event, and I'm going to do it!\n\nI've done some research, gone through shared calendars, and identified a date, time, and venue that should work for us all (details below!).\n\nDate\nTime\nVenue\nCan you let me know if you would like to attend? Drop me an email with a yes or no, and I'll confirm the numbers and make a booking.\n\nI can't wait to see you.\n(Your name)"
+  },
+  {
+    "id": 1679653373124,
+    "time": "3:52 PM",
+    "subject": "",
+    "senderName": "reena",
+    "sender": "reena@gmail.com",
+    "recipient": "",
+    "content": ""
+  },
+  {
+    "id": 1679653375967,
+    "time": "3:52 PM",
+    "subject": "Lunch invite for all",
+    "recipient": "rita@gmail.com",
+    "content": "Hey all!\n\nIt's about time we organized a social event, and I'm going to do it!\n\nI've done some research, gone through shared calendars, and identified a date, time, and venue that should work for us all (details below!).\n\nDate\nTime\nVenue\nCan you let me know if you would like to attend? Drop me an email with a yes or no, and I'll confirm the numbers and make a booking.\n\nI can't wait to see you.\n(Your name)"
+  },
+  {
+    "id": 1679653388321,
+    "time": "3:53 PM",
+    "subject": "",
+    "recipient": "",
+    "content": ""
+  },
+  {
+    "id": 1679653714845,
+    "time": "3:58 PM",
+    "subject": "sdfvgbn ",
+    "senderName": "ace",
+    "sender": "ace@gmail.com",
+    "recipient": "sdcfvbg@mailbord.in",
+    "content": "cvb njm,k.l/;\".jhgfdfvgbhnjmkl;"
   }
 ]
