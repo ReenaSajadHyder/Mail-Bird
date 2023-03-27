@@ -133,15 +133,6 @@
     "content": "Hey all!\n\nIt's about time we organized a social event, and I'm going to do it!\n\nI've done some research, gone through shared calendars, and identified a date, time, and venue that should work for us all (details below!).\n\n\nCan you let me know if you would like to attend? an email with a yes or no, and I'll confirm the numbers and make a booking.\n\nI can't wait to see you.\n(Your name)"
   },
   {
-    "id": 1679910556972,
-    "time": "3:19 PM",
-    "subject": "Business Proposal",
-    "senderName": "ace",
-    "sender": "ace@gmail.com",
-    "recipient": "linda@gmail.com",
-    "content": "Hi Linda,\n\nI'm contacting you with great offers for our best customers (like you!).\n\nWe're always looking for ways to save you money and can offer sh.\n\nWe're only offering these deals to our best customers, and they're available for a limited time. Contact me today if you want to take advantage. We can't guarantee you'll ever get these prices again.\n\nLooking forward to your call.\nAce"
-  },
-  {
     "id": 1679913163384,
     "time": "4:02 PM",
     "subject": "a",
@@ -151,12 +142,12 @@
     "content": "a"
   },
   {
-    "id": 1679913170846,
-    "time": "4:02 PM",
-    "subject": "b",
+    "id": 1679917789837,
+    "time": "5:19 PM",
+    "subject": "Hi",
     "senderName": "reena",
     "sender": "reena@gmail.com",
     "recipient": "ace@gmail.com",
-    "content": "b"
+    "content": "Hi there"
   }
 ]

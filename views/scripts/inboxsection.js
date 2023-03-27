@@ -103,3 +103,7 @@ function addToTrash() {
       window.location.href = "/inboxsection";
     });
 }
+document.querySelector("#sign-out-txt").title = `Sign out of your account!`;
+document.querySelector("#sent-txt").title = `Navigate to the sent section`;
+document.querySelector("#trash-txt").title = `Navigate to the trash section`;
+document.querySelector("#drafts-txt").title = `Navigate to the draft section`;

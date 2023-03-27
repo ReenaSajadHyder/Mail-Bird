@@ -16,48 +16,98 @@
   </head>
   <body>
     <div id="home-pg">
-        <div id="menu-section">
-            <div id="app-name-logo">
-                <div><img id="app-logo" src="assets/images/logo-carrier-pigeon.png" alt="logo-carrier-pigeon"></div>
-                <div id="app-name">Mail Bird</div> 
-            </div>
-            <div id="sections">
-                <div id="inbox-sec">
-                    <div><img id="inbox-sym" src="./assets/images/inbox.png" alt=""></div>
-                    <div><a id="inbox-txt" href="/inboxsection">Inbox</a></div>
-                </div>
-                <div id="sent-sec">
-                    <div><img id="sent-sym" src="./assets/images/sent.png" alt=""></div>
-                    <div><a id="sent-txt" href="/sentsection">Sent</a></div>
-                </div>
-                <div id="drafts-sec">
-                    <div><img id="drafts-sym" src="./assets/images/draft.png" alt=""></div>
-                    <div><a id="drafts-txt" href="/draftssection">Drafts</a></div>
-                </div>
-                <div id="trash-sec">
-                    <div><img id="trash-sym" src="./assets/images/trash.png" alt=""></div>
-                    <div><a id="trash-txt"href="/trashsection">Trash</a></div>
-                </div>
-            </div>
-            <div></div>
+      <div id="menu-section">
+        <div id="app-name-logo">
+          <div>
+            <img
+              id="app-logo"
+              src="assets/images/logo-carrier-pigeon.png"
+              alt="logo-carrier-pigeon"
+            />
+          </div>
+          <div id="app-name">Mail Bird</div>
         </div>
-        <div id="design-section">
-            <div id="welcome-message">
-                <div id="welcome">
-                    Welcome to your mail box,
-                    <span id="current-user"><% if(message) { %> <%= message %> <% } %></span>
-                    !
-                </div>
-                <div id="select">Select a section to go through</div>
-            </div>
-            <div id="bg-image"></div>
+        <div id="sections">
+          <div id="inbox-sec">
             <div>
-                <div id="compose-btn">
-                    <div><img id="compose-sym" src="./assets/images/compose-white.png" alt="Write mail symbol"></div>
-                    <div><a id="compose-txt" href="/composemail">Compose</a></div>
-                </div>
+              <img id="inbox-sym" src="./assets/images/inbox.png" alt="" />
             </div>
+            <div>
+              <a
+                id="inbox-txt"
+                href="/inboxsection"
+                title="Navigate to the inbox section"
+                >Inbox</a
+              >
+            </div>
+          </div>
+          <div id="sent-sec">
+            <div>
+              <img id="sent-sym" src="./assets/images/sent.png" alt="" />
+            </div>
+            <div>
+              <a
+                id="sent-txt"
+                href="/sentsection"
+                title="Navigate to the sent section"
+                >Sent</a
+              >
+            </div>
+          </div>
+          <div id="drafts-sec">
+            <div>
+              <img id="drafts-sym" src="./assets/images/draft.png" alt="" />
+            </div>
+            <div>
+              <a
+                id="drafts-txt"
+                href="/draftssection"
+                title="Navigate to the drafts section"
+                >Drafts</a
+              >
+            </div>
+          </div>
+          <div id="trash-sec">
+            <div>
+              <img id="trash-sym" src="./assets/images/trash.png" alt="" />
+            </div>
+            <div>
+              <a
+                id="trash-txt"
+                href="/trashsection"
+                title="Navigate to the trash section"
+                >Trash</a
+              >
+            </div>
+          </div>
         </div>
+        <div></div>
+      </div>
+      <div id="design-section">
+        <div id="welcome-message">
+          <div id="welcome">
+            Welcome to your mail box,
+            <span id="current-user"
+              ><% if(message) { %> <%= message %> <% } %></span
+            >
+            !
+          </div>
+          <div id="select">Select a section to go through</div>
+        </div>
+        <div id="bg-image"></div>
+        <div>
+          <div id="compose-btn">
+            <div>
+              <img
+                id="compose-sym"
+                src="./assets/images/compose-white.png"
+                alt="Write mail symbol"
+              />
+            </div>
+            <div><a id="compose-txt" href="/composemail">Compose</a></div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

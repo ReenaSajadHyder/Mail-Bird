@@ -324,6 +324,7 @@ app.post("/addTrash", (req, res) => {
     newMail.recipient = req.body.recipient;
     newMail.content = req.body.content;
     let data = [];
+    let mail = [];
     fs.readFile("./trash.json", "utf-8", (err, trashData) => {
       if (err) {
         console.log(err);
@@ -361,6 +362,69 @@ app.post("/addTrash", (req, res) => {
               console.log(err);
             } else {
               console.log("Succesfully deleted from mails.json");
+       
+            }
+          });
+        } catch (err) {
+          console.log("Error:" + err);
+        }
+      }
+    });
+  } catch (err) {
+    console.log("Error parsing trash JSON file:" + err);
+  }
+  res.json("Succesfully written");
+});
+
+app.post("/addDraftTrash", (req, res) => {
+  try {
+    let newMail = {};
+    newMail.id = req.body.id;
+    newMail.time = req.body.time;
+    newMail.subject = req.body.subject;
+    newMail.senderName = req.body.senderName;
+    newMail.sender = req.body.sender;
+    newMail.recipient = req.body.recipient;
+    newMail.content = req.body.content;
+    let data = [];
+    let mail = [];
+    fs.readFile("./trash.json", "utf-8", (err, trashData) => {
+      if (err) {
+        console.log(err);
+      } else {
+        try {
+          data = JSON.parse(trashData);
+          data.push(newMail);
+          fs.writeFile("./trash.json", JSON.stringify(data, null, 2), (err) => {
+            if (err) {
+              console.log(err);
+            } else {
+              console.log("Succesfully written into trash.json");
+            
+            }
+          });
+        } catch (err) {
+          console.log("Error parsing trash JSON file:" + err);
+        }
+      }
+    });
+    fs.readFile("./drafts.json", "utf-8", (err, mailData) => {
+      if (err) {
+        console.log(err);
+      } else {
+        try {
+          mail = JSON.parse(mailData);
+          for( let i = 0; i < mail.length; i++){
+            if(mail[i].id == newMail.id){
+              mail.splice(i,1);
+              break;
+            }
+          }
+          fs.writeFile("./drafts.json", JSON.stringify(mail, null, 2), (err) => {
+            if (err) {
+              console.log(err);
+            } else {
+              console.log("Succesfully deleted from drafts.json");
        
             }
           });

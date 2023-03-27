@@ -1,5 +1,6 @@
 let draftsArr = [];
 let email;
+let user;
 let currentMailId = "";
 
 (function () {
@@ -11,23 +12,22 @@ function fetchUsername() {
   fetch("/fetchUsername")
     .then((data) => data.json())
     .then((result) => {
-      let user = result.user;
+      user = result.user;
       email = result.email;
     });
 }
 
+console.log(user, email);
 function fetchDrafts() {
   fetch("/fetchDrafts")
     .then((data) => data.json())
     .then((result) => {
-      console.table(result);
       draftsArr = result;
       displayMails();
     });
 }
 
 function displayMails() {
-  console.log("Inside display mails function");
   document.querySelector("#mails-container").innerHTML = "";
   for (let i = 0; i < draftsArr.length; i++) {
     if (draftsArr[i].sender == email) {
@@ -47,7 +47,7 @@ function displayMails() {
                     </div>
                 </div>
                 <div>
-                    <img class="trash-can" src="./assets/images/trash-outline.png" alt="trash can">
+                    <img class="trash-can" src="./assets/images/trash-outline.png" alt="trash can" onclick="addToTrash()">
                 </div>
             </div>` + document.querySelector("#mails-container").innerHTML;
     }
@@ -71,3 +71,33 @@ function showMailContent(id) {
 
   window.location.href = "/composemail";
 }
+
+function addToTrash() {
+  let mailObj = {};
+  for (let i = 0; i < draftsArr.length; i++) {
+    if (draftsArr[i].id == currentMailId) {
+      mailObj.id = draftsArr[i].id;
+      mailObj.time = draftsArr[i].time;
+      mailObj.senderName = draftsArr[i].senderName;
+      mailObj.sender = draftsArr[i].sender;
+      mailObj.subject = draftsArr[i].subject;
+      mailObj.recipient = draftsArr[i].recipient;
+      mailObj.content = draftsArr[i].content;
+    }
+  }
+  fetch("/addDraftTrash", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(mailObj),
+  })
+    .then((data) => data.json())
+    .then((result) => {
+      console.log(result);
+      window.location.href = "/draftssection";
+    });
+}
+
+document.querySelector("#sign-out-txt").title = `Sign out of your account!`;
+document.querySelector("#inbox-txt").title = `Navigate to the inbox section`;
+document.querySelector("#sent-txt").title = `Navigate to the sent section`;
+document.querySelector("#trash-txt").title = `Navigate to the trash section`;

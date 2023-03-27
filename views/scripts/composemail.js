@@ -14,7 +14,6 @@ function fetchUsername() {
       email = result.email;
     });
 }
-// console.log(sessionStorage.getItem("draft"));
 
 function addMail() {
   let newMailObj = {};
@@ -54,11 +53,17 @@ function addToDrafts() {
       window.location.href = "/draftssection";
     });
 }
-let sessionDraft=sessionStorage.getItem("draft");
-if(sessionDraft!=null){ 
-  sessionDraft=JSON.parse(sessionDraft);
+let sessionDraft = sessionStorage.getItem("draft");
+if (sessionDraft != null) {
+  sessionDraft = JSON.parse(sessionDraft);
   document.querySelector("#subject-inp").value = `${sessionDraft.subject}`;
   document.querySelector("#recipient-name").value = `${sessionDraft.recipient}`;
   document.querySelector("#content").value = `${sessionDraft.content}`;
   sessionStorage.clear();
 }
+
+document.querySelector("#sign-out-txt").title = `Sign out of your account!`;
+document.querySelector("#inbox-txt").title = `Navigate to the inbox section`;
+document.querySelector("#sent-txt").title = `Navigate to the sent section`;
+document.querySelector("#trash-txt").title = `Navigate to the trash section`;
+document.querySelector("#drafts-txt").title = `Navigate to the draft section`;
