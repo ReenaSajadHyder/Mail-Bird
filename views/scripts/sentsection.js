@@ -33,16 +33,18 @@ function displayMails(){
         if(mailArr[i].sender == email){
             currentMailId = mailArr[i].id;
             document.querySelector("#mails-container").innerHTML = 
-            `<div class="mail" onclick="showMailContent(${currentMailId})">
+            `<div class="mail">
                 <div class="pin"><img class="pin-symbol" src="./assets/images/tack-bw.png" alt="pinned"></div>
-                <div class="sender-name">
-                    ${mailArr[i].recipient}
-                </div>
-                <div class="mail-title">
-                    ${mailArr[i].subject}
-                </div>
-                <div class="time">
-                    ${mailArr[i].time}
+                <div class="show-mail" onclick="showMailContent(${currentMailId})">
+                    <div class="sender-name">
+                        ${mailArr[i].recipient}
+                    </div>
+                    <div class="mail-title">
+                        ${mailArr[i].subject}
+                    </div>
+                    <div class="time">
+                        ${mailArr[i].time}
+                    </div>
                 </div>
                 <div>
                     <img class="trash-can" src="./assets/images/trash-outline.png" alt="trash can">

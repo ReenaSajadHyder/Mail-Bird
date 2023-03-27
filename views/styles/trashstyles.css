@@ -145,11 +145,15 @@
   cursor: pointer;
   display: grid;
   font-family: "Mulish", sans-serif;
-  grid-template-columns: 5% 20% 65% 10%;
+  grid-template-columns: 5% 92% 3%;
   height: 8%;
   margin-bottom: 0.5%;
   padding-top: 1%;
   width: 100%;
+}
+.show-mail {
+  display: grid;
+  grid-template-columns: 20% 70% 10%;
 }
 .pin {
   padding-left: 20%;
@@ -164,6 +168,17 @@
 }
 .time {
   font-size: 18px;
+}
+.trash-can {
+  height: 16px;
+  margin-top: 8%;
+  width: 16px;
+}
+.trash-can:hover {
+  background-color: white;
+  height: 16px;
+  margin-top: 8%;
+  width: 16px;
 }
 #compose-btn {
   background-color: #ff4f5a;

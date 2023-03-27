@@ -198,22 +198,6 @@ app.get("/fetchMail", (req, res) => {
   });
 });
 
-app.get("/fetchTrash", (req, res) => {
-  let data;
-  fs.readFile("./trash.json", "utf-8", (err, mailData) => {
-    if (err) {
-      console.log(err);
-    } else {
-      try {
-        data = JSON.parse(mailData);
-        res.json(data);
-      } catch {
-        console.log("Error parsing mails file");
-      }
-    }
-  });
-});
-
 app.post("/addMail", (req, res) => {
   try {
     var today = new Date();
@@ -329,6 +313,68 @@ app.post("/addDraft", (req, res) => {
   res.json("Succesfully written");
 });
 
+app.post("/addTrash", (req, res) => {
+  try {
+    let newMail = {};
+    newMail.id = req.body.id;
+    newMail.time = req.body.time;
+    newMail.subject = req.body.subject;
+    newMail.senderName = req.body.senderName;
+    newMail.sender = req.body.sender;
+    newMail.recipient = req.body.recipient;
+    newMail.content = req.body.content;
+    let data = [];
+    fs.readFile("./trash.json", "utf-8", (err, trashData) => {
+      if (err) {
+        console.log(err);
+      } else {
+        try {
+          data = JSON.parse(trashData);
+          data.push(newMail);
+          fs.writeFile("./trash.json", JSON.stringify(data, null, 2), (err) => {
+            if (err) {
+              console.log(err);
+            } else {
+              console.log("Succesfully written into trash.json");
+            
+            }
+          });
+        } catch (err) {
+          console.log("Error parsing trash JSON file:" + err);
+        }
+      }
+    });
+    fs.readFile("./mails.json", "utf-8", (err, mailData) => {
+      if (err) {
+        console.log(err);
+      } else {
+        try {
+          mail = JSON.parse(mailData);
+          for( let i = 0; i < mail.length; i++){
+            if(mail[i].id == newMail.id){
+              mail.splice(i,1);
+              break;
+            }
+          }
+          fs.writeFile("./mails.json", JSON.stringify(mail, null, 2), (err) => {
+            if (err) {
+              console.log(err);
+            } else {
+              console.log("Succesfully deleted from mails.json");
+       
+            }
+          });
+        } catch (err) {
+          console.log("Error:" + err);
+        }
+      }
+    });
+  } catch (err) {
+    console.log("Error parsing trash JSON file:" + err);
+  }
+  res.json("Succesfully written");
+});
+
 app.get("/fetchDrafts", (req, res) => {
   let data;
   fs.readFile("./drafts.json", "utf-8", (err, draftData) => {
@@ -343,6 +389,22 @@ app.get("/fetchDrafts", (req, res) => {
         res.json(data);
       } catch {
         console.log("Error parsing drafts file");
+      }
+    }
+  });
+});
+
+app.get("/fetchTrash", (req, res) => {
+  let data;
+  fs.readFile("./trash.json", "utf-8", (err, mailData) => {
+    if (err) {
+      console.log(err);
+    } else {
+      try {
+        data = JSON.parse(mailData);
+        res.json(data);
+      } catch {
+        console.log("Error parsing mails file");
       }
     }
   });

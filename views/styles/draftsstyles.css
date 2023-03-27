@@ -145,11 +145,15 @@
   cursor: pointer;
   display: grid;
   font-family: "Mulish", sans-serif;
-  grid-template-columns: 5% 20% 65% 7% 3%;
+  grid-template-columns: 5% 92% 3%;
   height: 8%;
   margin-bottom: 0.5%;
   padding-top: 1%;
   width: 100%;
+}
+.show-mail {
+  display: grid;
+  grid-template-columns: 20% 70% 10%;
 }
 .pin {
   padding-left: 20%;
