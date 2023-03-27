@@ -20,6 +20,7 @@ function fetchDrafts() {
   fetch("/fetchDrafts")
     .then((data) => data.json())
     .then((result) => {
+      console.table(result);
       draftsArr = result;
       displayMails();
     });
@@ -54,45 +55,17 @@ function displayMails() {
 function showMailContent(id) {
   let mailContentId = id;
   for (let i = 0; i < draftsArr.length; i++) {
-    if (draftsArr[i].id == mailContentId){
-      // document.querySelector("#subject-inp").innerHTML = `${draftsArr[i].subject}`;
-      // document.querySelector("#recipient-name").innerHTML = `${draftsArr[i].recipient}`;
-      // document.querySelector("#content").innerHTML = `${draftsArr[i].mailContentId}`;
-      sessionStorage.setItem("draft",JSON.stringify({
-        subject:draftsArr[i].subject,
-        recipient:draftsArr[i].recipient,
-        content:draftsArr[i].content
-      }))
+    if (draftsArr[i].id == mailContentId) {
+      sessionStorage.setItem(
+        "draft",
+        JSON.stringify({
+          subject: draftsArr[i].subject,
+          recipient: draftsArr[i].recipient,
+          content: draftsArr[i].content,
+        })
+      );
     }
   }
-  
+
   window.location.href = "/composemail";
 }
-
-// fetch("/fetchCompose", {
-  //   method: "POST",
-  //   headers: { "Content-Type": "application/json" },
-  //   body:JSON.stringify(mailContentId),
-  // })
-    // .then((data) => data.json())
-    // .then((result) => {
-    //   console.log(result)
-    // });
-
-    // fetch("/addMail", {
-    //   method: "POST",
-    //   headers: { "Content-Type": "application/json" },
-    //   body: JSON.stringify(newMailObj),
-    // })
-    //   .then((data) => data.json())
-    //   .then((result) => {
-    //     console.log(result);
-    //     window.location.href = "/sentsection";
-    //   });
-// }
-
- // window.location.href = "composemail";
-  // sessionStorage.setItem("draft", mailContentId);
-  
-    
-    
