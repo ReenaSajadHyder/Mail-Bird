@@ -28,7 +28,6 @@ function fetchMail() {
     .then((data) => data.json())
     .then((result) => {
       pinnedMailArr = result;
-      console.log(pinnedMailArr);
       displayMails();
     });
       
@@ -70,7 +69,7 @@ function displayMails() {
         currentMailId = pinnedMailArr[i].id;
         document.querySelector("#mails-container").innerHTML =
           `<div class="mail">
-                  <div class="pin"><img class="pin-symbol" src="http://localhost:8000/assets/images/tack-red.png" alt="pinned" onclick="pinMail(${currentMailId})"></div>
+                  <div class="pin"><img class="pin-symbol" src="http://localhost:8000/assets/images/tack-red.png" alt="pinned" onclick="pinMail(${currentMailId}, event)"></div>
                   <div class="show-mail" onclick="showMailContent(${currentMailId})">
                       <div class="sender-name">
                           ${pinnedMailArr[i].senderName}
@@ -93,7 +92,7 @@ function displayMails() {
         currentMailId = remainingMails[i].id;
         document.querySelector("#mails-container").innerHTML +=
           `<div class="mail">
-                  <div class="pin"><img class="pin-symbol" src="./assets/images/tack-bw.png" alt="pinned" onclick="pinMail(${currentMailId})"></div>
+                  <div class="pin"><img class="pin-symbol" src="./assets/images/tack-bw.png" alt="pinned" onclick="pinMail(${currentMailId}, event)"></div>
                   <div class="show-mail" onclick="showMailContent(${currentMailId})">
                       <div class="sender-name">
                           ${remainingMails[i].senderName}
@@ -127,7 +126,6 @@ function getRemainingMails() {
             if (j == pinnedMailArr.length)
                 remainingMails.push(mailArr[i]);
         }
-        console.table(remainingMails);
 }
 
 function showMailContent(id) {
@@ -180,7 +178,11 @@ function addToTrash() {
       window.location.href = "/inboxsection";
     });
 }
-function pinMail(id) {
+function pinMail(id, e) {
+  // let pin = document.querySelector(".pin-symbol");
+  let pinUrl = e.target.src;
+  // console.log("pin",pinUrl);
+  console.log(pinUrl.endsWith("tack-bw.png"));
   let pinMailId = id;
   let pinnedObj = {};
   for(let i = 0; i< mailArr.length; i++) {
@@ -192,7 +194,7 @@ function pinMail(id) {
       pinnedObj.sender = mailArr[i].sender;
       pinnedObj.recipient = mailArr[i].recipient;
       pinnedObj.content = mailArr[i].content;
-      // if(document.querySelector(".pin-symbol").src.endsWith("tack-bw.png")) {
+      if(pinUrl.endsWith("tack-bw.png")) {
         fetch("/addPinnedMail", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -203,19 +205,19 @@ function pinMail(id) {
             console.log(result);
             window.location.href = "/inboxsection";
           });
-      // }
-      // if(document.querySelector(".pin-symbol").src.endsWith("tack-red.png")) {
-      //   fetch("/removePinnedMail", {
-      //     method: "POST",
-      //     headers: { "Content-Type": "application/json" },
-      //     body: JSON.stringify(pinnedObj),
-      //   })
-      //     .then((data) => data.json())
-      //     .then((result) => {
-      //       console.log(result);
-      //       window.location.href = "/inboxsection";
-      //     });
-      // }
+      }
+      if(pinUrl.endsWith("tack-red.png")) {
+        fetch("/removePinnedMail", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(pinnedObj),
+        })
+          .then((data) => data.json())
+          .then((result) => {
+            console.log(result);
+            window.location.href = "/inboxsection";
+          });
+      }
     }
   }
 }
