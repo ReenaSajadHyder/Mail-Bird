@@ -122,3 +122,4 @@ document.querySelector("#trash-sec").addEventListener("click", () => {
 document.querySelector("#compose-btn").addEventListener("click", () => {
   window.location.href = "/composemail";
 });
+
