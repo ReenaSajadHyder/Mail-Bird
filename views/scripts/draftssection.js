@@ -17,7 +17,6 @@ function fetchUsername() {
     });
 }
 
-console.log(user, email);
 function fetchDrafts() {
   fetch("/fetchDrafts")
     .then((data) => data.json())
@@ -92,7 +91,6 @@ function addToTrash() {
   })
     .then((data) => data.json())
     .then((result) => {
-      console.log(result);
       window.location.href = "/draftssection";
     });
 }

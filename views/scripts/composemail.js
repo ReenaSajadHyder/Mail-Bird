@@ -66,9 +66,13 @@ function addToDrafts() {
 let sessionDraft = sessionStorage.getItem("draft");
 if (sessionDraft != null) {
   sessionDraft = JSON.parse(sessionDraft);
+  let content = sessionDraft.content.replace(
+    /\r\n|\r|\n/g,
+    "<br>"
+   );
   document.querySelector("#subject-inp").value = `${sessionDraft.subject}`;
   document.querySelector("#recipient-name").value = `${sessionDraft.recipient}`;
-  document.querySelector("#content").value = `${sessionDraft.content}`;
+  document.querySelector("#content").value = `${content}`;
   sessionStorage.clear();
 }
 

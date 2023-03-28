@@ -1,20 +1,20 @@
 [
   {
     "id": 1679567078021,
-    "time": "3:21 PM",
+    "time": "10:37 AM",
     "subject": "Lunch invite for all",
     "senderName": "reena",
-    "sender": "reena@gmail.com",
-    "recipient": "rita@gmail.com",
-    "content": "Hey all!\n\nIt's about time we organized a social event, and I'm going to do it!\n\nI've done some research, gone through shared calendars, and identified a date, time, and venue that should work for us all (details below!).\n\ne\nCan you let me know if you would like to attend? Drop me an email with a yes or no, and I'll confirm the numbers and make a booking.\n\nI can't wait to see you.\n(Your name)"
+    "sender": "reena@mailbird.com",
+    "recipient": "rita@mailbird.com",
+    "content": "Hey all!<br><br>It's about time we organized a social event, and I'm going to do it!<br><br>I've done some research, gone through shared calendars, and identified a date, time, and venue that should work for us all (details below!).<br><br>e<br>Can you let me know if you would like to attend? Drop me an email with a yes or no, and I'll confirm the numbers and make a booking.<br><br>I can't wait to see you.<br>(Your name)"
   },
   {
     "id": 1679567196877,
     "time": "11:53 AM",
     "subject": "Business Proposal",
     "senderName": "ace",
-    "sender": "ace@gmail.com",
-    "recipient": "linda@gmail.com",
+    "sender": "ace@mailbird.com",
+    "recipient": "linda@mailbird.com",
     "content": "Hi Linda,\n\nI'm contacting you with great offers for our best customers (like you!).\n\nWe're always looking for ways to save you money and can offer sh.\n\nWe're only offering these deals to our best customers, and they're available for a limited time. Contact me today if you want to take advantage. We can't guarantee you'll ever get these prices again.\n\nLooking forward to your call.\nAce"
   },
   {
@@ -22,33 +22,24 @@
     "time": "12:13 AM",
     "subject": "hello",
     "senderName": "reena",
-    "sender": "reena@gmail.com",
-    "recipient": "reemaa@gmail.com",
+    "sender": "reena@mailbird.com",
+    "recipient": "reemaa@mailbird.com",
     "content": "www"
-  },
-  {
-    "id": 1679568660964,
-    "time": "4:21 PM",
-    "subject": "ree",
-    "senderName": "reena",
-    "sender": "reena@gmail.com",
-    "recipient": "reemaa@gmail.com",
-    "content": "asdfghjmk"
   },
   {
     "id": 1679652907940,
     "time": "3:45 PM",
     "subject": "Lunch invite for all",
     "senderName": "reena",
-    "sender": "reena@gmail.com",
-    "recipient": "rita@gmail.com",
+    "sender": "reena@mailbird.com",
+    "recipient": "rita@mailbird.com",
     "content": "Hey all!\n\nIt's about time we organized a social event, and I'm going to do it!\n\nI've done some research, gone through shared calendars, and identified a date, time, and venue that should work for us all (details below!).\n\nDate\nTime\nVenue\nCan you let me know if you would like to attend? Drop me an email with a yes or no, and I'll confirm the numbers and make a booking.\n\nI can't wait to see you.\n(Your name)"
   },
   {
     "id": 1679652955975,
     "time": "10:46 AM",
     "subject": "Lunch invite for all",
-    "recipient": "rita@gmail.com",
+    "recipient": "rita@mailbird.com",
     "content": "Hey all!\n\nIt's about time we organized a social event, and I'm going to do it!\n\nI've done some research, gone through shared calendars, and identified a date, time, and venue that should work for us all (details below!).\n\n\nCan you let me know if you would like to attend? an email with a yes or no, and I'll confirm the numbers and make a booking.\n\nI can't wait to see you.\n(Your name)"
   },
   {
@@ -56,7 +47,7 @@
     "time": "10:42 AM",
     "subject": "sdfvgbn ",
     "senderName": "ace",
-    "sender": "ace@gmail.com",
+    "sender": "ace@mailbird.com",
     "recipient": "sdcfvbg@mailbord.in",
     "content": "cvb njm,k.l/;\".jhgfdfvg"
   },
@@ -65,7 +56,7 @@
     "time": "11:59 AM",
     "subject": "xc",
     "senderName": "ace",
-    "sender": "ace@gmail.com",
+    "sender": "ace@mailbird.com",
     "recipient": "sxc ",
     "content": "xc vsdcfdsaxc"
   },
@@ -74,7 +65,7 @@
     "time": "12:24 AM",
     "subject": "dcfvgbhnj",
     "senderName": "reena",
-    "sender": "reena@gmail.com",
+    "sender": "reena@mailbird.com",
     "recipient": "dfghm,",
     "content": "dfghnjm,. "
   },
@@ -83,8 +74,26 @@
     "time": "12:24 AM",
     "subject": "w3e4r5ty6u",
     "senderName": "reena",
-    "sender": "reena@gmail.com",
+    "sender": "reena@mailbird.com",
     "recipient": "ertyui",
     "content": "defrtyuio"
+  },
+  {
+    "id": 1679979925393,
+    "time": "10:35 AM",
+    "subject": "Hi there",
+    "senderName": "reena",
+    "sender": "reena@mailbird.com",
+    "recipient": "reemaa@mailbird.com",
+    "content": "Hi"
+  },
+  {
+    "id": 1679979952697,
+    "time": "10:35 AM",
+    "subject": "Lunch event",
+    "senderName": "reena",
+    "sender": "reena@mailbird.com",
+    "recipient": "nalina@mailbird.com",
+    "content": "Lunch at 3:00 Pm"
   }
 ]
