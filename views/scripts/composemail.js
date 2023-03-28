@@ -16,12 +16,17 @@ function fetchUsername() {
 }
 
 function addMail() {
+  let content = document.querySelector("#content");
+  let contentValue = content.value.replace(
+      /\r\n|\r|\n/g,
+      "<br>"
+     );
   let newMailObj = {};
   newMailObj.senderName = user;
   newMailObj.sender = email;
   newMailObj.subject = document.querySelector("#subject-inp").value;
   newMailObj.recipient = document.querySelector("#recipient-name").value;
-  newMailObj.content = document.querySelector("#content").value;
+  newMailObj.content = contentValue;
   fetch("/addMail", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -35,12 +40,17 @@ function addMail() {
 }
 
 function addToDrafts() {
+  let content = document.querySelector("#content");
+  let contentValue = content.value.replace(
+      /\r\n|\r|\n/g,
+      "<br>"
+     );
   let draftObj = {};
   draftObj.senderName = user;
   draftObj.sender = email;
   draftObj.subject = document.querySelector("#subject-inp").value;
   draftObj.recipient = document.querySelector("#recipient-name").value;
-  draftObj.content = document.querySelector("#content").value;
+  draftObj.content = contentValue;
 
   fetch("/addDraft", {
     method: "POST",

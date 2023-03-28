@@ -212,5 +212,14 @@
     "sender": "ace@gmail.com",
     "recipient": "reena@gmail.com",
     "content": "g"
+  },
+  {
+    "id": 1679978966504,
+    "time": "10:19 AM",
+    "subject": "Welcome",
+    "senderName": "reena",
+    "sender": "reena@gmail.com",
+    "recipient": "ace@gmail.com",
+    "content": "Hey Ace!<br><br>Welcome to Soliton. We are happy to have you join our community.<br><br>[Brand name] goal is to create [add goal and/or mission of your brand].<br><br>We promise to only send you emails [add how many times per week you will be sending an email].<br><br>All our emails will offer valuable information to help you along your journey and we may occasionally recommend a product that we believe in.<br><br>We hope you enjoy your time with us and, in the meantime, feel free to check our [educational resources of your brand]<br><br>Yours,<br><br>Reena"
   }
 ]
