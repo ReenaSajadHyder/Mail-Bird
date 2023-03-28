@@ -94,3 +94,6 @@ document.querySelector("#drafts-sec").addEventListener("click", () => {
 document.querySelector("#trash-sec").addEventListener("click", () => {
   window.location.href = "/trashsection";
 });
+
+
+

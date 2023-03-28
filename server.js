@@ -511,6 +511,57 @@ app.post("/deleteTrash", (req, res) => {
   res.json("Succesfully written");
 });
 
+app.get("/fetchPinnedMail", (req, res) => {
+  let data;
+  fs.readFile("./pinnedmails.json", "utf-8", (err, mailData) => {
+    if (err) {
+      console.log(err);
+    } else {
+      try {
+        data = JSON.parse(mailData);
+        res.json(data);
+      } catch {
+        console.log("Error parsing mails file");
+      }
+    }
+  });
+});
+
+app.post("/addPinnedMail", (req, res) => {
+  try {
+    let newMail = {}
+    newMail.time = req.body.time;
+    newMail.subject = req.body.subject;
+    newMail.senderName = req.body.senderName;
+    newMail.sender = req.body.sender;
+    newMail.recipient = req.body.recipient;
+    newMail.content = req.body.content;
+    let data = [];
+    fs.readFile("./pinnedmails.json", "utf-8", (err, mailData) => {
+      if (err) {
+        console.log(err);
+      } else {
+        try {
+          data = JSON.parse(mailData);
+          data.push(newMail);
+          fs.writeFile("./pinnedmails.json", JSON.stringify(data, null, 2), (err) => {
+            if (err) {
+              console.log(err);
+            } else {
+              console.log("Succesfully written into pinnedmails.json");
+            }
+          });
+        } catch (err) {
+          console.log("Error parsing pinnedmails JSON file:" + err);
+        }
+      }
+    });
+  } catch (err) {
+    console.log("Error parsing pinnedmails JSOn file:" + err);
+  }
+  res.json("Succesfully written");
+});
+
 app.listen(8000, () => {
   console.log(
     "Server connected at port number 8000 with url 'http://localhost:8000/'"
