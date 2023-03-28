@@ -112,31 +112,7 @@ function displayMails() {
       }
     }
   }
-  // for (let i = 0; i < mailArr.length; i++) {
-  //   if (mailArr[i].recipient == email) {
-  //     currentMailId = mailArr[i].id;
-  //     for(let i = 0; i < pinnedMailArr.length; i++){
-  //       document.querySelector("#mails-container").innerHTML =
-  //       `<div class="mail">
-  //               <div class="pin"><img class="pin-symbol" src="./assets/images/tack-bw.png" alt="pinned" onclick="pinMail()"></div>
-  //               <div class="show-mail" onclick="showMailContent(${currentMailId})">
-  //                   <div class="sender-name">
-  //                       ${pinnedMailArr[i].senderName}
-  //                   </div>
-  //                   <div class="mail-title">
-  //                       ${pinnedMailArr[i].subject}
-  //                   </div>
-  //                   <div class="time">
-  //                       ${pinnedMailArr[i].time}
-  //                    </div>
-  //               </div>
-  //               <div>
-  //                   <img class="trash-can" src="./assets/images/trash-outline.png" alt="trash can" onclick="addToTrash()">
-  //               </div>
-  //           </div>` + document.querySelector("#mails-container").innerHTML;
-  //     }
-  //   }
-  // }
+  
 }
 
 function getRemainingMails() {
@@ -151,6 +127,7 @@ function getRemainingMails() {
             if (j == pinnedMailArr.length)
                 remainingMails.push(mailArr[i]);
         }
+        console.table(remainingMails);
 }
 
 function showMailContent(id) {
@@ -204,11 +181,8 @@ function addToTrash() {
     });
 }
 function pinMail(id) {
-  console.log("Inside pin mail");
-  // document.querySelector(".pin").src = "http://localhost:8000/assets/images/tack-red.png";
   let pinMailId = id;
   let pinnedObj = {};
-  // let unpinnedObj = {};
   for(let i = 0; i< mailArr.length; i++) {
     if(mailArr[i].id == pinMailId){
       pinnedObj.id = mailArr[i].id;
@@ -218,30 +192,31 @@ function pinMail(id) {
       pinnedObj.sender = mailArr[i].sender;
       pinnedObj.recipient = mailArr[i].recipient;
       pinnedObj.content = mailArr[i].content;
-      fetch("/addPinnedMail", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(pinnedObj),
-      })
-        .then((data) => data.json())
-        .then((result) => {
-          console.log(result);
-          window.location.href = "/inboxsection";
-        });
+      // if(document.querySelector(".pin-symbol").src.endsWith("tack-bw.png")) {
+        fetch("/addPinnedMail", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(pinnedObj),
+        })
+          .then((data) => data.json())
+          .then((result) => {
+            console.log(result);
+            window.location.href = "/inboxsection";
+          });
+      // }
+      // if(document.querySelector(".pin-symbol").src.endsWith("tack-red.png")) {
+      //   fetch("/removePinnedMail", {
+      //     method: "POST",
+      //     headers: { "Content-Type": "application/json" },
+      //     body: JSON.stringify(pinnedObj),
+      //   })
+      //     .then((data) => data.json())
+      //     .then((result) => {
+      //       console.log(result);
+      //       window.location.href = "/inboxsection";
+      //     });
+      // }
     }
-    // if(mailArr[i].id !== currentMailId){
-    //   unpinnedObj = mailArr[i];
-    //   fetch("/addNormalMail", {
-    //     method: "POST",
-    //     headers: { "Content-Type": "application/json" },
-    //     body: JSON.stringify(unpinnedObj),
-    //   })
-    //     .then((data) => data.json())
-    //     .then((result) => {
-    //       console.log(result);
-    //       window.location.href = "/inboxsection";
-    //     });
-    // }
   }
 }
 document.querySelector("#sign-out-txt").title = `Sign out of your account!`;

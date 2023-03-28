@@ -168,6 +168,7 @@ app.get("/trashsection", (req, res) => {
 app.get("/composemail", (req, res) => {
   res.render("composemail.ejs");
 });
+
 app.get("/openmail", (req, res) => {
   res.render("openmail.ejs");
 });
@@ -337,7 +338,6 @@ app.post("/addTrash", (req, res) => {
               console.log(err);
             } else {
               console.log("Succesfully written into trash.json");
-            
             }
           });
         } catch (err) {
@@ -351,9 +351,9 @@ app.post("/addTrash", (req, res) => {
       } else {
         try {
           mail = JSON.parse(mailData);
-          for( let i = 0; i < mail.length; i++){
-            if(mail[i].id == newMail.id){
-              mail.splice(i,1);
+          for (let i = 0; i < mail.length; i++) {
+            if (mail[i].id == newMail.id) {
+              mail.splice(i, 1);
               break;
             }
           }
@@ -362,7 +362,6 @@ app.post("/addTrash", (req, res) => {
               console.log(err);
             } else {
               console.log("Succesfully deleted from mails.json");
-       
             }
           });
         } catch (err) {
@@ -400,7 +399,6 @@ app.post("/addDraftTrash", (req, res) => {
               console.log(err);
             } else {
               console.log("Succesfully written into trash.json");
-            
             }
           });
         } catch (err) {
@@ -414,20 +412,23 @@ app.post("/addDraftTrash", (req, res) => {
       } else {
         try {
           mail = JSON.parse(mailData);
-          for( let i = 0; i < mail.length; i++){
-            if(mail[i].id == newMail.id){
-              mail.splice(i,1);
+          for (let i = 0; i < mail.length; i++) {
+            if (mail[i].id == newMail.id) {
+              mail.splice(i, 1);
               break;
             }
           }
-          fs.writeFile("./drafts.json", JSON.stringify(mail, null, 2), (err) => {
-            if (err) {
-              console.log(err);
-            } else {
-              console.log("Succesfully deleted from drafts.json");
-       
+          fs.writeFile(
+            "./drafts.json",
+            JSON.stringify(mail, null, 2),
+            (err) => {
+              if (err) {
+                console.log(err);
+              } else {
+                console.log("Succesfully deleted from drafts.json");
+              }
             }
-          });
+          );
         } catch (err) {
           console.log("Error:" + err);
         }
@@ -480,31 +481,29 @@ app.post("/deleteTrash", (req, res) => {
     newMail.id = req.body.id;
     let data = [];
     fs.readFile("./trash.json", "utf-8", (err, trashData) => {
-      if(err) {
+      if (err) {
         console.log(err);
-      }
-      else {
-        try{
+      } else {
+        try {
           data = JSON.parse(trashData);
-          for( let i = 0; i < data.length; i++) {
-            if(data[i].id == newMail.id){
-              data.splice(i,1)
+          for (let i = 0; i < data.length; i++) {
+            if (data[i].id == newMail.id) {
+              data.splice(i, 1);
               break;
             }
           }
           fs.writeFile("./trash.json", JSON.stringify(data, null, 2), (err) => {
-            if(err) {
+            if (err) {
               console.log(err);
-            }
-            else {
+            } else {
               console.log("Succesfully deleted from trash.json");
             }
-          })
-        } catch(err) {
+          });
+        } catch (err) {
           console.log("Error:" + err);
         }
       }
-    })
+    });
   } catch {
     console.log("Error:" + err);
   }
@@ -529,7 +528,8 @@ app.get("/fetchPinnedMail", (req, res) => {
 
 app.post("/addPinnedMail", (req, res) => {
   try {
-    let newMail = {}
+    let newMail = {};
+    newMail.id = req.body.id;
     newMail.time = req.body.time;
     newMail.subject = req.body.subject;
     newMail.senderName = req.body.senderName;
@@ -544,13 +544,17 @@ app.post("/addPinnedMail", (req, res) => {
         try {
           data = JSON.parse(mailData);
           data.push(newMail);
-          fs.writeFile("./pinnedmails.json", JSON.stringify(data, null, 2), (err) => {
-            if (err) {
-              console.log(err);
-            } else {
-              console.log("Succesfully written into pinnedmails.json");
+          fs.writeFile(
+            "./pinnedmails.json",
+            JSON.stringify(data, null, 2),
+            (err) => {
+              if (err) {
+                console.log(err);
+              } else {
+                console.log("Succesfully written into pinnedmails.json");
+              }
             }
-          });
+          );
         } catch (err) {
           console.log("Error parsing pinnedmails JSON file:" + err);
         }
@@ -558,6 +562,41 @@ app.post("/addPinnedMail", (req, res) => {
     });
   } catch (err) {
     console.log("Error parsing pinnedmails JSOn file:" + err);
+  }
+  res.json("Succesfully written");
+});
+
+app.post("/removePinnedMail", (req, res) => {
+  try {
+    let newMail = {};
+    newMail.id = req.body.id;
+    let data = [];
+    fs.readFile("./pinnedmails.json", "utf-8", (err, mailData) => {
+      if (err) {
+        console.log(err);
+      } else {
+        try {
+          data = JSON.parse(mailData);
+          for (let i = 0; i < data.length; i++) {
+            if (data[i].id == newMail.id) {
+              data.splice(i, 1);
+              break;
+            }
+          }
+          fs.writeFile("./pinnedmails.json", JSON.stringify(data, null, 2), (err) => {
+            if (err) {
+              console.log(err);
+            } else {
+              console.log("Succesfully deleted from pinnedmails.json");
+            }
+          });
+        } catch (err) {
+          console.log("Error:" + err);
+        }
+      }
+    });
+  } catch {
+    console.log("Error:" + err);
   }
   res.json("Succesfully written");
 });
