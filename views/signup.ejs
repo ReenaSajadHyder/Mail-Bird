@@ -62,8 +62,12 @@
                 placeholder="Enter password"
                 required
               />
-              <img id="password-hidden" src="./assets/images/password-hidden.png" alt="password hidden">
-              <!-- <i class="far fa-eye" id="togglePassword"></i> -->
+              <img
+                id="password-hidden"
+                src="./assets/images/password-hidden.png"
+                alt="password hidden"
+                onclick="toggleVisibility()"
+              />
             </div>
             <div>
               <label id="conf-password" for="password">Confirm Password*</label>
@@ -77,8 +81,12 @@
                 placeholder="Enter password again"
                 required
               />
-              <!-- <i class="far fa-eye" id="togglePassword"></i> -->
-              <img id="conf-password-hidden" src="./assets/images/password-hidden.png" alt="password hidden">
+              <img
+                id="conf-password-hidden"
+                src="./assets/images/password-hidden.png"
+                alt="password hidden"
+                onclick="togglePwdVisibility()"
+              />
             </div>
             <div>
               <button id="signup-btn" type="submit">Sign up</button>
@@ -109,5 +117,6 @@
         <div id="digi-illustration"></div>
       </div>
     </div>
+    <script src="./scripts/loginsignup.js"></script>
   </body>
 </html>

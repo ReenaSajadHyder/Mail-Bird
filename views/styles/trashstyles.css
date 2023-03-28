@@ -206,3 +206,43 @@
   background-color: #a12c34;
   color: white;
 }
+#mail-container {
+  display: grid;
+  grid-template-rows: 10% 8% 82%;
+  font-family: "Mulish", sans-serif;
+  background-color: white;
+  padding: 2% 2% 1% 2%;
+  margin: 1%;
+  height: 82vh;
+  border-radius: 10px;
+}
+#subject-time {
+  display: grid;
+  grid-template-columns: 98% 2%;
+  border-bottom: 2px solid black;
+}
+#subject {
+  font-size: 32px;
+}
+#time-stamp {
+  font-size: 16px;
+}
+#close-compose {
+  font-size: 20px;
+}
+#close-compose:hover {
+  cursor: pointer;
+  color: red;
+}
+#from-sender,
+#to-recipient {
+  padding-top: 0.8%;
+  display: grid;
+  grid-template-columns: 10% 90%;
+  font-size: 24px;
+  border-bottom: 2px solid black;
+}
+#content {
+  padding-top: 1%;
+  overflow-y: auto;
+}

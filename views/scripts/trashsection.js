@@ -46,12 +46,54 @@ function displayMails() {
                     </div>
                 </div>
                 <div>
-                    <img class="trash-can" src="./assets/images/trash-outline.png" alt="trash can">
+                    <img class="trash-can" src="./assets/images/trash-outline.png" alt="trash can" onclick="deleteTrash()">
                 </div>
             </div>` + document.querySelector("#mails-container").innerHTML;
     }
   }
 }
+
+function showMailContent(id) {
+    let mailContentId = id;
+    for (let i = 0; i < mailArr.length; i++) {
+      if (mailArr[i].id == mailContentId) {
+        document.querySelector("#mails-container").style.overflowY = "hidden";
+        document.querySelector(
+          "#mails-container"
+        ).innerHTML = `<div id="compose-box">
+                      <div id="mail-container">
+                          <div id="subject-time">
+                              <div id="subject">${mailArr[i].subject}</div>
+                              <div id="close-compose" onclick="displayMails()">&#10005</div>
+                          </div>
+                          <div id="from-sender">
+                              <div id="from">From:</div>
+                              <div id="sender-name">${mailArr[i].senderName}</div>
+                          </div> 
+                          <div id="content">
+                              ${mailArr[i].content}
+                          </div>
+                      </div>
+                  </div>`;
+      }
+    }
+  }
+
+  function deleteTrash() {
+    let mailObj = {};
+    mailObj.id = currentMailId;
+    fetch("/deleteTrash", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(mailObj),
+    })
+      .then((data) => data.json())
+      .then((result) => {
+        console.log(result);
+        window.location.href = "/trashsection";
+      });
+  }
+  
 document.querySelector("#sign-out-txt").title = `Sign out of your account!`;
 document.querySelector("#inbox-txt").title = `Navigate to the inbox section`;
 document.querySelector("#sent-txt").title = `Navigate to the sent section`;

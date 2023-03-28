@@ -474,6 +474,43 @@ app.get("/fetchTrash", (req, res) => {
   });
 });
 
+app.post("/deleteTrash", (req, res) => {
+  try {
+    let newMail = {};
+    newMail.id = req.body.id;
+    let data = [];
+    fs.readFile("./trash.json", "utf-8", (err, trashData) => {
+      if(err) {
+        console.log(err);
+      }
+      else {
+        try{
+          data = JSON.parse(trashData);
+          for( let i = 0; i < data.length; i++) {
+            if(data[i].id == newMail.id){
+              data.splice(i,1)
+              break;
+            }
+          }
+          fs.writeFile("./trash.json", JSON.stringify(data, null, 2), (err) => {
+            if(err) {
+              console.log(err);
+            }
+            else {
+              console.log("Succesfully deleted from trash.json");
+            }
+          })
+        } catch(err) {
+          console.log("Error:" + err);
+        }
+      }
+    })
+  } catch {
+    console.log("Error:" + err);
+  }
+  res.json("Succesfully written");
+});
+
 app.listen(8000, () => {
   console.log(
     "Server connected at port number 8000 with url 'http://localhost:8000/'"
