@@ -107,7 +107,6 @@ document.querySelector("#sign-out-txt").title = `Sign out of your account!`;
 document.querySelector("#sent-txt").title = `Navigate to the sent section`;
 document.querySelector("#trash-txt").title = `Navigate to the trash section`;
 document.querySelector("#drafts-txt").title = `Navigate to the draft section`;
-
 document.querySelector("#inbox-sec").addEventListener("click", () => {
   window.location.href = "/inboxsection";
 });
@@ -119,4 +118,7 @@ document.querySelector("#drafts-sec").addEventListener("click", () => {
 });
 document.querySelector("#trash-sec").addEventListener("click", () => {
   window.location.href = "/trashsection";
+});
+document.querySelector("#compose-btn").addEventListener("click", () => {
+  window.location.href = "/composemail";
 });

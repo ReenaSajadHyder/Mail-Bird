@@ -54,13 +54,13 @@ function displayMails() {
 }
 
 function showMailContent(id) {
-    let mailContentId = id;
-    for (let i = 0; i < mailArr.length; i++) {
-      if (mailArr[i].id == mailContentId) {
-        document.querySelector("#mails-container").style.overflowY = "hidden";
-        document.querySelector(
-          "#mails-container"
-        ).innerHTML = `<div id="compose-box">
+  let mailContentId = id;
+  for (let i = 0; i < mailArr.length; i++) {
+    if (mailArr[i].id == mailContentId) {
+      document.querySelector("#mails-container").style.overflowY = "hidden";
+      document.querySelector(
+        "#mails-container"
+      ).innerHTML = `<div id="compose-box">
                       <div id="mail-container">
                           <div id="subject-time">
                               <div id="subject">${mailArr[i].subject}</div>
@@ -75,30 +75,29 @@ function showMailContent(id) {
                           </div>
                       </div>
                   </div>`;
-      }
     }
   }
+}
 
-  function deleteTrash() {
-    let mailObj = {};
-    mailObj.id = currentMailId;
-    fetch("/deleteTrash", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(mailObj),
-    })
-      .then((data) => data.json())
-      .then((result) => {
-        console.log(result);
-        window.location.href = "/trashsection";
-      });
-  }
-  
+function deleteTrash() {
+  let mailObj = {};
+  mailObj.id = currentMailId;
+  fetch("/deleteTrash", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(mailObj),
+  })
+    .then((data) => data.json())
+    .then((result) => {
+      console.log(result);
+      window.location.href = "/trashsection";
+    });
+}
+
 document.querySelector("#sign-out-txt").title = `Sign out of your account!`;
 document.querySelector("#inbox-txt").title = `Navigate to the inbox section`;
 document.querySelector("#sent-txt").title = `Navigate to the sent section`;
 document.querySelector("#drafts-txt").title = `Navigate to the draft section`;
-
 document.querySelector("#inbox-sec").addEventListener("click", () => {
   window.location.href = "/inboxsection";
 });
@@ -110,4 +109,7 @@ document.querySelector("#drafts-sec").addEventListener("click", () => {
 });
 document.querySelector("#trash-sec").addEventListener("click", () => {
   window.location.href = "/trashsection";
+});
+document.querySelector("#compose-btn").addEventListener("click", () => {
+  window.location.href = "/composemail";
 });
