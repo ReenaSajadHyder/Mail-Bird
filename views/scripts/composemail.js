@@ -67,3 +67,16 @@ document.querySelector("#inbox-txt").title = `Navigate to the inbox section`;
 document.querySelector("#sent-txt").title = `Navigate to the sent section`;
 document.querySelector("#trash-txt").title = `Navigate to the trash section`;
 document.querySelector("#drafts-txt").title = `Navigate to the draft section`;
+
+document.querySelector("#inbox-sec").addEventListener("click", () => {
+  window.location.href = "/inboxsection";
+});
+document.querySelector("#sent-sec").addEventListener("click", () => {
+  window.location.href = "/sentsection";
+});
+document.querySelector("#drafts-sec").addEventListener("click", () => {
+  window.location.href = "/draftssection";
+});
+document.querySelector("#trash-sec").addEventListener("click", () => {
+  window.location.href = "/trashsection";
+});
