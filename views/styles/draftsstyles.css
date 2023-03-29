@@ -156,13 +156,6 @@
   grid-template-columns: 25% 65% 10%;
   padding-left: 1%;
 }
-.pin {
-  padding-left: 20%;
-}
-.pin-symbol {
-  height: 28px;
-  width: 28px;
-}
 .sender-name,
 .mail-title {
   font-size: 22px;
