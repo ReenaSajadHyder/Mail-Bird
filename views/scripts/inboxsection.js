@@ -126,6 +126,10 @@ function getRemainingMails() {
             if (j == pinnedMailArr.length)
                 remainingMails.push(mailArr[i]);
         }
+        remainingMails.sort((a, b) => {
+          return b.time.localeCompare(a.time);
+        });
+        console.table(remainingMails);
 }
 
 function showMailContent(id) {
@@ -139,7 +143,7 @@ function showMailContent(id) {
                     <div id="mail-container">
                         <div id="subject-time">
                             <div id="subject">${mailArr[i].subject}</div>
-                            <div id="close-compose" onclick="displayMails()">&#10005</div>
+                            <div id="close-compose" onclick="closeMail()">&#10005</div>
                         </div>
                         <div id="from-sender">
                             <div id="from">From:</div>
@@ -162,8 +166,13 @@ function showMailContent(id) {
       .then((data) => data.json())
       .then((result) => {
         console.log(result);
-        window.location.href = "/inboxsection";
       });
+}
+
+function closeMail() {
+  fetchUsername();
+  fetchMail();
+  displayMails();
 }
 
 function addToTrash() {

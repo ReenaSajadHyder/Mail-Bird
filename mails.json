@@ -167,7 +167,7 @@
     "sender": "ace@mailbird.com",
     "recipient": "reena@mailbird.com",
     "content": "a",
-    "readStatus": "read"
+    "readStatus": "unread"
   },
   {
     "id": 1679978333021,
@@ -178,16 +178,6 @@
     "recipient": "reena@mailbird.com",
     "content": "b",
     "readStatus": "read"
-  },
-  {
-    "id": 1679978339509,
-    "time": "10:08 AM",
-    "subject": "c",
-    "senderName": "ace",
-    "sender": "ace@mailbird.com",
-    "recipient": "reena@mailbird.com",
-    "content": "c",
-    "readStatus": "unread"
   },
   {
     "id": 1679978344997,
@@ -217,7 +207,7 @@
     "sender": "ace@mailbird.com",
     "recipient": "reena@mailbird.com",
     "content": "f",
-    "readStatus": "unread"
+    "readStatus": "read"
   },
   {
     "id": 1679978363340,
@@ -227,7 +217,7 @@
     "sender": "ace@mailbird.com",
     "recipient": "reena@mailbird.com",
     "content": "g",
-    "readStatus": "unread"
+    "readStatus": "read"
   },
   {
     "id": 1680065595304,
