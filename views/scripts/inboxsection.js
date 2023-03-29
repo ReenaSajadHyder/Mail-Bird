@@ -39,6 +39,7 @@ function displayMails() {
   getRemainingMails();
   document.querySelector("#mails-container").innerHTML = "";
   if(pinnedMailArr.length == 0) {
+    // document.querySelector("#mails-container").replaceChildren();
     for(let i = 0; i < mailArr.length; i++){
       if(mailArr[i].recipient == email){
         currentMailId = mailArr[i].id;
@@ -64,6 +65,8 @@ function displayMails() {
     }
   }
   else {
+    // document.querySelector("#mails-container").innerHTML = "";
+    // document.querySelector("#mails-container").replaceChildren(); 
     for(let i = 0; i < pinnedMailArr.length; i++){
       if(pinnedMailArr[i].recipient == email){
         currentMailId = pinnedMailArr[i].id;
@@ -115,6 +118,7 @@ function displayMails() {
 }
 
 function getRemainingMails() {
+  remainingMails=[]
   for (let i = 0; i < mailArr.length; i++)
         {
             let j;
@@ -179,9 +183,7 @@ function addToTrash() {
     });
 }
 function pinMail(id, e) {
-  // let pin = document.querySelector(".pin-symbol");
   let pinUrl = e.target.src;
-  // console.log("pin",pinUrl);
   console.log(pinUrl.endsWith("tack-bw.png"));
   let pinMailId = id;
   let pinnedObj = {};
