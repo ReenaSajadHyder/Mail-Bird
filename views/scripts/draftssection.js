@@ -33,7 +33,6 @@ function displayMails() {
       currentMailId = draftsArr[i].id;
       document.querySelector("#mails-container").innerHTML =
         `<div class="mail">
-                <div class="pin"><img class="pin-symbol" src="./assets/images/tack-bw.png" alt="pinned"></div>
                 <div class ="show-mail" onclick="showMailContent(${currentMailId})" >
                     <div class="sender-name">
                         ${draftsArr[i].recipient}
