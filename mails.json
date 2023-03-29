@@ -130,36 +130,6 @@
     "readStatus": "unread"
   },
   {
-    "id": 1679900451651,
-    "time": "12:30 PM",
-    "subject": "dfvgbnhm",
-    "senderName": "reena",
-    "sender": "reena@mailbird.com",
-    "recipient": "sxdcfvghnjmk,",
-    "content": "sxdcfgvhnjmhgfdsa",
-    "readStatus": "unread"
-  },
-  {
-    "id": 1679913163384,
-    "time": "4:02 PM",
-    "subject": "a",
-    "senderName": "reena",
-    "sender": "reena@mailbird.com",
-    "recipient": "ace@mailbird.com",
-    "content": "a",
-    "readStatus": "unread"
-  },
-  {
-    "id": 1679917789837,
-    "time": "5:19 PM",
-    "subject": "Hi",
-    "senderName": "reena",
-    "sender": "reena@mailbird.com",
-    "recipient": "ace@mailbird.com",
-    "content": "Hi there",
-    "readStatus": "unread"
-  },
-  {
     "id": 1679978326105,
     "time": "10:08 AM",
     "subject": "a",
@@ -187,7 +157,7 @@
     "sender": "ace@mailbird.com",
     "recipient": "reena@mailbird.com",
     "content": "d",
-    "readStatus": "unread"
+    "readStatus": "read"
   },
   {
     "id": 1679978350421,
@@ -197,7 +167,7 @@
     "sender": "ace@mailbird.com",
     "recipient": "reena@mailbird.com",
     "content": "e",
-    "readStatus": "unread"
+    "readStatus": "read"
   },
   {
     "id": 1679978356748,

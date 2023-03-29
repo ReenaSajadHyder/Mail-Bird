@@ -246,7 +246,15 @@
   padding-top: 1%;
   overflow-y: auto;
 }
-
 .unread{
   font-weight: bolder;
+}
+#mails-number{
+  font-size: 16px;
+  color: white;
+  background-color: black;
+  border-radius: 4px;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin-left: 10%;
 }

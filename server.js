@@ -617,7 +617,6 @@ app.post("/changeMailStatus", (req, res) => {
         for(let i = 0; i < data.length; i++) {
           if(data[i].id == mailId){
             data[i].readStatus = "read";
-            // console.log(data[i].readStatus);
           }
         }
         fs.writeFile("./mails.json", JSON.stringify(data, null, 2), (err) => {

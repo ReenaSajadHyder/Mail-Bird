@@ -1,9 +1,10 @@
 let mailArr = [];
-let pinnedMailArr =[];
+let pinnedMailArr = [];
 let remainingMails = [];
 let email;
 let user;
 let currentMailId = "";
+let mailNum = 0;
 
 (function () {
   fetchUsername();
@@ -25,22 +26,21 @@ function fetchMail() {
     .then((result) => {
       mailArr = result;
       fetch("/fetchPinnedMail")
-    .then((data) => data.json())
-    .then((result) => {
-      pinnedMailArr = result;
-      displayMails();
+        .then((data) => data.json())
+        .then((result) => {
+          pinnedMailArr = result;
+          displayMails();
+          changeMailNum();
+        });
     });
-      
-    });
-    
 }
 
 function displayMails() {
   getRemainingMails();
   document.querySelector("#mails-container").innerHTML = "";
-  if(pinnedMailArr.length == 0) {
-    for(let i = 0; i < mailArr.length; i++){
-      if(mailArr[i].recipient == email){
+  if (pinnedMailArr.length == 0) {
+    for (let i = 0; i < mailArr.length; i++) {
+      if (mailArr[i].recipient == email) {
         currentMailId = mailArr[i].id;
         document.querySelector("#mails-container").innerHTML =
           `<div class="mail">
@@ -62,10 +62,9 @@ function displayMails() {
               </div>` + document.querySelector("#mails-container").innerHTML;
       }
     }
-  }
-  else {
-    for(let i = 0; i < pinnedMailArr.length; i++){
-      if(pinnedMailArr[i].recipient == email){
+  } else {
+    for (let i = 0; i < pinnedMailArr.length; i++) {
+      if (pinnedMailArr[i].recipient == email) {
         currentMailId = pinnedMailArr[i].id;
         document.querySelector("#mails-container").innerHTML =
           `<div class="mail ${pinnedMailArr[i].readStatus}">
@@ -87,11 +86,12 @@ function displayMails() {
               </div>` + document.querySelector("#mails-container").innerHTML;
       }
     }
-    for(let i = 0; i < remainingMails.length; i++) {
-      if(remainingMails[i].recipient == email) {
+    for (let i = 0; i < remainingMails.length; i++) {
+      if (remainingMails[i].recipient == email) {
         currentMailId = remainingMails[i].id;
-        document.querySelector("#mails-container").innerHTML +=
-          `<div class="mail ${remainingMails[i].readStatus}">
+        document.querySelector(
+          "#mails-container"
+        ).innerHTML += `<div class="mail ${remainingMails[i].readStatus}">
                   <div class="pin"><img class="pin-symbol" src="./assets/images/tack-bw.png" alt="pinned" onclick="pinMail(${currentMailId}, event)"></div>
                   <div class="show-mail" onclick="showMailContent(${currentMailId})">
                       <div class="sender-name">
@@ -107,29 +107,26 @@ function displayMails() {
                   <div>
                       <img class="trash-can" src="./assets/images/trash-outline.png" alt="trash can" onclick="addToTrash()">
                   </div>
-              </div>`
+              </div>`;
       }
+    }
   }
-}
 }
 
 function getRemainingMails() {
-  remainingMails=[]
-  for (let i = 0; i < mailArr.length; i++)
-        {
-            let j;
-            for (j = 0; j < pinnedMailArr.length; j++){
-              if (mailArr[i].id === pinnedMailArr[j].id){
-                break;
-              }
-            }
-            if (j == pinnedMailArr.length)
-                remainingMails.push(mailArr[i]);
-        }
-        remainingMails.sort((a, b) => {
-          return b.time.localeCompare(a.time);
-        });
-        console.table(remainingMails);
+  remainingMails = [];
+  for (let i = 0; i < mailArr.length; i++) {
+    let j;
+    for (j = 0; j < pinnedMailArr.length; j++) {
+      if (mailArr[i].id === pinnedMailArr[j].id) {
+        break;
+      }
+    }
+    if (j == pinnedMailArr.length) remainingMails.push(mailArr[i]);
+  }
+  remainingMails.sort((a, b) => {
+    return b.time.localeCompare(a.time);
+  });
 }
 
 function showMailContent(id) {
@@ -157,22 +154,35 @@ function showMailContent(id) {
     }
   }
   let mailStatus = {};
-    mailStatus.id = mailContentId;
-    fetch("/changeMailStatus", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(mailStatus),
-    })
-      .then((data) => data.json())
-      .then((result) => {
-        console.log(result);
-      });
+  mailStatus.id = mailContentId;
+  fetch("/changeMailStatus", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(mailStatus),
+  })
+    .then((data) => data.json())
+    .then((result) => {
+      console.log(result);
+    });
 }
 
 function closeMail() {
   fetchUsername();
   fetchMail();
   displayMails();
+}
+
+function changeMailNum() {
+  mailNum = 0;
+  for (let i = 0; i < mailArr.length; i++) {
+    if (mailArr[i].recipient == email) {
+      if (mailArr[i].readStatus == "unread") {
+        mailNum++;
+      }
+    }
+  }
+  console.log(mailNum);
+  document.querySelector("#mails-number").innerHTML = mailNum;
 }
 
 function addToTrash() {
@@ -205,8 +215,8 @@ function pinMail(id, e) {
   console.log(pinUrl.endsWith("tack-bw.png"));
   let pinMailId = id;
   let pinnedObj = {};
-  for(let i = 0; i< mailArr.length; i++) {
-    if(mailArr[i].id == pinMailId){
+  for (let i = 0; i < mailArr.length; i++) {
+    if (mailArr[i].id == pinMailId) {
       pinnedObj.id = mailArr[i].id;
       pinnedObj.time = mailArr[i].time;
       pinnedObj.subject = mailArr[i].subject;
@@ -215,7 +225,7 @@ function pinMail(id, e) {
       pinnedObj.recipient = mailArr[i].recipient;
       pinnedObj.content = mailArr[i].content;
       pinnedObj.readStatus = mailArr[i].readStatus;
-      if(pinUrl.endsWith("tack-bw.png")) {
+      if (pinUrl.endsWith("tack-bw.png")) {
         fetch("/addPinnedMail", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -227,7 +237,7 @@ function pinMail(id, e) {
             window.location.href = "/inboxsection";
           });
       }
-      if(pinUrl.endsWith("tack-red.png")) {
+      if (pinUrl.endsWith("tack-red.png")) {
         fetch("/removePinnedMail", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
