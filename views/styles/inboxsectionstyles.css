@@ -247,3 +247,6 @@
   overflow-y: auto;
 }
 
+.unread{
+  font-weight: bolder;
+}

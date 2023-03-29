@@ -39,7 +39,6 @@ function displayMails() {
   getRemainingMails();
   document.querySelector("#mails-container").innerHTML = "";
   if(pinnedMailArr.length == 0) {
-    // document.querySelector("#mails-container").replaceChildren();
     for(let i = 0; i < mailArr.length; i++){
       if(mailArr[i].recipient == email){
         currentMailId = mailArr[i].id;
@@ -65,13 +64,11 @@ function displayMails() {
     }
   }
   else {
-    // document.querySelector("#mails-container").innerHTML = "";
-    // document.querySelector("#mails-container").replaceChildren(); 
     for(let i = 0; i < pinnedMailArr.length; i++){
       if(pinnedMailArr[i].recipient == email){
         currentMailId = pinnedMailArr[i].id;
         document.querySelector("#mails-container").innerHTML =
-          `<div class="mail">
+          `<div class="mail ${pinnedMailArr[i].readStatus}">
                   <div class="pin"><img class="pin-symbol" src="http://localhost:8000/assets/images/tack-red.png" alt="pinned" onclick="pinMail(${currentMailId}, event)"></div>
                   <div class="show-mail" onclick="showMailContent(${currentMailId})">
                       <div class="sender-name">
@@ -94,7 +91,7 @@ function displayMails() {
       if(remainingMails[i].recipient == email) {
         currentMailId = remainingMails[i].id;
         document.querySelector("#mails-container").innerHTML +=
-          `<div class="mail">
+          `<div class="mail ${remainingMails[i].readStatus}">
                   <div class="pin"><img class="pin-symbol" src="./assets/images/tack-bw.png" alt="pinned" onclick="pinMail(${currentMailId}, event)"></div>
                   <div class="show-mail" onclick="showMailContent(${currentMailId})">
                       <div class="sender-name">
@@ -112,9 +109,8 @@ function displayMails() {
                   </div>
               </div>`
       }
-    }
   }
-  
+}
 }
 
 function getRemainingMails() {
@@ -156,6 +152,18 @@ function showMailContent(id) {
                 </div>`;
     }
   }
+  let mailStatus = {};
+    mailStatus.id = mailContentId;
+    fetch("/changeMailStatus", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(mailStatus),
+    })
+      .then((data) => data.json())
+      .then((result) => {
+        console.log(result);
+        window.location.href = "/inboxsection";
+      });
 }
 
 function addToTrash() {
@@ -169,6 +177,7 @@ function addToTrash() {
       mailObj.subject = mailArr[i].subject;
       mailObj.recipient = mailArr[i].recipient;
       mailObj.content = mailArr[i].content;
+      mailObj.readStatus = mailArr[i].readStatus;
     }
   }
   fetch("/addTrash", {
@@ -196,6 +205,7 @@ function pinMail(id, e) {
       pinnedObj.sender = mailArr[i].sender;
       pinnedObj.recipient = mailArr[i].recipient;
       pinnedObj.content = mailArr[i].content;
+      pinnedObj.readStatus = mailArr[i].readStatus;
       if(pinUrl.endsWith("tack-bw.png")) {
         fetch("/addPinnedMail", {
           method: "POST",

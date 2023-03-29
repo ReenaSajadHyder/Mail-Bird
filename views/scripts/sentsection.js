@@ -14,7 +14,6 @@ function fetchUsername() {
     .then((result) => {
       user = result.user;
       email = result.email;
-      console.log(user);
     });
 }
 

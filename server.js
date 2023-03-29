@@ -214,6 +214,7 @@ app.post("/addMail", (req, res) => {
     newMail.sender = req.body.sender;
     newMail.recipient = req.body.recipient;
     newMail.content = req.body.content;
+    newMail.readStatus = req.body.readStatus;
     let data = [];
     fs.readFile("./mails.json", "utf-8", (err, mailData) => {
       if (err) {
@@ -324,6 +325,7 @@ app.post("/addTrash", (req, res) => {
     newMail.sender = req.body.sender;
     newMail.recipient = req.body.recipient;
     newMail.content = req.body.content;
+    newMail.readStatus = req.body.readStatus;
     let data = [];
     let mail = [];
     fs.readFile("./trash.json", "utf-8", (err, trashData) => {
@@ -536,6 +538,7 @@ app.post("/addPinnedMail", (req, res) => {
     newMail.sender = req.body.sender;
     newMail.recipient = req.body.recipient;
     newMail.content = req.body.content;
+    newMail.readStatus = req.body.readStatus;
     let data = [];
     fs.readFile("./pinnedmails.json", "utf-8", (err, mailData) => {
       if (err) {
@@ -600,6 +603,37 @@ app.post("/removePinnedMail", (req, res) => {
   }
   res.json("Succesfully written");
 });
+
+app.post("/changeMailStatus", (req, res) => {
+  try {
+    let data = [];
+    let mailId = req.body.id;
+    fs.readFile("./mails.json", "utf-8", (err, mailData) => {
+      if(err) {
+        console.log(err);
+      }
+      else {
+        data = JSON.parse(mailData);
+        for(let i = 0; i < data.length; i++) {
+          if(data[i].id == mailId){
+            data[i].readStatus = "read";
+            // console.log(data[i].readStatus);
+          }
+        }
+        fs.writeFile("./mails.json", JSON.stringify(data, null, 2), (err) => {
+          if(err) {
+            console.log(err);
+          }
+          else {
+            console.log("Mail read status successfully updated in the mails.json file");
+          }
+        })
+      }
+    })
+  } catch(err) {
+    console.log(err);
+  }
+})
 
 app.listen(8000, () => {
   console.log(

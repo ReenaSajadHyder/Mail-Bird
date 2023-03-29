@@ -27,6 +27,7 @@ function addMail() {
   newMailObj.subject = document.querySelector("#subject-inp").value;
   newMailObj.recipient = document.querySelector("#recipient-name").value;
   newMailObj.content = contentValue;
+  newMailObj.readStatus = "unread";
   fetch("/addMail", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -40,8 +41,8 @@ function addMail() {
 }
 
 function addToDrafts() {
-  let content = document.querySelector("#content");
-  let contentValue = content.value.replace(
+  let content = document.querySelector("#content").value;
+  let contentValue = content.replace(
       /\r\n|\r|\n/g,
       "<br>"
      );

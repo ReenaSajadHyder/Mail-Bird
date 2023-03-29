@@ -1,20 +1,22 @@
 [
   {
-    "id": 1679563215315,
-    "time": "2:50 PM",
-    "subject": "Project Plan",
-    "senderName": "Nalina",
-    "sender": "nalina@mailbird.com",
-    "recipient": "reena@mailbird.com",
-    "content": "Hi George,\nThanks for your reply.　 You are always so quick!\n\nI sent an-mail to Mr. Imai of Seibido yesterday, and I just got a phone call\nfrom him.　 They want us to send the whole thing and also a \"Project　\nPlan.\"　 It seems that they have some form to fill in to describe the project　\nin Japanese, so I will write something which will appeal to the publsiher.\n\nThat's all for now.　 Let's hope it will come out!\n\n"
-  },
-  {
     "id": 1679913163384,
     "time": "4:02 PM",
     "subject": "a",
     "senderName": "reena",
     "sender": "reena@mailbird.com",
     "recipient": "ace@mailbird.com",
-    "content": "a"
+    "content": "a",
+    "readStatus": "unread"
+  },
+  {
+    "id": 1680065595304,
+    "time": "10:23 AM",
+    "subject": "Sandwich",
+    "senderName": "Nalina",
+    "sender": "nalina@mailbird.com",
+    "recipient": "reena@mailbird.com",
+    "content": "sanfwich",
+    "readStatus": "read"
   }
 ]
