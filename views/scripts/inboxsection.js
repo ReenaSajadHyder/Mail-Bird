@@ -181,7 +181,6 @@ function changeMailNum() {
       }
     }
   }
-  console.log(mailNum);
   document.querySelector("#mails-number").innerHTML = mailNum;
 }
 

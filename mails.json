@@ -157,7 +157,7 @@
     "sender": "ace@mailbird.com",
     "recipient": "reena@mailbird.com",
     "content": "d",
-    "readStatus": "read"
+    "readStatus": "unread"
   },
   {
     "id": 1679978350421,
@@ -167,7 +167,7 @@
     "sender": "ace@mailbird.com",
     "recipient": "reena@mailbird.com",
     "content": "e",
-    "readStatus": "read"
+    "readStatus": "unread"
   },
   {
     "id": 1679978356748,
@@ -177,7 +177,7 @@
     "sender": "ace@mailbird.com",
     "recipient": "reena@mailbird.com",
     "content": "f",
-    "readStatus": "read"
+    "readStatus": "unread"
   },
   {
     "id": 1679978363340,
