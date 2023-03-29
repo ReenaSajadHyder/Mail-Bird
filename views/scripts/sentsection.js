@@ -2,6 +2,7 @@ let mailArr = [];
 let email;
 let user;
 let currentMailId = "";
+let totalMailNum = 0;
 
 (function () {
   fetchUsername();
@@ -22,13 +23,14 @@ function fetchMail() {
     .then((data) => data.json())
     .then((result) => {
       mailArr = result;
-      displayMails();
       changeMailNum();
+      displayMails();
     });
 }
 
 function displayMails() {
   document.querySelector("#mails-container").innerHTML = "";
+  changeBg();
   for (let i = 0; i < mailArr.length; i++) {
     if (mailArr[i].sender == email) {
       currentMailId = mailArr[i].id;
@@ -50,6 +52,16 @@ function displayMails() {
                 </div>
             </div>` + document.querySelector("#mails-container").innerHTML;
     }
+  }
+}
+
+function changeBg() {
+  if(totalMailNum == 0){
+    document.querySelector("#mails-container").style.backgroundImage = "url(./assets/images/sectionpg-bg-small.jpg)";
+  }
+  if(totalMailNum > 0){
+    console.log("Inside totalmailnum > 0")
+    document.querySelector("#mails-container").style.backgroundColor = "white";
   }
 }
 
@@ -81,8 +93,10 @@ function showMailContent(id) {
 
 function changeMailNum() {
   mailNum = 0;
+  totalMailNum = 0;
   for (let i = 0; i < mailArr.length; i++) {
     if (mailArr[i].recipient == email) {
+      totalMailNum++;
       if (mailArr[i].readStatus == "unread") {
         mailNum++;
       }

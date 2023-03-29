@@ -2,11 +2,12 @@ let mailArr = [];
 let email;
 let currentMailId = "";
 let user;
+let totalMailNum = 0;
 
 (function () {
   fetchUsername();
-  fetchTrash();
   fetchMail();
+  fetchTrash();
 })();
 
 function fetchUsername() {
@@ -38,7 +39,9 @@ function fetchMail() {
 
 function changeMailNum() {
   mailNum = 0;
+  totalMailNum = 0;
   for (let i = 0; i < mailArr.length; i++) {
+    totalMailNum++;
     if (mailArr[i].recipient == email) {
       if (mailArr[i].readStatus == "unread") {
         mailNum++;
@@ -49,6 +52,7 @@ function changeMailNum() {
 }
 
 function displayMails() {
+  changeBg();
   document.querySelector("#mails-container").innerHTML = "";
   for (let i = 0; i < mailArr.length; i++) {
     if (mailArr[i].recipient == email || mailArr[i].sender == email) {
@@ -71,6 +75,16 @@ function displayMails() {
                 </div>
             </div>` + document.querySelector("#mails-container").innerHTML;
     }
+  }
+}
+
+function changeBg() {
+  if(totalMailNum == 0){
+    document.querySelector("#mails-container").style.backgroundImage = "url(./assets/images/sectionpg-bg-small.jpg)";
+  }
+  if(totalMailNum > 0){
+    console.log("Inside totalmailnum > 0")
+    document.querySelector("#mails-container").style.backgroundColor = "white";
   }
 }
 

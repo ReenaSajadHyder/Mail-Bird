@@ -123,7 +123,7 @@
   width: 32px;
 }
 #mails-container {
-  background-image: url(../assets/images/sectionpg-bg-small.jpg);
+  /* background-image: url(../assets/images/sectionpg-bg-small.jpg); */
   background-position: 50% 50%;
   background-repeat: no-repeat;
   overflow-y: auto;

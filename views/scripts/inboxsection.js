@@ -5,6 +5,7 @@ let email;
 let user;
 let currentMailId = "";
 let mailNum = 0;
+let totalMailNum = 0;
 
 (function () {
   fetchUsername();
@@ -29,14 +30,15 @@ function fetchMail() {
         .then((data) => data.json())
         .then((result) => {
           pinnedMailArr = result;
-          displayMails();
           changeMailNum();
+          displayMails();
         });
     });
 }
 
 function displayMails() {
   getRemainingMails();
+  changeBg();
   document.querySelector("#mails-container").innerHTML = "";
   if (pinnedMailArr.length == 0) {
     for (let i = 0; i < mailArr.length; i++) {
@@ -129,6 +131,17 @@ function getRemainingMails() {
   });
 }
 
+function changeBg() {
+  console.log(totalMailNum);
+  if(totalMailNum == 0){
+    document.querySelector("#mails-container").style.backgroundImage = "url(./assets/images/sectionpg-bg-small.jpg)";
+  }
+  if(totalMailNum > 0){
+    console.log("Inside totalmailnum > 0")
+    document.querySelector("#mails-container").style.backgroundColor = "white";
+  }
+}
+
 function showMailContent(id) {
   let mailContentId = id;
   for (let i = 0; i < mailArr.length; i++) {
@@ -176,6 +189,7 @@ function changeMailNum() {
   mailNum = 0;
   for (let i = 0; i < mailArr.length; i++) {
     if (mailArr[i].recipient == email) {
+      totalMailNum++;
       if (mailArr[i].readStatus == "unread") {
         mailNum++;
       }
