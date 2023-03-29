@@ -1,11 +1,14 @@
+let mailArr = [];
 let draftsArr = [];
 let email;
 let user;
 let currentMailId = "";
+let mailNum = 0;
 
 (function () {
   fetchUsername();
   fetchDrafts();
+  fetchMail();
 })();
 
 function fetchUsername() {
@@ -23,6 +26,15 @@ function fetchDrafts() {
     .then((result) => {
       draftsArr = result;
       displayMails();
+    });
+}
+
+function fetchMail() {
+  fetch("/fetchMail")
+    .then((data) => data.json())
+    .then((result) => {
+      mailArr = result;
+      changeMailNum();
     });
 }
 
@@ -93,6 +105,20 @@ function addToTrash() {
       window.location.href = "/draftssection";
     });
 }
+
+function changeMailNum() {
+  mailNum = 0;
+  for (let i = 0; i < mailArr.length; i++) {
+    if (mailArr[i].recipient == email) {
+      if (mailArr[i].readStatus == "unread") {
+        mailNum++;
+      }
+    }
+  }
+  console.log(mailNum);
+  document.querySelector("#mails-number").innerHTML = mailNum;
+}
+
 
 document.querySelector("#sign-out-txt").title = `Sign out of your account!`;
 document.querySelector("#inbox-txt").title = `Navigate to the inbox section`;

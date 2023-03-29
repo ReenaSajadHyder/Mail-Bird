@@ -23,6 +23,7 @@ function fetchMail() {
     .then((result) => {
       mailArr = result;
       displayMails();
+      changeMailNum();
     });
 }
 
@@ -76,6 +77,19 @@ function showMailContent(id) {
                 </div>`;
     }
   }
+}
+
+function changeMailNum() {
+  mailNum = 0;
+  for (let i = 0; i < mailArr.length; i++) {
+    if (mailArr[i].recipient == email) {
+      if (mailArr[i].readStatus == "unread") {
+        mailNum++;
+      }
+    }
+  }
+  console.log(mailNum);
+  document.querySelector("#mails-number").innerHTML = mailNum;
 }
 
 function addToTrash() {
