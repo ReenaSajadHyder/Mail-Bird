@@ -1,4 +1,5 @@
 let mailArr = [];
+let trashArr = [];
 let email;
 let currentMailId = "";
 let user;
@@ -23,7 +24,8 @@ function fetchTrash() {
   fetch("/fetchTrash")
     .then((data) => data.json())
     .then((result) => {
-      mailArr = result;
+      trashArr = result;
+      trashNum();
       displayMails();
     });
 }
@@ -37,12 +39,19 @@ function fetchMail() {
     });
 }
 
+function trashNum(){
+  for (let i = 0; i < trashArr.length; i++) {
+    if ((trashArr[i].recipient == email) || (trashArr[i].sender == email)){
+      totalMailNum++;
+    }
+  }
+}
+
 function changeMailNum() {
   mailNum = 0;
   totalMailNum = 0;
   for (let i = 0; i < mailArr.length; i++) {
-    totalMailNum++;
-    if (mailArr[i].recipient == email) {
+    if (mailArr[i].recipient == email){
       if (mailArr[i].readStatus == "unread") {
         mailNum++;
       }
@@ -54,20 +63,20 @@ function changeMailNum() {
 function displayMails() {
   changeBg();
   document.querySelector("#mails-container").innerHTML = "";
-  for (let i = 0; i < mailArr.length; i++) {
-    if (mailArr[i].recipient == email || mailArr[i].sender == email) {
-      currentMailId = mailArr[i].id;
+  for (let i = 0; i < trashArr.length; i++) {
+    if (trashArr[i].recipient == email || trashArr[i].sender == email) {
+      currentMailId = trashArr[i].id;
       document.querySelector("#mails-container").innerHTML =
         `<div class="mail">
                 <div class="show-mail" onclick="showMailContent(${currentMailId})">
                     <div class="sender-name">
-                        ${mailArr[i].senderName}
+                        ${trashArr[i].senderName}
                     </div>
                     <div class="mail-title">
-                        ${mailArr[i].subject}
+                        ${trashArr[i].subject}
                     </div>
                     <div class="time">
-                        ${mailArr[i].time}
+                        ${trashArr[i].time}
                     </div>
                 </div>
                 <div>
@@ -83,30 +92,29 @@ function changeBg() {
     document.querySelector("#mails-container").style.backgroundImage = "url(./assets/images/sectionpg-bg-small.jpg)";
   }
   if(totalMailNum > 0){
-    console.log("Inside totalmailnum > 0")
     document.querySelector("#mails-container").style.backgroundColor = "white";
   }
 }
 
 function showMailContent(id) {
   let mailContentId = id;
-  for (let i = 0; i < mailArr.length; i++) {
-    if (mailArr[i].id == mailContentId) {
+  for (let i = 0; i < trashArr.length; i++) {
+    if (trashArr[i].id == mailContentId) {
       document.querySelector("#mails-container").style.overflowY = "hidden";
       document.querySelector(
         "#mails-container"
       ).innerHTML = `<div id="compose-box">
                       <div id="mail-container">
                           <div id="subject-time">
-                              <div id="subject">${mailArr[i].subject}</div>
+                              <div id="subject">${trashArr[i].subject}</div>
                               <div id="close-compose" onclick="displayMails()">&#10005</div>
                           </div>
                           <div id="from-sender">
                               <div id="from">From:</div>
-                              <div id="sender-name">${mailArr[i].senderName}</div>
+                              <div id="sender-name">${trashArr[i].senderName}</div>
                           </div> 
                           <div id="content">
-                              ${mailArr[i].content}
+                              ${trashArr[i].content}
                           </div>
                       </div>
                   </div>`;

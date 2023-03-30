@@ -26,8 +26,18 @@ function fetchDrafts() {
     .then((data) => data.json())
     .then((result) => {
       draftsArr = result;
+      draftsNum();
       displayMails();
     });
+}
+
+function draftsNum() {
+  totalMailNum = 0;
+  for (let i = 0; i < draftsArr.length; i++) {
+    if (draftsArr[i].sender == email) {
+      totalMailNum++;
+    }
+  }
 }
 
 function fetchMail() {
@@ -121,16 +131,13 @@ function addToTrash() {
 
 function changeMailNum() {
   mailNum = 0;
-  totalMailNum = 0;
   for (let i = 0; i < mailArr.length; i++) {
     if (mailArr[i].recipient == email) {
-      totalMailNum++;
       if (mailArr[i].readStatus == "unread") {
         mailNum++;
       }
     }
   }
-  console.log(mailNum);
   document.querySelector("#mails-number").innerHTML = mailNum;
 }
 

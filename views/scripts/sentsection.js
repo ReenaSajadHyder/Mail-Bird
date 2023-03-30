@@ -95,8 +95,10 @@ function changeMailNum() {
   mailNum = 0;
   totalMailNum = 0;
   for (let i = 0; i < mailArr.length; i++) {
-    if (mailArr[i].recipient == email) {
+    if(mailArr[i].sender == email) {
       totalMailNum++;
+    }
+    if (mailArr[i].recipient == email) {
       if (mailArr[i].readStatus == "unread") {
         mailNum++;
       }

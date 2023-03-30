@@ -132,7 +132,6 @@ function getRemainingMails() {
 }
 
 function changeBg() {
-  console.log(totalMailNum);
   if(totalMailNum == 0){
     document.querySelector("#mails-container").style.backgroundImage = "url(./assets/images/sectionpg-bg-small.jpg)";
   }
@@ -187,6 +186,7 @@ function closeMail() {
 
 function changeMailNum() {
   mailNum = 0;
+  totalMailNum = 0;
   for (let i = 0; i < mailArr.length; i++) {
     if (mailArr[i].recipient == email) {
       totalMailNum++;
