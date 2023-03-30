@@ -60,26 +60,6 @@
     "readStatus": "unread"
   },
   {
-    "id": 1679572396388,
-    "time": "5:23 PM",
-    "subject": "rewdfgb",
-    "senderName": "reena",
-    "sender": "reena@mailbird.com",
-    "recipient": "reemaa@mailbird.com",
-    "content": "Hi\nHello\nHow\nReg",
-    "readStatus": "unread"
-  },
-  {
-    "id": 1679572491964,
-    "time": "5:24 PM",
-    "subject": "sdfgbhnjm",
-    "senderName": "reena",
-    "sender": "reena@mailbird.com",
-    "recipient": "reemaa@mailbird.com",
-    "content": "Hi\nHello\nREgards",
-    "readStatus": "unread"
-  },
-  {
     "id": 1679894375790,
     "time": "10:49 AM",
     "subject": "sdfvgbn ",
@@ -137,7 +117,7 @@
     "sender": "reemaa@mailbird.com",
     "recipient": "reena@mailbird.com",
     "content": "Hi Reena<br><br>Thank you so much for [action they did] It was such a pleasure to work with you, and I’m very excited about the next opportunity to work together again.<br><br>Please don’t hesitate to contact me if I can provide any additional information.<br><br>Best regards,<br><br>Reemaa<br>Project Engineer",
-    "readStatus": "unread"
+    "readStatus": "read"
   },
   {
     "id": 1680150533216,

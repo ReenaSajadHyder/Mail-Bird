@@ -4,86 +4,80 @@
   grid-template-columns: 18% 82%;
   height: 100vh;
 }
-
 #menu-section {
+  background-color: #f9cece;
   display: grid;
   grid-template-rows: 16% 24% 40%;
-  background-color: #f9cece;
 }
-
 #app-name-logo {
   display: flex;
   flex-direction: row;
   margin-left: 10%;
   padding-top: 2.2%;
 }
-
 #app-logo {
   height: 52px;
   width: 52px;
 }
-
 #app-name {
-  font-size: 30px;
   font-family: "Pacifico", cursive;
+  font-size: 30px;
   margin-left: 3%;
   margin-top: 1%;
 }
-
 #sections {
   display: grid;
   grid-template-rows: 25% 25% 25% 25%;
   row-gap: 4%;
 }
-
 #inbox-sym,
 #sent-sym,
 #drafts-sym,
 #trash-sym {
-    height: 22px;
-    width: 22px;
-    margin-top: 20%;
+  height: 22px;
+  margin-top: 20%;
+  width: 22px;
 }
 #inbox-sec,
 #sent-sec,
 #drafts-sec,
 #trash-sec {
-    margin-left: 10%;
-    margin-right: 10%;
-    background-color: white;
-    padding-top: 2%;
-    padding-left: 24%;
-    cursor: pointer;
-    display: flex;
+  background-color: white;
+  cursor: pointer;
+  display: flex;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-left: 24%;
+  padding-top: 2%;
 }
 #inbox-txt,
 #sent-txt,
 #drafts-txt,
-#trash-txt{
-    font-family: 'Mulish', sans-serif;
-    font-size: 24px;
-    margin-left: 10%;
-    text-decoration: none;
-    color: black;
+#trash-txt {
+  color: black;
+  font-family: "Mulish", sans-serif;
+  font-size: 24px;
+  margin-left: 10%;
+  text-decoration: none;
 }
 #inbox-sec:hover,
 #sent-sec:hover,
 #drafts-sec:hover,
 #trash-sec:hover {
-    background-color: #FF4F5A;
-    cursor: pointer;
-    text-decoration: none;
+  background-color: #ff4f5a;
+  cursor: pointer;
+  text-decoration: none;
 }
 #inbox-txt:hover,
 #sent-txt:hover,
 #drafts-txt:hover,
 #trash-txt:hover {
-    color: white;
+  color: white;
 }
 #compose-section {
+  background-color: white;
   display: grid;
   grid-template-rows: 10% 92%;
-  background-color: white;
   height: 98vh;
 }
 #section-header {
@@ -94,21 +88,21 @@
 #section-name {
   font-family: "Mulish", sans-serif;
   font-size: 36px;
-  margin-top: 1%;
   margin-left: 50%;
+  margin-top: 1%;
 }
 #sign-out-btn {
-  margin-top: 10%;
+  cursor: pointer;
   display: grid;
   grid-template-columns: 65% 35%;
-  cursor: pointer;
+  margin-top: 10%;
 }
 #sign-out-txt {
+  color: black;
   font-family: "Mulish", sans-serif;
   font-size: 24px;
   margin-left: 10%;
   text-decoration: none;
-  color: black;
 }
 #sign-out-txt:hover {
   color: white;
@@ -118,12 +112,21 @@
   width: 32px;
 }
 #compose-box {
-  display: grid;
-  grid-template-rows: 10% 8% 76% 6%;
-  overflow-y: auto;
-  font-family: "Mulish", sans-serif;
   background-color: #f5f5f5;
+  display: grid;
+  font-family: "Mulish", sans-serif;
+  grid-template-rows: 94% 6%;
+  overflow-y: auto;
   padding: 2% 2% 1% 2%;
+
+  /*  */
+  /*  */
+}
+#form {
+  background-color: #f5f5f5;
+  display: grid;
+  font-family: "Mulish", sans-serif;
+  grid-template-rows: 15% 10% 75%;
 }
 ::-webkit-scrollbar {
   width: 10px;
@@ -138,70 +141,72 @@
   background: #555;
 }
 #subject-time {
+  border-bottom: 2px solid black;
   display: grid;
   grid-template-columns: 10% 88% 2%;
-  border-bottom: 2px solid black;
 }
-#subject-title{
+#subject-title {
+  font-family: "Mulish", sans-serif;
   font-size: 24px;
   padding-top: 12.6%;
 }
 #subject-inp {
-  font-size: 22px;
-  font-family: 'Mulish', sans-serif;
   background-color: #f5f5f5;
   border: none transparent;
-  outline: none;
+  font-family: "Mulish", sans-serif;
+  font-size: 22px;
   height: 100%;
+  outline: none;
   width: 100%;
 }
 #close-compose {
-    font-size: 20px;
+  font-size: 20px;
 }
 #close-compose:hover {
-    cursor: pointer;
-    color: red;
+  color: red;
+  cursor: pointer;
 }
 #from-sender,
 #to-recipient {
-    display: grid;
-    grid-template-columns: 10% 90%;
-    border-bottom: 2px solid black;
+  border-bottom: 2px solid black;
+  display: grid;
+  grid-template-columns: 10% 90%;
 }
 #to-title {
-  padding-top: 8%;
+  font-family: "Mulish", sans-serif;
   font-size: 24px;
+  padding-top: 8%;
 }
 #recipient-name {
-  font-family: 'Mulish', sans-serif;
-  font-size: 22px;
   background-color: #f5f5f5;
   border: none transparent;
+  font-family: "Mulish", sans-serif;
+  font-size: 22px;
+  height: 100%;
   outline: none;
   width: 100%;
-  height: 100%;
 }
-#content{
-    padding-top: 1%;
-    background-color: #f5f5f5;
-    border: none;
-    font-family: 'Mulish', sans-serif;
-    font-size: 20px;
-    overflow-y: auto;
-    width: 100%;
-    height: 62vh;
-    resize: none;
+#content {
+  background-color: #f5f5f5;
+  border: none;
+  font-family: "Mulish", sans-serif;
+  font-size: 20px;
+  height: 64vh;
+  overflow-y: auto;
+  padding-top: 1%;
+  resize: none;
+  width: 100%;
 }
-#send-btn{
-    background-color: #FF4F5A;
-    border-radius: 15px;
-    margin-left: 84%;
-    width: fit-content;
-    padding: 0.2% 2.2% 0% 2.2%;
-    cursor: pointer;
-    color: white;
-    font-size: 22px;
-    font-family: 'Mulish', sans-serif;
+#send-btn {
+  background-color: #ff4f5a;
+  border-radius: 15px;
+  color: white;
+  cursor: pointer;
+  font-family: "Mulish", sans-serif;
+  font-size: 22px;
+  margin-left: 84%;
+  padding: 0.2% 2.2% 0% 2.2%;
+  width: fit-content;
 }
 #mails-number {
   background-color: black;
