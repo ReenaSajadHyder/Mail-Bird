@@ -202,7 +202,7 @@
 }
 #mail-container {
   display: grid;
-  grid-template-rows: 10% 8% 82%;
+  grid-template-rows: 8% 6% 6% 80%;
   font-family: "Mulish", sans-serif;
   background-color: white;
   padding: 2% 2% 1% 2%;
@@ -230,11 +230,14 @@
 }
 #from-sender,
 #to-recipient {
-  padding-top: 0.8%;
   display: grid;
   grid-template-columns: 10% 90%;
   font-size: 24px;
   border-bottom: 2px solid black;
+}
+#from,
+#sender-name {
+  font-size: 21px;
 }
 #content {
   padding-top: 1%;

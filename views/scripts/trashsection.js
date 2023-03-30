@@ -113,6 +113,10 @@ function showMailContent(id) {
                               <div id="from">From:</div>
                               <div id="sender-name">${trashArr[i].senderName}</div>
                           </div> 
+                          <div id="to-recipient">
+                              <div id="from">To:</div>
+                              <div id="sender-name">${trashArr[i].recipient}</div>
+                          </div>
                           <div id="content">
                               ${trashArr[i].content}
                           </div>
