@@ -130,69 +130,9 @@
     "readStatus": "unread"
   },
   {
-    "id": 1679978326105,
-    "time": "10:08 AM",
-    "subject": "a",
-    "senderName": "ace",
-    "sender": "ace@mailbird.com",
-    "recipient": "reena@mailbird.com",
-    "content": "a",
-    "readStatus": "unread"
-  },
-  {
-    "id": 1679978333021,
-    "time": "10:08 AM",
-    "subject": "b",
-    "senderName": "ace",
-    "sender": "ace@mailbird.com",
-    "recipient": "reena@mailbird.com",
-    "content": "b",
-    "readStatus": "read"
-  },
-  {
-    "id": 1679978344997,
-    "time": "10:09 AM",
-    "subject": "d",
-    "senderName": "ace",
-    "sender": "ace@mailbird.com",
-    "recipient": "reena@mailbird.com",
-    "content": "d",
-    "readStatus": "unread"
-  },
-  {
-    "id": 1679978350421,
-    "time": "10:09 AM",
-    "subject": "e",
-    "senderName": "ace",
-    "sender": "ace@mailbird.com",
-    "recipient": "reena@mailbird.com",
-    "content": "e",
-    "readStatus": "unread"
-  },
-  {
-    "id": 1679978356748,
-    "time": "10:09 AM",
-    "subject": "f",
-    "senderName": "ace",
-    "sender": "ace@mailbird.com",
-    "recipient": "reena@mailbird.com",
-    "content": "f",
-    "readStatus": "unread"
-  },
-  {
-    "id": 1679978363340,
-    "time": "10:09 AM",
-    "subject": "g",
-    "senderName": "ace",
-    "sender": "ace@mailbird.com",
-    "recipient": "reena@mailbird.com",
-    "content": "g",
-    "readStatus": "read"
-  },
-  {
     "id": 1680065595304,
     "time": "10:23 AM",
-    "subject": "Sandwich",
+    "subject": "Meeting at 3",
     "senderName": "Nalina",
     "sender": "nalina@mailbird.com",
     "recipient": "reena@mailbird.com",
@@ -217,6 +157,56 @@
     "sender": "sathika@mailbird.com",
     "recipient": "reena@mailbird.com",
     "content": "Hi<br>There<br>Hello<br>There",
+    "readStatus": "read"
+  },
+  {
+    "id": 1680150452432,
+    "time": "9:57 AM",
+    "subject": "Thanks for your services",
+    "senderName": "Reemaa Sajad",
+    "sender": "reemaa@mailbird.com",
+    "recipient": "reena@mailbird.com",
+    "content": "Hi Reena<br><br>Thank you so much for [action they did] It was such a pleasure to work with you, and I’m very excited about the next opportunity to work together again.<br><br>Please don’t hesitate to contact me if I can provide any additional information.<br><br>Best regards,<br><br>Reemaa<br>Project Engineer",
+    "readStatus": "unread"
+  },
+  {
+    "id": 1680150533216,
+    "time": "9:58 AM",
+    "subject": "Token of Appreciation",
+    "senderName": "tom",
+    "sender": "tom@mailbird.com",
+    "recipient": "reena@mailbird.com",
+    "content": "Dear Mrs. Reena,<br><br>I would like to formally recognize all the hard work and dedication you’ve put into completing [project/task]. Due to your consistent efforts, the project is what it is today and that led to the positive results we were hoping for. <br><br>On behalf of [company name, board members, etc.], we would like to formally thank you for your hard work and we would like to let you know that we highly value your contribution and your continued dedication to your job.<br><br>We are very grateful to have you as a member of our team and we wish to continue to see you thrive within our organization.<br><br>Best regards,<br><br>Tom<br>Engineer",
+    "readStatus": "unread"
+  },
+  {
+    "id": 1680150646120,
+    "time": "10:00 AM",
+    "subject": "REMINDER - INTERVIEW",
+    "senderName": "Kai",
+    "sender": "kai@mailbird.com",
+    "recipient": "reena@mailbird.com",
+    "content": "Hi Reena,<br><br>I’m sure your schedule is very busy, so this email is simply to remind you of your upcoming interview with [name] who is a candidate for [name of position].<br><br>The interview will be at [time] on [date] in [location].<br><br>Please let me know if there’s anything I can help you with to prepare to interview this candidate.<br><br>Best,<br><br>Kai<br>Hiring Manager",
+    "readStatus": "read"
+  },
+  {
+    "id": 1680150760043,
+    "time": "10:02 AM",
+    "subject": "Client Introduction",
+    "senderName": "Kai",
+    "sender": "kai@mailbird.com",
+    "recipient": "reena@mailbird.com",
+    "content": "Dear Madame,<br><br>I would like to take a moment to introduce myself and my company. My name is [name] and I am a [job title] at [company name]. Our company provides customers with cutting-edge technology for all their email signature needs.<br><br>At [company name], there are a number of services we can offer, such as [short list of services]. Our employees are also highly dedicated and are willing to help you with your every need. <br><br>I’d love the opportunity to speak or meet with you to discuss your needs further and to tell you more about how [company name] can help you succeed. You can contact me at [phone number] with any questions you may have.<br><br>Thank you,<br><br>Kai",
+    "readStatus": "unread"
+  },
+  {
+    "id": 1680151666251,
+    "time": "10:17 AM",
+    "subject": "Quotation",
+    "senderName": "Nalina",
+    "sender": "nalina@mailbird.com",
+    "recipient": "reena@mailbird.com",
+    "content": "Dear Reena,<br><br>We’d like to thank you for sending in your inquiry on [date] regarding a quotation for auditing your website.<br><br>Based on an initial estimation, we are happy to offer you a quotation based on your requests. Please find the official pricing quote attached to this email. Note that this quotation includes [list of services], but should you want additional services, we’d be happy to discuss it further with you and provide another quotation.<br><br>Please do not hesitate to get back to us with any questions about the quotation or our services.<br><br>Yours sincerely,<br><br>Nalina",
     "readStatus": "unread"
   }
 ]

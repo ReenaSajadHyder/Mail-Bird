@@ -129,6 +129,7 @@ function getRemainingMails() {
   remainingMails.sort((a, b) => {
     return b.time.localeCompare(a.time);
   });
+  console.table(remainingMails);
 }
 
 function changeBg() {

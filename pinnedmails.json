@@ -1,22 +1,22 @@
 [
   {
-    "id": 1679913163384,
-    "time": "4:02 PM",
-    "subject": "a",
-    "senderName": "reena",
-    "sender": "reena@mailbird.com",
-    "recipient": "ace@mailbird.com",
-    "content": "a",
-    "readStatus": "unread"
+    "id": 1680065595304,
+    "time": "10:23 AM",
+    "subject": "Meeting at 3",
+    "senderName": "Nalina",
+    "sender": "nalina@mailbird.com",
+    "recipient": "reena@mailbird.com",
+    "content": "sanfwich",
+    "readStatus": "read"
   },
   {
-    "id": 1679978333021,
-    "time": "10:08 AM",
-    "subject": "b",
-    "senderName": "ace",
-    "sender": "ace@mailbird.com",
+    "id": 1680150646120,
+    "time": "10:00 AM",
+    "subject": "REMINDER - INTERVIEW",
+    "senderName": "Kai",
+    "sender": "kai@mailbird.com",
     "recipient": "reena@mailbird.com",
-    "content": "b",
+    "content": "Hi Reena,<br><br>I’m sure your schedule is very busy, so this email is simply to remind you of your upcoming interview with [name] who is a candidate for [name of position].<br><br>The interview will be at [time] on [date] in [location].<br><br>Please let me know if there’s anything I can help you with to prepare to interview this candidate.<br><br>Best,<br><br>Kai<br>Hiring Manager",
     "readStatus": "read"
   }
 ]
