@@ -127,17 +127,17 @@ function getRemainingMails() {
     if (j == pinnedMailArr.length) remainingMails.push(mailArr[i]);
   }
   remainingMails.sort((a, b) => {
-    return b.time.localeCompare(a.time);
+    return b.id - a.id;
   });
-  console.table(remainingMails);
 }
 
 function changeBg() {
-  if(totalMailNum == 0){
-    document.querySelector("#mails-container").style.backgroundImage = "url(./assets/images/sectionpg-bg-small.jpg)";
+  if (totalMailNum == 0) {
+    document.querySelector("#mails-container").style.backgroundImage =
+      "url(./assets/images/sectionpg-bg-small.jpg)";
   }
-  if(totalMailNum > 0){
-    console.log("Inside totalmailnum > 0")
+  if (totalMailNum > 0) {
+    console.log("Inside totalmailnum > 0");
     document.querySelector("#mails-container").style.backgroundColor = "white";
   }
 }
@@ -285,5 +285,3 @@ document.querySelector("#trash-sec").addEventListener("click", () => {
 document.querySelector("#compose-btn").addEventListener("click", () => {
   window.location.href = "/composemail";
 });
-
-
