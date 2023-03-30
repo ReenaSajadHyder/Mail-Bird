@@ -198,5 +198,25 @@
     "recipient": "nalina@mailbird.com",
     "content": "ee",
     "readStatus": "unread"
+  },
+  {
+    "id": 1680171073422,
+    "time": "3:41 PM",
+    "subject": "hello",
+    "senderName": "reena",
+    "sender": "reena@mailbird.com",
+    "recipient": "sowmiya.raveendran@mailbird.com",
+    "content": "asdf",
+    "readStatus": "unread"
+  },
+  {
+    "id": 1680171177980,
+    "time": "3:42 PM",
+    "subject": "Important Notice",
+    "senderName": "reena",
+    "sender": "reena@mailbird.com",
+    "recipient": "reenasajadhyderkabeerahmed@gmail.com",
+    "content": "Insert notice here",
+    "readStatus": "unread"
   }
 ]

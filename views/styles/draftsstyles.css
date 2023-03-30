@@ -159,6 +159,8 @@
 .sender-name,
 .mail-title {
   font-size: 22px;
+  overflow-x: hidden;
+  margin-right: 5%;
 }
 .time {
   font-size: 18px;
