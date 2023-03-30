@@ -48,7 +48,7 @@ function displayMails() {
                     </div>
                 </div>
                 <div>
-                    <img class="trash-can" src="./assets/images/trash-outline.png" alt="trash can" onclick="addToTrash()">
+                    <img class="trash-can" src="./assets/images/trash-outline.png" alt="trash can" onclick="addToTrash(${currentMailId})">
                 </div>
             </div>` + document.querySelector("#mails-container").innerHTML;
     }
@@ -107,10 +107,11 @@ function changeMailNum() {
   document.querySelector("#mails-number").innerHTML = mailNum;
 }
 
-function addToTrash() {
+function addToTrash(id) {
+  let deletedMailId = id;
   let mailObj = {};
   for (let i = 0; i < mailArr.length; i++) {
-    if (mailArr[i].id == currentMailId) {
+    if (mailArr[i].id == deletedMailId) {
       mailObj.id = mailArr[i].id;
       mailObj.time = mailArr[i].time;
       mailObj.senderName = mailArr[i].senderName;

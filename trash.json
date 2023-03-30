@@ -155,5 +155,33 @@
     "sender": "reena@mailbird.com",
     "recipient": "reemaa@mailbird.com",
     "content": "www"
+  },
+  {
+    "id": 1680169224883,
+    "time": "3:10 PM",
+    "subject": "bb",
+    "senderName": "ace",
+    "sender": "ace@mailbird.com",
+    "recipient": "nalina@mailbird.com",
+    "content": "bb",
+    "readStatus": "read"
+  },
+  {
+    "id": 1680151666251,
+    "time": "10:17 AM",
+    "subject": "Quotation",
+    "senderName": "Nalina",
+    "sender": "nalina@mailbird.com",
+    "recipient": "reena@mailbird.com",
+    "content": "Dear Reena,<br><br>We’d like to thank you for sending in your inquiry on [date] regarding a quotation for auditing your website.<br><br>Based on an initial estimation, we are happy to offer you a quotation based on your requests. Please find the official pricing quote attached to this email. Note that this quotation includes [list of services], but should you want additional services, we’d be happy to discuss it further with you and provide another quotation.<br><br>Please do not hesitate to get back to us with any questions about the quotation or our services.<br><br>Yours sincerely,<br><br>Nalina"
+  },
+  {
+    "id": 1680169855415,
+    "time": "3:20 PM",
+    "subject": "Meeting",
+    "senderName": "Nalina",
+    "sender": "nalina@mailbird.com",
+    "recipient": "reena@mailbird.com",
+    "content": "meeting"
   }
 ]

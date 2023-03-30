@@ -69,7 +69,7 @@ function displayMails() {
                     </div>
                 </div>
                 <div>
-                    <img class="trash-can" src="./assets/images/trash-outline.png" alt="trash can" onclick="addToTrash()">
+                    <img class="trash-can" src="./assets/images/trash-outline.png" alt="trash can" onclick="addToTrash(${currentMailId})">
                 </div>
             </div>` + document.querySelector("#mails-container").innerHTML;
     }
@@ -105,10 +105,11 @@ function showMailContent(id) {
   window.location.href = "/composemail";
 }
 
-function addToTrash() {
+function addToTrash(id) {
+  let deletedMailId = id;
   let mailObj = {};
   for (let i = 0; i < draftsArr.length; i++) {
-    if (draftsArr[i].id == currentMailId) {
+    if (draftsArr[i].id == deletedMailId) {
       mailObj.id = draftsArr[i].id;
       mailObj.time = draftsArr[i].time;
       mailObj.senderName = draftsArr[i].senderName;

@@ -80,7 +80,7 @@ function displayMails() {
                     </div>
                 </div>
                 <div>
-                    <img class="trash-can" src="./assets/images/trash-outline.png" alt="trash can" onclick="deleteTrash()">
+                    <img class="trash-can" src="./assets/images/trash-outline.png" alt="trash can" onclick="deleteTrash(${currentMailId})">
                 </div>
             </div>` + document.querySelector("#mails-container").innerHTML;
     }
@@ -126,9 +126,10 @@ function showMailContent(id) {
   }
 }
 
-function deleteTrash() {
+function deleteTrash(id) {
+  let deletedMailId = id;
   let mailObj = {};
-  mailObj.id = currentMailId;
+  mailObj.id = deletedMailId;
   fetch("/deleteTrash", {
     method: "POST",
     headers: { "Content-Type": "application/json" },

@@ -37,7 +37,7 @@
     "sender": "reemaa@mailbird.com",
     "recipient": "nalina@mailbird.com",
     "content": "Hi Dennis,\n\nAfter the exciting Saturday, I guess you've been doing as good as that\nSaturday.　 The weather is good, food is good, and studying is good in this\nseason.　 I like this season the best.\n\nOh, well, this introduction may remind you of students' writing, so I\nshould stop it now.　 To make a long story short (or the introduction　\nshort?), I am sending you this message to say thank you.　 I said so for　\nthe Saturday already.　 Today's \"thank you\" is to the vocabulary test,　\nwhich was delivered to me today.　 On the letter from Professor Tanaka,　\nyour name was also written, so I assume that you and Prof. Tanaka　\nworked together to develop this test.　 To tell you the truth, I like it, and I　\ndo want to use it for my research and classes.　 He said that an online　\ndelivery is being planned.　 I wonder if anyone can use the test.　 If so, this　\nis really great.\n\nSending you a thank-you message, I would like to ask you a favor.　 The\nattached is a thank-you letter to　 Prof. Tanaka.　 Would it be too much to\nask you to print it out and hand it to him?　 If so, would you send me back\na \"Do it yourself\" message.　 I'll send it by regular mail.　 Or would you let　\nme know his mail address.　 (I hope he is a regular mail user.　 In our school,\nthere are still quite a few senior professors who don't use e-mail at all.\nYes, AT ALL!　 Can you believe that?)\n\nOK, Dennis, sorry for interrupting you with my favor.　 Hope to see you\nsoon again.　\n\nBest wishes,\n\nReemaa",
-    "readStatus": "unread"
+    "readStatus": "read"
   },
   {
     "id": 1679566121290,
@@ -147,7 +147,7 @@
     "sender": "tom@mailbird.com",
     "recipient": "reena@mailbird.com",
     "content": "Dear Mrs. Reena,<br><br>I would like to formally recognize all the hard work and dedication you’ve put into completing [project/task]. Due to your consistent efforts, the project is what it is today and that led to the positive results we were hoping for. <br><br>On behalf of [company name, board members, etc.], we would like to formally thank you for your hard work and we would like to let you know that we highly value your contribution and your continued dedication to your job.<br><br>We are very grateful to have you as a member of our team and we wish to continue to see you thrive within our organization.<br><br>Best regards,<br><br>Tom<br>Engineer",
-    "readStatus": "unread"
+    "readStatus": "read"
   },
   {
     "id": 1680150646120,
@@ -170,13 +170,33 @@
     "readStatus": "unread"
   },
   {
-    "id": 1680151666251,
-    "time": "10:17 AM",
-    "subject": "Quotation",
-    "senderName": "Nalina",
-    "sender": "nalina@mailbird.com",
-    "recipient": "reena@mailbird.com",
-    "content": "Dear Reena,<br><br>We’d like to thank you for sending in your inquiry on [date] regarding a quotation for auditing your website.<br><br>Based on an initial estimation, we are happy to offer you a quotation based on your requests. Please find the official pricing quote attached to this email. Note that this quotation includes [list of services], but should you want additional services, we’d be happy to discuss it further with you and provide another quotation.<br><br>Please do not hesitate to get back to us with any questions about the quotation or our services.<br><br>Yours sincerely,<br><br>Nalina",
+    "id": 1680169231068,
+    "time": "3:10 PM",
+    "subject": "cc",
+    "senderName": "ace",
+    "sender": "ace@mailbird.com",
+    "recipient": "nalina@mailbird.com",
+    "content": "cc",
+    "readStatus": "read"
+  },
+  {
+    "id": 1680169237165,
+    "time": "3:10 PM",
+    "subject": "dd",
+    "senderName": "ace",
+    "sender": "ace@mailbird.com",
+    "recipient": "nalina@mailbird.com",
+    "content": "dd",
+    "readStatus": "unread"
+  },
+  {
+    "id": 1680169246565,
+    "time": "3:10 PM",
+    "subject": "ee",
+    "senderName": "ace",
+    "sender": "ace@mailbird.com",
+    "recipient": "nalina@mailbird.com",
+    "content": "ee",
     "readStatus": "unread"
   }
 ]

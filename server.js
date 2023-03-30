@@ -6,6 +6,11 @@ const session = require("express-session");
 const cookieParser = require("cookie-parser");
 let currentUser;
 let currentUserEmail;
+// let validEmail = currentUserEmail.endsWith(".com");
+
+// let check = new RegExp(
+//   "(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})"
+// );
 
 app.set("view-engine", "ejs");
 app.use(express.urlencoded({ extended: false }));
@@ -57,7 +62,6 @@ app.post("/login", (req, res) => {
           currentUserEmail = data[i].email;
           req.flash("message", `${currentUser}`);
           res.redirect("/homepg");
-          // window.sessionStorage.setItem("data[i].name", "data[i].email");
         } else {
           req.flash("message", "Password entered is incorrect.");
           res.redirect("/login");
@@ -586,13 +590,17 @@ app.post("/removePinnedMail", (req, res) => {
               break;
             }
           }
-          fs.writeFile("./pinnedmails.json", JSON.stringify(data, null, 2), (err) => {
-            if (err) {
-              console.log(err);
-            } else {
-              console.log("Succesfully deleted from pinnedmails.json");
+          fs.writeFile(
+            "./pinnedmails.json",
+            JSON.stringify(data, null, 2),
+            (err) => {
+              if (err) {
+                console.log(err);
+              } else {
+                console.log("Succesfully deleted from pinnedmails.json");
+              }
             }
-          });
+          );
         } catch (err) {
           console.log("Error:" + err);
         }
@@ -609,30 +617,30 @@ app.post("/changeMailStatus", (req, res) => {
     let data = [];
     let mailId = req.body.id;
     fs.readFile("./mails.json", "utf-8", (err, mailData) => {
-      if(err) {
+      if (err) {
         console.log(err);
-      }
-      else {
+      } else {
         data = JSON.parse(mailData);
-        for(let i = 0; i < data.length; i++) {
-          if(data[i].id == mailId){
+        for (let i = 0; i < data.length; i++) {
+          if (data[i].id == mailId) {
             data[i].readStatus = "read";
           }
         }
         fs.writeFile("./mails.json", JSON.stringify(data, null, 2), (err) => {
-          if(err) {
+          if (err) {
             console.log(err);
+          } else {
+            console.log(
+              "Mail read status successfully updated in the mails.json file"
+            );
           }
-          else {
-            console.log("Mail read status successfully updated in the mails.json file");
-          }
-        })
+        });
       }
-    })
-  } catch(err) {
+    });
+  } catch (err) {
     console.log(err);
   }
-})
+});
 
 app.listen(8000, () => {
   console.log(
