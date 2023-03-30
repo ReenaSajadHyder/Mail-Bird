@@ -22,6 +22,7 @@ function fetchMail() {
     .then((data) => data.json())
     .then((result) => {
       mailArr = result;
+      console.table(mailArr)
       changeMailNum();
     });
 }
@@ -38,3 +39,19 @@ function changeMailNum() {
   console.log(mailNum);
   document.querySelector("#mails-number").innerHTML = mailNum;
 }
+
+document.querySelector("#inbox-sec").addEventListener("click", () => {
+  window.location.href = "/inboxsection";
+});
+document.querySelector("#sent-sec").addEventListener("click", () => {
+  window.location.href = "/sentsection";
+});
+document.querySelector("#drafts-sec").addEventListener("click", () => {
+  window.location.href = "/draftssection";
+});
+document.querySelector("#trash-sec").addEventListener("click", () => {
+  window.location.href = "/trashsection";
+});
+document.querySelector("#compose-btn").addEventListener("click", () => {
+  window.location.href = "/composemail";
+});
