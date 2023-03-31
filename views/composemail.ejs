@@ -52,18 +52,18 @@
                 </div>
             </div>
             <div id="compose-box">
-                <form action="">
+                <form action="javascript:addMail()">
                     <div id="subject-time">
-                        <div id="subject-title">Subject</div>
+                        <div id="subject-title">Subject:</div>
                         <div><input id="subject-inp" type="text" placeholder="Enter subject here" required></div>
                         <div id="close-compose" onclick="addToDrafts()">&#10005</div>
                     </div>
                     <div id="to-recipient">
                         <div id="to-title">To:</div>
-                        <div><input id="recipient-name" type="text" placeholder="Enter recipients' email address here" required></div>
+                        <div><input id="recipient-name" type="text" placeholder="Enter recipient email address here" required></div>
                     </div>
                     <div><textarea name="content" id="content" placeholder="Enter your content here" required></textarea></div>
-                    <button id="send-btn" onsubmit="addMail()">
+                    <button id="send-btn" onsubmit="">
                         Send
                     </button>
                 </form>
