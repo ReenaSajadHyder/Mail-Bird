@@ -137,7 +137,6 @@ function changeBg() {
       "url(./assets/images/sectionpg-bg-small.jpg)";
   }
   if (totalMailNum > 0) {
-    console.log("Inside totalmailnum > 0");
     document.querySelector("#mails-container").style.backgroundColor = "white";
   }
 }
@@ -196,6 +195,7 @@ function changeMailNum() {
       }
     }
   }
+  console.log(mailNum);
   document.querySelector("#mails-number").innerHTML = mailNum;
 }
 

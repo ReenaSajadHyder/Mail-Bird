@@ -17,7 +17,7 @@
     "sender": "nalina@mailbird.com",
     "recipient": "reena@mailbird.com",
     "content": "Hi George,\nThanks for your reply.　 You are always so quick!\n\nI sent an-mail to Mr. Imai of Seibido yesterday, and I just got a phone call\nfrom him.　 They want us to send the whole thing and also a \"Project　\nPlan.\"　 It seems that they have some form to fill in to describe the project　\nin Japanese, so I will write something which will appeal to the publsiher.\n\nThat's all for now.　 Let's hope it will come out!\n\n",
-    "readStatus": "read"
+    "readStatus": "unread"
   },
   {
     "id": 1679563296090,
@@ -107,7 +107,7 @@
     "sender": "sathika@mailbird.com",
     "recipient": "reena@mailbird.com",
     "content": "Hi<br>There<br>Hello<br>There",
-    "readStatus": "read"
+    "readStatus": "unread"
   },
   {
     "id": 1680150452432,
@@ -117,7 +117,7 @@
     "sender": "reemaa@mailbird.com",
     "recipient": "reena@mailbird.com",
     "content": "Hi Reena<br><br>Thank you so much for [action they did] It was such a pleasure to work with you, and I’m very excited about the next opportunity to work together again.<br><br>Please don’t hesitate to contact me if I can provide any additional information.<br><br>Best regards,<br><br>Reemaa<br>Project Engineer",
-    "readStatus": "read"
+    "readStatus": "unread"
   },
   {
     "id": 1680150533216,
@@ -147,7 +147,7 @@
     "sender": "kai@mailbird.com",
     "recipient": "reena@mailbird.com",
     "content": "Dear Madame,<br><br>I would like to take a moment to introduce myself and my company. My name is [name] and I am a [job title] at [company name]. Our company provides customers with cutting-edge technology for all their email signature needs.<br><br>At [company name], there are a number of services we can offer, such as [short list of services]. Our employees are also highly dedicated and are willing to help you with your every need. <br><br>I’d love the opportunity to speak or meet with you to discuss your needs further and to tell you more about how [company name] can help you succeed. You can contact me at [phone number] with any questions you may have.<br><br>Thank you,<br><br>Kai",
-    "readStatus": "unread"
+    "readStatus": "read"
   },
   {
     "id": 1680169231068,
