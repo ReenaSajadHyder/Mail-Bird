@@ -1,3 +1,19 @@
+var signupErrorMessage = false;
+let errorIcon = document.querySelector("error-msg-icon");
+
+(function () {
+  hideErrorIcon();
+})();
+
+function hideErrorIcon() {
+  // if(!loginErrorMessage){
+  //   errorIconLg.style.display = "none";
+  // }
+  if (!signupErrorMessage) {
+    errorIcon.style.display = "none";
+  }
+}
+
 function toggleVisibility() {
   let pwd = document.getElementById("password-input");
   let eye = document.getElementById("password-hidden");
@@ -8,7 +24,7 @@ function toggleVisibility() {
   } else {
     pwd.type = "password";
   }
-  if (imgurl.endsWith("password-hidden.png")){
+  if (imgurl.endsWith("password-hidden.png")) {
     isTrue = true;
   }
   if (isTrue) {
@@ -28,7 +44,7 @@ function togglePwdVisibility() {
   } else {
     confPwd.type = "password";
   }
-  if(imgurl.endsWith("password-hidden.png")){
+  if (imgurl.endsWith("password-hidden.png")) {
     isTrue = true;
   }
   if (isTrue) {
@@ -37,3 +53,13 @@ function togglePwdVisibility() {
     confEye.src = "http://localhost:8000/assets/images/password-hidden.png";
   }
 }
+
+document.querySelector("#signup-btn").addEventListener("click", () => {
+  console.log("Inside sign up on click");
+  if (document.querySelector("signup-error-message").innerHTML == " ") {
+    signupErrorMessage = false;
+  }
+  if (signupErrorMessage) {
+    errorIcon.src = "http://localhost:8000/assets/images/error-message.png";
+  }
+});

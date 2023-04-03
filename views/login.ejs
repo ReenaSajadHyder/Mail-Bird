@@ -11,7 +11,6 @@
       href="https://fonts.googleapis.com/css2?family=Mulish:wght@500;700&family=Pacifico&display=swap"
       rel="stylesheet"
     />
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"> -->
     <title>Mail Bird</title>
     <link rel="shortcut icon" href="./assets/images/logo-carrier-pigeon.png" />
   </head>
@@ -55,13 +54,16 @@
               />
             </div>
             <div>
-              <button id="login-btn" type="submit" onclick="addUser()">
+              <button id="login-btn" type="submit" >
                 Login
               </button>
             </div>
           </form>
           <div id="login-error-message">
-            <% if(message) { %> <%= message %> <% } %>
+            <img id="error-msg-icon" alt="error-icon" src="">
+            <% if(message) {
+               %> <%= message %> <% 
+              } %>
           </div>
           <div class="signup-redir">Don't have an account yet?</div>
           <div>
@@ -85,6 +87,6 @@
         <div id="digi-illustration"></div>
       </div>
     </div>
-    <script src="./scripts/loginsignup.js"></script>
+    <script src="./scripts/login.js"></script>
   </body>
 </html>

@@ -102,6 +102,12 @@ input:-webkit-autofill:active {
   margin-left: 4%;
   margin-top: 4%;
 }
+
+#error-msg-icon {
+  height: 14px;
+  width: 14px;
+}
+
 .login-redir {
   margin-left: 16%;
   margin-top: 4%;
