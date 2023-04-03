@@ -22,7 +22,6 @@ function fetchMail() {
     .then((data) => data.json())
     .then((result) => {
       mailArr = result;
-      console.table(mailArr)
       changeMailNum();
     });
 }

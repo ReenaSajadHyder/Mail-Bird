@@ -11,18 +11,18 @@
 
 #signup-box {
   background-color: white;
-  width: 40vh;
-  height: 66vh;
+  width: 50vh;
+  height: 76vh;
   border-radius: 15px;
   font-family: "Mulish", sans-serif;
-  margin-top: 40%;
-  margin-left: 15%;
+  margin-top: 28%;
+  margin-left: 9%;
 }
 
 #sign-up-title {
   font-size: 30px;
   padding-top: 10%;
-  padding-left: 12%;
+  padding-left: 20%;
   padding-bottom: 8%;
 }
 
@@ -87,7 +87,7 @@ input:-webkit-autofill:active {
   color: white;
   width: 106px;
   border-color: #ff4f5a;
-  margin-left: 28%;
+  margin-left: 34%;
   margin-top: 4%;
   padding-bottom: 1.2%;
 }
@@ -99,22 +99,31 @@ input:-webkit-autofill:active {
 
 #signup-error-message {
   font-size: 14px;
-  margin-left: 4%;
-  margin-top: 4%;
+  /* margin-left: 4%; */
+  /* margin-top: 2%; */
+  color: red;
+}
+
+#error-message{
+  margin-left: 18%;
+  margin-right: 18%;
+  border:  solid 2px #bc343e;
+  padding-left: 2%;
 }
 
 #error-msg-icon {
-  height: 14px;
-  width: 14px;
+  visibility: hidden;
+  height: 30px;
+  width: 30px;
 }
 
 .login-redir {
-  margin-left: 16%;
+  margin-left: 24%;
   margin-top: 4%;
 }
 
 #login-redir {
-  margin-left: 38%;
+  margin-left: 42%;
 }
 
 #design-side {

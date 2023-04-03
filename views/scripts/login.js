@@ -1,19 +1,19 @@
 var loginErrorMessage = false;
-var signupErrorMessage = false;
-let errorIcon = document.querySelector("error-msg-icon-l");
+// var signupErrorMessage = false;
+let errorIcon = document.querySelector("#error-msg-icon");
 
-(function () {
-  hideErrorIcon();
-})();
+// (function () {
+//   hideErrorIcon();
+// })();
 
-function hideErrorIcon() {
-  if (!loginErrorMessage) {
-    errorIconLg.style.display = "none";
-  }
-  // if(!signupErrorMessage) {
-  //   errorIcon.style.display = "none";
-  // }
-}
+// function hideErrorIcon() {
+//   if (!loginErrorMessage) {
+//     errorIcon.style.display = "none";
+//   }
+//   // if(!signupErrorMessage) {
+//   //   errorIcon.style.display = "none";
+//   // }
+// }
 
 function toggleVisibility() {
   let pwd = document.getElementById("password-input");
@@ -35,12 +35,31 @@ function toggleVisibility() {
   }
 }
 
-document.querySelector("#login-btn").addEventListener("click", () => {
-  console.log("Inside login on click");
-  if (document.querySelector("login-error-message").innerHTML == " ") {
-    loginErrorMessage = false;
-  }
-  if (loginErrorMessage) {
-    errorIcon.src = "http://localhost:8000/assets/images/error-message.png";
-  }
-});
+// console.log(document.querySelector("#error-message").innerHTML);
+
+// document.querySelector("#login-btn").addEventListener("click", () => {
+  
+// });
+
+// function showError() {
+//   let userObj = {};
+//   userObj.email = document.querySelector("#email-input").value;
+//   userObj.password = document.querySelector("#password-input").value;
+//   fetch("/login", {
+//     method: "POST",
+//     headers: { "Content-Type": "application/json" },
+//     body: JSON.stringify(userObj),
+//   }).then((data) => data.json())
+//   .then((result) => {
+//     errorMsg();
+//   });
+  
+// }
+
+// function errorMsg() {
+//   if (!(document.querySelector("#error-message").innerHTML === "")) {
+//     console.log("Inside");
+//     document.querySelector("#login-error-message").style.display = "flex";
+//     errorIcon.style.visibility = "visible";
+//   }
+// }

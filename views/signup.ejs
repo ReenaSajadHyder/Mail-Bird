@@ -93,8 +93,16 @@
             </div>
           </form>
           <div id="signup-error-message">
-            <img id="error-msg-icon" src="./assets/images/error-message.png" alt="error-icon">
-            <% if(message) { %> <%= message %> <% } %>
+            <img
+              id="error-msg-icon"
+              src="./assets/images/error-message.png"
+              alt="error-icon"
+            />
+            <div id="error-message">
+              <% if(message) { 
+                %> <%= message %> <% 
+              } %>
+            </div>
           </div>
           <div class="login-redir">Already have an account?</div>
           <div>

@@ -1,18 +1,18 @@
 var signupErrorMessage = false;
 let errorIcon = document.querySelector("error-msg-icon");
 
-(function () {
-  hideErrorIcon();
-})();
+// (function () {
+//   hideErrorIcon();
+// })();
 
-function hideErrorIcon() {
-  // if(!loginErrorMessage){
-  //   errorIconLg.style.display = "none";
-  // }
-  if (!signupErrorMessage) {
-    errorIcon.style.display = "none";
-  }
-}
+// function hideErrorIcon() {
+//   // if(!loginErrorMessage){
+//   //   errorIconLg.style.display = "none";
+//   // }
+//   if (!signupErrorMessage) {
+//     errorIcon.style.display = "none";
+//   }
+// }
 
 function toggleVisibility() {
   let pwd = document.getElementById("password-input");
@@ -54,12 +54,20 @@ function togglePwdVisibility() {
   }
 }
 
-document.querySelector("#signup-btn").addEventListener("click", () => {
-  console.log("Inside sign up on click");
-  if (document.querySelector("signup-error-message").innerHTML == " ") {
-    signupErrorMessage = false;
-  }
-  if (signupErrorMessage) {
-    errorIcon.src = "http://localhost:8000/assets/images/error-message.png";
-  }
-});
+// document.querySelector("#signup-btn").addEventListener("click", () => {
+//   console.log("Inside sign up on click");
+//   if (document.querySelector("signup-error-message").innerHTML == " ") {
+//     signupErrorMessage = false;
+//   }
+//   if (signupErrorMessage) {
+//     errorIcon.src = "http://localhost:8000/assets/images/error-message.png";
+//   }
+// });
+
+// function showError() {
+//     if (!(document.querySelector("#error-message").innerHTML === "")) {
+//       console.log("Inside");
+//       document.querySelector("#signup-error-message").style.display = "flex";
+//       errorIcon.style.visibility = "visible";
+//     }
+//   }
